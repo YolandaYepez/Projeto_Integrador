@@ -1,129 +1,40 @@
-// Variáveis do Tema Fake News (Alertas, Contraste e Jornalismo)
-$color-bg: #0f172a;
-$color-surface: #1e293b;
-$color-text: #f8fafc;
-$color-primary: #ef4444; // Vermelho Alerta
-$color-warning: #f59e0b; // Amarelo Atenção
-$color-accent: #3b82f6;
-
-$font-main: 'Inter', system-ui, -apple-system, sans-serif;
-$transition: all 0.3s ease;
-
-.header {
-  background-color: $color-bg;
-  color: $color-text;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  border-bottom: 2px solid rgba($color-primary, 0.3);
-  font-family: $font-main;
-
-  &__container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: $color-text;
-    font-weight: 800;
-    font-size: 1.4rem;
-
-    .highlight {
-      color: $color-primary;
-    }
-  }
-
-  &__list {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  &__link {
-    color: lighten($color-bg, 60%);
-    text-decoration: none;
-    font-weight: 500;
-    transition: $transition;
-
-    &:hover,
-    &.active {
-      color: $color-primary;
-    }
-  }
-
-  &__toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 5px;
-
-    .toggler-bar {
-      width: 25px;
-      height: 3px;
-      background-color: $color-text;
-      border-radius: 2px;
-      transition: $transition;
-    }
-  }
+/* Estilos Base e Hierarquia Visual */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #212529;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-// Estilos de Botão
-.btn {
-  background-color: $color-primary;
-  color: #fff;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: $transition;
-
-  &:hover {
-    background-color: darken($color-primary, 10%);
-    transform: translateY(-2px);
-  }
+/* Flashcards com bordas e sombras evidentes */
+.accessible-card {
+  border: 3px solid #0d6efd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-// Responsividade para Telas Menores (Mobile)
-@media (max-width: 768px) {
-  .header {
-    &__toggle {
-      display: flex;
-    }
+/* Modo Alto Contraste (Inversão e Contraste Máximo) */
+body.high-contrast {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
 
-    &__nav {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color: $color-surface;
-      padding: 1.5rem;
-      display: none;
+body.high-contrast .card {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+  border: 3px solid #ffff00 !important; /* Borda Amarela para Destaque */
+}
 
-      &.show-menu {
-        display: block;
-      }
-    }
+body.high-contrast .btn-primary {
+  background-color: #ffff00 !important;
+  color: #000000 !important;
+  font-weight: bold;
+  border: 2px solid #ffffff !important;
+}
 
-    &__list {
-      flex-direction: column;
-      gap: 1rem;
-      align-items: center;
-    }
-  }
+body.high-contrast .accessibility-bar {
+  background-color: #1a1a1a !important;
+  border-bottom: 2px solid #ffff00;
 }

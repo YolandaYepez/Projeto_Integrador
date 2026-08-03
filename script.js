@@ -1,27 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const navToggle = document.getElementById('nav-toggle');
-  const navMenu = document.getElementById('nav-menu');
-  const btnVerify = document.getElementById('btn-verify');
+  const btnIncrease = document.getElementById('btn-increase-font');
+  const btnDecrease = document.getElementById('btn-decrease-font');
+  const btnContrast = document.getElementById('btn-toggle-contrast');
 
-  // Alternar Menu Mobile
-  if (navToggle && navMenu) {
-    navToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('show-menu');
-    });
-  }
+  let currentFontSize = 100; // Porcentagem do tamanho da fonte
 
-  // Interação Temática: Simulação de Verificação de Notícia
-  if (btnVerify) {
-    btnVerify.addEventListener('click', () => {
-      const url = prompt("Cole o link ou título da notícia para checar:");
-      
-      if (url) {
-        // Exemplo simples de retorno interativo
-        alert("🔍 Analisando fontes confiáveis e banco de dados...");
-        setTimeout(() => {
-          alert("⚠️ ATENÇÃO: Esta informação possui alto índice de ser inconsistente. Sempre verifique fontes oficiais!");
-        }, 800);
-      }
-    });
-  }
+  // Ajuste Dinâmico de Fonte
+  btnIncrease.addEventListener('click', () => {
+    if (currentFontSize < 150) {
+      currentFontSize += 10;
+      document.body.style.fontSize = `${currentFontSize}%`;
+    }
+  });
+
+  btnDecrease.addEventListener('click', () => {
+    if (currentFontSize > 90) {
+      currentFontSize -= 10;
+      document.body.style.fontSize = `${currentFontSize}%`;
+    }
+  });
+
+  // Alternância do Modo Alto Contraste
+  btnContrast.addEventListener('click', () => {
+    document.body.classList.toggle('high-contrast');
+  });
 });
