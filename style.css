@@ -1,40 +1,133 @@
-/* Estilos Base e Hierarquia Visual */
+/* Estilos Visuais e Acessibilidade */
+:root {
+  --bg-color: #f4f4f9;
+  --text-color: #222222;
+  --header-bg: #1a252f;
+  --header-text: #ffffff;
+  --accent-color: #2980b9;
+  --card-bg: #ffffff;
+  --font-base: 18px;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: var(--font-base);
   line-height: 1.6;
-  background-color: #f8f9fa;
-  color: #212529;
-  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
 }
 
-/* Flashcards com bordas e sombras evidentes */
-.accessible-card {
-  border: 3px solid #0d6efd;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Modo Alto Contraste (Inversão e Contraste Máximo) */
-body.high-contrast {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-}
-
-body.high-contrast .card {
-  background-color: #121212 !important;
-  color: #ffffff !important;
-  border: 3px solid #ffff00 !important; /* Borda Amarela para Destaque */
-}
-
-body.high-contrast .btn-primary {
-  background-color: #ffff00 !important;
-  color: #000000 !important;
+/* Menu de Acessibilidade */
+.accessibility-bar {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 12px;
+  text-align: center;
   font-weight: bold;
-  border: 2px solid #ffffff !important;
 }
 
-body.high-contrast .accessibility-bar {
-  background-color: #1a1a1a !important;
-  border-bottom: 2px solid #ffff00;
+.accessibility-bar button {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #ffffff;
+  padding: 8px 14px;
+  margin: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.accessibility-bar button:focus,
+.accessibility-bar button:hover {
+  outline: 3px solid #ffcc00;
+  background-color: #e6e6e6;
+}
+
+/* Navegação Principal */
+nav {
+  background-color: var(--header-bg);
+  padding: 12px 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 5px 15px;
+}
+
+nav a {
+  color: var(--header-text);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+nav a:focus,
+nav a:hover {
+  text-decoration: underline;
+  color: #ffcc00;
+}
+
+/* Conteúdo Principal */
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+section {
+  background-color: var(--card-bg);
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 8px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: var(--header-bg);
+  color: var(--header-text);
+}
+
+/* Modo Alto Contraste */
+body.high-contrast {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --header-bg: #111111;
+  --header-text: #ffff00;
+  --accent-color: #ffff00;
+  --card-bg: #1a1a1a;
+}
+
+body.high-contrast section {
+  border: 2px solid #ffff00;
+}
+
+body.high-contrast a {
+  color: #ffff00;
 }

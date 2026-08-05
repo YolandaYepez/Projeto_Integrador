@@ -1,27 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const btnIncrease = document.getElementById('btn-increase-font');
-  const btnDecrease = document.getElementById('btn-decrease-font');
-  const btnContrast = document.getElementById('btn-toggle-contrast');
+  const btnContrast = document.getElementById('btn-contrast');
+  const btnIncrease = document.getElementById('btn-increase');
+  const btnDecrease = document.getElementById('btn-decrease');
+  const btnReset = document.getElementById('btn-reset');
 
-  let currentFontSize = 100; // Porcentagem do tamanho da fonte
+  let currentFontSize = 18;
 
-  // Ajuste Dinâmico de Fonte
-  btnIncrease.addEventListener('click', () => {
-    if (currentFontSize < 150) {
-      currentFontSize += 10;
-      document.body.style.fontSize = `${currentFontSize}%`;
-    }
-  });
-
-  btnDecrease.addEventListener('click', () => {
-    if (currentFontSize > 90) {
-      currentFontSize -= 10;
-      document.body.style.fontSize = `${currentFontSize}%`;
-    }
-  });
-
-  // Alternância do Modo Alto Contraste
+  // Botão de Alto Contraste
   btnContrast.addEventListener('click', () => {
     document.body.classList.toggle('high-contrast');
+  });
+
+  // Botão Aumentar Fonte
+  btnIncrease.addEventListener('click', () => {
+    if (currentFontSize < 28) {
+      currentFontSize += 2;
+      document.body.style.fontSize = currentFontSize + 'px';
+    }
+  });
+
+  // Botão Diminuir Fonte
+  btnDecrease.addEventListener('click', () => {
+    if (currentFontSize > 14) {
+      currentFontSize -= 2;
+      document.body.style.fontSize = currentFontSize + 'px';
+    }
+  });
+
+  // Botão Resetar Fonte
+  btnReset.addEventListener('click', () => {
+    currentFontSize = 18;
+    document.body.style.fontSize = '18px';
   });
 });

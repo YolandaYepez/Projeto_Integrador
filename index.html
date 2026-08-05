@@ -3,64 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plataforma de Estudos Acessível</title>
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Tecnociência, Óptica e Informação</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="accessibility-bar bg-dark text-light py-2">
-    <div class="container d-flex justify-content-between align-items-center flex-wrap">
-      <span class="fw-bold">Acessibilidade:</span>
-      <div class="btn-group" role="group" aria-label="Controles de Acessibilidade">
-        <button id="btn-increase-font" class="btn btn-outline-light btn-sm" aria-label="Aumentar tamanho do texto">A+</button>
-        <button id="btn-decrease-font" class="btn btn-outline-light btn-sm" aria-label="Diminuir tamanho do texto">A-</button>
-        <button id="btn-toggle-contrast" class="btn btn-outline-warning btn-sm" aria-label="Alternar modo de alto contraste">Alto Contraste 🌓</button>
-      </div>
+  <!-- Menu de Acessibilidade -->
+  <header>
+    <div class="accessibility-bar" role="region" aria-label="Menu de Acessibilidade">
+      <span>Acessibilidade:</span>
+      <button id="btn-contrast" aria-label="Alternar Alto Contraste">Alto Contraste</button>
+      <button id="btn-increase" aria-label="Aumentar Fonte">A+</button>
+      <button id="btn-decrease" aria-label="Diminuir Fonte">A-</button>
+      <button id="btn-reset" aria-label="Resetar Tamanho da Fonte">Tamanho Normal</button>
     </div>
+
+    <!-- Navegação Principal -->
+    <nav>
+      <ul>
+        <li><a href="#optica">Óptica</a></li>
+        <li><a href="#robotica">Robótica</a></li>
+        <li><a href="#tecnociencia">Tecnociência</a></li>
+        <li><a href="#fakenews">Fake News</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="container my-4" id="main-content">
-    <header class="text-center mb-5">
-      <h1 class="display-5 fw-bold">Cartões de Estudo Acessíveis</h1>
-      <p class="lead">Conteúdo adaptado para leitura de tela e fácil navegação.</p>
-    </header>
+  <main id="main-content">
+    <!-- Seção Óptica -->
+    <section id="optica">
+      <h2>Introdução à Óptica</h2>
+      <p>
+        A óptica é o ramo da física responsável por estudar a luz, suas formas de propagação e a maneira como ela interage com a matéria. 
+      </p>
+      <p>
+        Para pessoas com baixa visão, a óptica é a base teórica e prática para a criação de lupas, óculos especiais, lentes de aumento e filtros de contraste, permitindo maior inclusão e autonomia na leitura e navegação visual.
+      </p>
+    </section>
 
-    <section aria-labelledby="sec-flashcards">
-      <h2 id="sec-flashcards" class="visually-hidden">Lista de Flashcards</h2>
-      
-      <div class="row g-4">
-        
-        <article class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 accessible-card">
-            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Ilustração simplificada de um olho humano com um símbolo de lupa à frente, representando o conceito de baixa visão.">
-            <div class="card-body">
-              <h3 class="card-title h5">O que é Baixa Visão?</h3>
-              <p class="card-text">Perda parcial da visão que não pode ser totalmente corrigida com óculos convencionais, lentes de contato ou cirurgia.</p>
-            </div>
-            <div class="card-footer bg-transparent border-0 pb-3">
-              <button class="btn btn-primary w-100 btn-lg" aria-label="Ler mais sobre baixa visão">Saber Mais</button>
-            </div>
-          </div>
-        </article>
+    <!-- Seção Robótica -->
+    <section id="robotica">
+      <h2>Robótica</h2>
+      <p>
+        A robótica integra engenharia, computação e eletrônica para criar dispositivos que ajudam a automatizar tarefas e apoiar seres humanos. No campo da acessibilidade, a robótica auxilia no desenvolvimento de bengalas inteligentes, próteses motorizadas e guias robóticos para mobilidade.
+      </p>
+    </section>
 
-        <article class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 accessible-card">
-            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Ícone de um leitor de tela exibindo ondas sonoras saindo de um monitor de computador.">
-            <div class="card-body">
-              <h3 class="card-title h5">Leitores de Tela</h3>
-              <p class="card-text">Softwares que transformam o texto exibido na tela em resposta audível ou em saídas em braille para o usuário.</p>
-            </div>
-            <div class="card-footer bg-transparent border-0 pb-3">
-              <button class="btn btn-primary w-100 btn-lg" aria-label="Ler mais sobre leitores de tela">Saber Mais</button>
-            </div>
-          </div>
-        </article>
+    <!-- Seção Tecnociência -->
+    <section id="tecnociencia">
+      <h2>Tecnociência</h2>
+      <p>
+        A tecnociência representa a união direta entre a investigação científica e a aplicação tecnológica. É por meio dessa sinergia que surgem softwares leitores de tela, algoritmos de inteligência artificial para reconhecimento de imagens e novas interfaces acessíveis.
+      </p>
+    </section>
 
-      </div>
+    <!-- Seção Fake News -->
+    <section id="fakenews">
+      <h2>Orientações sobre Fake News</h2>
+      <p>A desinformação afeta a todos no meio digital. Siga estas orientações simples para checar conteúdos antes de repassar:</p>
+      <ul>
+        <li><strong>Analise a fonte:</strong> Verifique se o portal de notícias é confiável e se tem histórico de bom jornalismo.</li>
+        <li><strong>Não leia apenas a manchete:</strong> Muitas matérias usam títulos exagerados para atrair cliques.</li>
+        <li><strong>Confira a data de publicação:</strong> Fatos antigos costumam ser compartilhados fora de contexto para gerar pânico.</li>
+        <li><strong>Consulte agências de checagem:</strong> Procure a informação em sites dedicados exclusivamente a checar dados e notícias.</li>
+      </ul>
     </section>
   </main>
+
+  <footer>
+    <p>&copy; Portal de Acessibilidade e Ciência</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
