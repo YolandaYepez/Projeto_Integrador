@@ -244,7 +244,7 @@ h2 {
 
 
 h3 {
-  color: #145a86;
+  color: #621486;
 
   font-size: 1.4rem;
 
@@ -254,7 +254,7 @@ h3 {
 
 
 h4 {
-  color: #1769aa;
+  color: #7417aa;
 
   font-size: 1.15rem;
 
@@ -274,7 +274,7 @@ p {
 
 
 strong {
-  color: #123f63;
+  color: #610c64;
 }
 
 
@@ -344,7 +344,7 @@ li::marker {
       #f5fbff
     );
 
-  color: #345;
+  color: rgb(77, 23, 90);
 
   margin: 25px 0;
 }
@@ -437,12 +437,12 @@ tr:hover {
    ========================================== */
 
 a {
-  color: #075eaa;
+  color: #6411b1;
 }
 
 
 a:hover {
-  color: #003c70;
+  color: #7b1688;
 }
 
 
@@ -524,7 +524,7 @@ a:hover {
 
 
 #btn-topo:hover {
-  background: #0d47a1;
+  background: #660da1;
 
   transform: translateY(-4px);
 }
@@ -541,7 +541,7 @@ a:hover {
    ========================================== */
 
 footer {
-  background: #0d47a1;
+  background: #720da1;
 
   color: white;
 
@@ -598,7 +598,7 @@ body.alto-contraste h4 {
 
 
 body.alto-contraste strong {
-  color: #00ffff;
+  color: #9900ff;
 }
 
 
