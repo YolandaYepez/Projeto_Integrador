@@ -53,7 +53,7 @@ body {
 
 .accessibility-bar {
   width: 100%;
-  background: #0d47a1;
+  background: #881ab4;
   color: white;
 
   display: flex;
@@ -75,7 +75,7 @@ body {
 
 .accessibility-bar button {
   background: white;
-  color: #0d47a1;
+  color: #7212b3;
 
   border: 2px solid white;
   border-radius: 6px;
@@ -151,7 +151,7 @@ nav ul {
 nav a {
   display: block;
 
-  color: #123;
+  color: rgb(64, 26, 92);
   text-decoration: none;
 
   padding: 10px 13px;
@@ -216,7 +216,7 @@ section {
    ========================================== */
 
 h1 {
-  color: #0d47a1;
+  color: #660da1;
 
   font-size: 2.4rem;
 
