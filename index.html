@@ -5,6 +5,514 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tecnociência, Óptica e Informação – Projeto IA e Tecnologias</title>
   <link rel="stylesheet" href="style.css">
+
+  <style id="wow-theme">
+    :root {
+      --wow-purple: #7b1fc7;
+      --wow-purple-dark: #35105d;
+      --wow-purple-soft: #efe2ff;
+      --wow-pink: #ff4fa3;
+      --wow-blue: #4b7bec;
+      --wow-ink: #24152f;
+      --wow-muted: #62566d;
+      --wow-bg: #f6f3fb;
+      --wow-card: rgba(255,255,255,.92);
+      --wow-shadow: 0 18px 45px rgba(73, 24, 112, .12);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 10% 5%, rgba(190,130,255,.18), transparent 28%),
+        radial-gradient(circle at 90% 20%, rgba(255,79,163,.10), transparent 25%),
+        linear-gradient(180deg, #fbfaff 0%, var(--wow-bg) 48%, #ffffff 100%);
+      color: var(--wow-ink);
+    }
+
+    /* Barra de acessibilidade mais moderna */
+    .accessibility-bar {
+      background: linear-gradient(90deg, #35105d, #7b1fc7, #9d35d5) !important;
+      box-shadow: 0 5px 22px rgba(62, 18, 98, .22);
+    }
+
+    .accessibility-bar button {
+      border: 0 !important;
+      border-radius: 12px !important;
+      font-weight: 800;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .accessibility-bar button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(0,0,0,.14);
+    }
+
+    /* Menu */
+    nav {
+      position: sticky !important;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(255,255,255,.88) !important;
+      box-shadow: 0 8px 28px rgba(53,16,93,.08);
+      border-bottom: 1px solid rgba(123,31,199,.10);
+    }
+
+    nav ul {
+      gap: 8px !important;
+      padding: 12px 18px !important;
+    }
+
+    nav a {
+      border-radius: 999px !important;
+      padding: 10px 15px !important;
+      transition: all .22s ease;
+      position: relative;
+    }
+
+    nav a:hover {
+      background: linear-gradient(135deg, var(--wow-purple), #a53bdd) !important;
+      color: white !important;
+      transform: translateY(-2px);
+      box-shadow: 0 7px 18px rgba(123,31,199,.22);
+    }
+
+    /* Capa principal */
+    .hero-wow {
+      position: relative;
+      min-height: 520px;
+      margin: 0;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 20% 25%, rgba(255,255,255,.16), transparent 20%),
+        radial-gradient(circle at 80% 30%, rgba(255,79,163,.20), transparent 24%),
+        linear-gradient(135deg, #24103f 0%, #5d1595 48%, #8b27c9 100%);
+      color: white;
+      isolation: isolate;
+    }
+
+    .hero-wow::before,
+    .hero-wow::after {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    .hero-wow::before {
+      left: -230px;
+      bottom: -280px;
+      box-shadow:
+        0 0 0 60px rgba(255,255,255,.025),
+        0 0 0 120px rgba(255,255,255,.018);
+    }
+
+    .hero-wow::after {
+      right: -260px;
+      top: -300px;
+      box-shadow:
+        0 0 0 70px rgba(255,255,255,.025),
+        0 0 0 140px rgba(255,255,255,.018);
+    }
+
+    .hero-content {
+      width: min(1000px, 90%);
+      text-align: center;
+      padding: 72px 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 9px 15px;
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      backdrop-filter: blur(8px);
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      margin-bottom: 18px;
+    }
+
+    .hero-content h1 {
+      margin: 0;
+      font-size: clamp(3.2rem, 9vw, 7rem) !important;
+      line-height: .95;
+      letter-spacing: -.055em;
+      color: white !important;
+      text-shadow: 0 12px 35px rgba(0,0,0,.22);
+    }
+
+    .hero-content h1 span {
+      background: linear-gradient(90deg, #ffffff, #ffd6ed, #c9b0ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      max-width: 700px;
+      margin: 25px auto 0;
+      font-size: clamp(1.05rem, 2.4vw, 1.45rem);
+      line-height: 1.6;
+      color: rgba(255,255,255,.90) !important;
+    }
+
+    .hero-wave {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      height: 80px;
+      margin: 24px auto 18px;
+    }
+
+    .hero-wave span {
+      display: block;
+      width: 5px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #fff, #ff9bd0);
+      animation: lightWave 1.2s ease-in-out infinite alternate;
+    }
+
+    .hero-wave span:nth-child(1) { height: 25px; animation-delay: -.1s; }
+    .hero-wave span:nth-child(2) { height: 42px; animation-delay: -.2s; }
+    .hero-wave span:nth-child(3) { height: 62px; animation-delay: -.3s; }
+    .hero-wave span:nth-child(4) { height: 78px; animation-delay: -.4s; }
+    .hero-wave span:nth-child(5) { height: 78px; animation-delay: -.5s; }
+    .hero-wave span:nth-child(6) { height: 62px; animation-delay: -.6s; }
+    .hero-wave span:nth-child(7) { height: 42px; animation-delay: -.7s; }
+    .hero-wave span:nth-child(8) { height: 25px; animation-delay: -.8s; }
+
+    @keyframes lightWave {
+      from { transform: scaleY(.65); opacity: .65; }
+      to { transform: scaleY(1.15); opacity: 1; }
+    }
+
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 9px;
+      margin: 20px 0 28px;
+    }
+
+    .hero-chips span {
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.11);
+      border: 1px solid rgba(255,255,255,.20);
+      color: white;
+      font-size: .9rem;
+      font-weight: 700;
+      backdrop-filter: blur(6px);
+    }
+
+    .hero-button {
+      display: inline-block;
+      text-decoration: none;
+      color: #4b1472 !important;
+      background: white;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 900;
+      box-shadow: 0 12px 30px rgba(0,0,0,.20);
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+
+    .hero-button:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 18px 35px rgba(0,0,0,.25);
+    }
+
+    .hero-glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(2px);
+      opacity: .55;
+      z-index: 0;
+    }
+
+    .hero-glow-1 {
+      width: 180px;
+      height: 180px;
+      background: rgba(255,79,163,.32);
+      right: 12%;
+      bottom: 8%;
+    }
+
+    .hero-glow-2 {
+      width: 130px;
+      height: 130px;
+      background: rgba(93,180,255,.25);
+      left: 10%;
+      top: 16%;
+    }
+
+    /* Faixa de navegação visual */
+    .explore-strip {
+      width: min(1120px, 90%);
+      margin: 32px auto 8px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .explore-strip div {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.88);
+      border: 1px solid rgba(123,31,199,.10);
+      box-shadow: 0 10px 28px rgba(53,16,93,.07);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .explore-strip div:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--wow-shadow);
+    }
+
+    .explore-strip strong {
+      color: white;
+      background: linear-gradient(135deg, var(--wow-purple), var(--wow-pink));
+      border-radius: 12px;
+      padding: 7px 9px;
+      font-size: .8rem;
+    }
+
+    .explore-strip span {
+      font-weight: 800;
+      color: var(--wow-purple-dark);
+    }
+
+    /* Todas as seções viram cartões modernos */
+    main > section {
+      position: relative;
+      width: min(1120px, 90%);
+      margin: 28px auto;
+      padding: clamp(26px, 4vw, 48px);
+      border-radius: 26px !important;
+      background: var(--wow-card) !important;
+      border: 1px solid rgba(123,31,199,.11) !important;
+      box-shadow: var(--wow-shadow) !important;
+      overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    main > section::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--wow-purple), var(--wow-pink), var(--wow-blue));
+    }
+
+    main > section:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 24px 55px rgba(73,24,112,.15) !important;
+    }
+
+    main > section h1,
+    main > section h2 {
+      color: var(--wow-purple-dark) !important;
+      letter-spacing: -.02em;
+    }
+
+    main > section h2 {
+      font-size: clamp(1.7rem, 3vw, 2.45rem) !important;
+      margin-bottom: 18px;
+    }
+
+    main > section h3 {
+      color: var(--wow-purple) !important;
+      margin-top: 34px;
+      position: relative;
+    }
+
+    main > section h3::after {
+      content: "";
+      display: block;
+      width: 58px;
+      height: 4px;
+      border-radius: 99px;
+      margin-top: 9px;
+      background: linear-gradient(90deg, var(--wow-purple), var(--wow-pink));
+    }
+
+    main > section h4 {
+      color: #6818a6 !important;
+    }
+
+    main > section p,
+    main > section li {
+      line-height: 1.75;
+    }
+
+    /* Destaque especial para a atividade dos quatro contextos */
+    #optica-contextos {
+      background:
+        linear-gradient(180deg, rgba(239,226,255,.55), rgba(255,255,255,.94) 24%),
+        var(--wow-card) !important;
+    }
+
+    #optica-contextos h3 {
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(123,31,199,.08), rgba(255,79,163,.06));
+      border: 1px solid rgba(123,31,199,.09);
+    }
+
+    #optica-contextos .imagem-placeholder {
+      margin: 20px auto 28px;
+      padding: 12px;
+      border-radius: 20px;
+      background: white;
+      border: 1px solid rgba(123,31,199,.10);
+      box-shadow: 0 12px 30px rgba(53,16,93,.08);
+    }
+
+    #optica-contextos img {
+      border-radius: 14px;
+      max-width: 100%;
+      display: block;
+      margin: auto;
+    }
+
+    /* Thomas Young com destaque de "experimento" */
+    #thomas-young {
+      background:
+        radial-gradient(circle at 95% 10%, rgba(255,79,163,.11), transparent 25%),
+        radial-gradient(circle at 5% 90%, rgba(75,123,236,.09), transparent 25%),
+        var(--wow-card) !important;
+    }
+
+    #thomas-young .fluxo-tecnologia {
+      margin: 24px 0;
+      padding: 22px;
+      border-radius: 18px;
+      text-align: center;
+      background: linear-gradient(135deg, #f2e7ff, #ffe8f3);
+      border: 1px solid rgba(123,31,199,.12);
+      color: var(--wow-purple-dark);
+      box-shadow: inset 0 0 30px rgba(255,255,255,.65);
+    }
+
+    #thomas-young .imagem-placeholder {
+      margin: 25px auto;
+      padding: 15px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #f8f1ff, #fff);
+      border: 1px solid rgba(123,31,199,.12);
+      text-align: center;
+    }
+
+    #thomas-young img {
+      max-width: 100%;
+      border-radius: 16px;
+      display: block;
+      margin: auto;
+    }
+
+    /* Listas mais bonitas */
+    main > section ul,
+    main > section ol {
+      padding-left: 1.35rem;
+    }
+
+    main > section li::marker {
+      color: var(--wow-purple);
+      font-weight: 900;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 55px !important;
+      background: linear-gradient(135deg, #25103f, #5d1595, #7b1fc7) !important;
+      color: white !important;
+      padding: 45px 20px !important;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: "◌  ◯  ◌  ◯  ◌";
+      display: block;
+      opacity: .15;
+      font-size: 3rem;
+      letter-spacing: 20px;
+      margin-bottom: 20px;
+    }
+
+    footer p {
+      color: rgba(255,255,255,.88) !important;
+    }
+
+    /* Responsivo */
+    @media (max-width: 800px) {
+      .hero-wow {
+        min-height: 470px;
+      }
+
+      .explore-strip {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      nav ul {
+        overflow-x: auto;
+        justify-content: flex-start;
+        flex-wrap: nowrap !important;
+      }
+
+      nav a {
+        white-space: nowrap;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero-content {
+        padding: 52px 10px;
+      }
+
+      .hero-badge {
+        font-size: .67rem;
+      }
+
+      .explore-strip {
+        grid-template-columns: 1fr;
+      }
+
+      main > section {
+        width: 92%;
+        padding: 25px 20px;
+        border-radius: 20px !important;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -58,7 +566,49 @@
   </header>
 
 
+  
+  <!-- =========================
+       HERO / CAPA DO SITE
+       ========================= -->
+  <section class="hero-wow" aria-label="Apresentação do projeto">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">PROJETO INTEGRADOR • IA E TECNOLOGIAS</div>
+
+      <h1>Descobrindo a <span>LUZ</span></h1>
+
+      <p class="hero-subtitle">
+        Óptica, tecnologia, ciência e acessibilidade em uma só experiência.
+      </p>
+
+      <div class="hero-wave" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="hero-chips">
+        <span>Óptica</span>
+        <span>Thomas Young</span>
+        <span>Tecnociência</span>
+        <span>IA</span>
+        <span>Acessibilidade</span>
+      </div>
+
+      <a class="hero-button" href="#optica">Explorar o projeto ↓</a>
+    </div>
+  </section>
+
   <main id="main-content">
+
+
+    <div class="explore-strip" aria-label="Áreas do projeto">
+      <div><strong>01</strong><span>Óptica</span></div>
+      <div><strong>02</strong><span>Thomas Young</span></div>
+      <div><strong>03</strong><span>Tecnologias</span></div>
+      <div><strong>04</strong><span>Acessibilidade</span></div>
+    </div>
 
     <!-- =========================
          ÓPTICA
