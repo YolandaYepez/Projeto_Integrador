@@ -1516,394 +1516,393 @@
 
   </section>
 
-  <!-- ATIVIDADE 2 -->
-  <section id="atividade-2">
+<!-- =========================
+     ATIVIDADE 2
+     ========================= -->
+<section id="atividade-2">
 
-    <h2>Atividade 2 – LED Fade-In e Fade-Out</h2>
+  <h2>Atividade 2 – LED Fade-In e Fade-Out</h2>
 
-    <h3>1. Apresentação da atividade</h3>
+  <h3>1. Apresentação da atividade</h3>
 
-    <p>
-      Desenvolvemos e simulamos no Tinkercad um circuito com Arduino,
-      resistor e LED para compreender, na prática, a relação entre
-      eletrônica e programação. O circuito foi montado, testado e ajustado
-      até funcionar corretamente.
-    </p>
+  <p>
+    Desenvolvemos e simulamos no Tinkercad um circuito com Arduino,
+    resistor e LED para compreender, na prática, a relação entre
+    eletrônica e programação. O circuito foi montado, testado e
+    ajustado até funcionar corretamente.
+  </p>
 
-    <h3>Montagem do circuito</h3>
+  <h3>Montagem do circuito</h3>
 
-    <p>
-      O Arduino controla o LED pelo pino 11; o resistor limita a corrente
-      e o GND fecha o circuito.
-    </p>
+  <p>
+    O Arduino controla o LED pelo pino 11. O resistor limita a corrente
+    elétrica e o GND fecha o circuito.
+  </p>
 
-    <!-- IMAGEM FADE-IN -->
-
-    <div class="atividade-imagem">
-
-      <div class="imagem-placeholder">
-
-        <img
-          src="img/led-fade-in.png"
-          alt="Circuito do LED Fade-In montado no Tinkercad"
-        >
-
-        <p>
-          Figura 1 – Circuito do LED Fade-In montado e simulado no Tinkercad.
-        </p>
-
-      </div>
-
-    </div>
-
-    <h3>Programação</h3>
-
-    <p>
-      No Fade-In, o brilho do LED começa baixo e aumenta gradualmente
-      até atingir uma intensidade maior.
-    </p>
-
-    <p>
-      No Fade-Out, o brilho começa em 255 e diminui até 0.
-      O <code>analogWrite()</code> controla o PWM e o <code>delay(50)</code>
-      torna a transição suave.
-    </p>
-
-    <!-- IMAGEM FADE-OUT -->
-
-    <div class="atividade-imagem">
-
-      <div class="imagem-placeholder">
-
-        <img
-          src="img/led-fade-out.png"
-          alt="Circuito do LED Fade-Out montado no Tinkercad"
-        >
-
-        <p>
-          Figura 2 – Circuito utilizado para realizar o efeito Fade-Out
-          no LED, diminuindo gradualmente sua intensidade luminosa.
-        </p>
-
-      </div>
-
-    </div>
-
-    <h3>2. Explicação científica</h3>
-
-    <p>
-      LED significa Diodo Emissor de Luz. É um semicondutor que transforma
-      energia elétrica em luz por eletroluminescência.
-    </p>
-
-    <h3>3. Relação com a deficiência visual</h3>
-
-    <p>
-      A iluminação interfere na segurança, orientação e percepção.
-      Pouca luz dificulta a identificação de objetos e obstáculos,
-      enquanto excesso de brilho pode causar ofuscamento.
-      Por isso, a iluminação deve ser ajustável.
-    </p>
-
-    <h3>4. Tecnologias existentes</h3>
-
-    <ul>
-      <li>
-        <strong>Magno Lumina Max:</strong> iluminação LED regulável.
-      </li>
-
-      <li>
-        <strong>Mobilux Digital Touch HD:</strong>
-        lupa eletrônica com ampliação, contraste e LED.
-      </li>
-
-      <li>
-        <strong>Quick Look Zoom:</strong>
-        lupa digital com controle de brilho e luz.
-      </li>
-
-      <li>
-        <strong>BenQ e-Reading Lamp:</strong>
-        iluminação ampla e ajuste automático.
-      </li>
-
-      <li>
-        <strong>eSight 4:</strong>
-        câmeras e telas para melhorar imagens.
-      </li>
-    </ul>
-
-    <h3>5. Nossa proposta – Luz Assist</h3>
-
-    <p>
-      A Luz Assist usaria sensores para medir a luz e um Arduino
-      para ajustar automaticamente a intensidade de uma lâmpada LED.
-      Em ambientes escuros, aumentaria gradualmente; com luz suficiente,
-      reduziria o brilho.
-    </p>
-
-    <div class="fluxo-tecnologia">
-
+  <div class="atividade-imagem">
+    <div class="imagem-placeholder">
+      <img src="img/fade-in.png"
+           alt="Circuito de LED Fade-In montado no Tinkercad">
       <p>
-        <strong>
-          Sensor de luminosidade → Arduino → Processamento →
-          Controle do LED → Iluminação adequada
-        </strong>
+        Circuito utilizado para realizar o efeito LED Fade-In no Tinkercad.
       </p>
-
     </div>
-
-    <p>
-      Componentes: Arduino, sensor de luminosidade, LED, resistores,
-      fios e fonte. Uma versão avançada poderia usar IA para aprender
-      os níveis mais adequados.
-    </p>
-
-    <h3>6. Uso da Inteligência Artificial</h3>
-
-    <p>
-      A IA foi usada como apoio à pesquisa e organização das ideias,
-      com conferência das informações em fontes confiáveis.
-      Também poderia tornar a Luz Assist mais personalizada.
-    </p>
-
-    <h3>7. Conclusão</h3>
-
-    <p>
-      A atividade mostrou que controlar a intensidade da luz pode contribuir
-      para segurança, conforto e autonomia, relacionando Arduino,
-      PWM e acessibilidade.
-    </p>
-
-  </section>
-
-  <!-- ATIVIDADE 3 -->
-  <section id="atividade-3">
-
-    <h2>Atividade 3 – LED RGB</h2>
-
-    <h3>1. Apresentação da atividade</h3>
-
-    <p>
-      Usamos o Tinkercad para montar e simular um circuito com LED RGB.
-      O componente possui vermelho, verde e azul, que podem ser controlados
-      separadamente para produzir outras cores.
-    </p>
-
-    <h3>Montagem do circuito</h3>
-<p>O circuito utiliza Arduino, LED RGB e resistores. A simulação permitiu testar combinações de cores e identificar possíveis erros.</p>
-
-<div class="atividade-imagem">
-  <div class="imagem-placeholder">
-    <img src="img/led-rgb.png" alt="Circuito com LED RGB montado no Tinkercad">
-    <p>Circuito com LED RGB e Arduino montado e simulado no Tinkercad.</p>
   </div>
-</div>
 
-<h3>Programação do LED RGB</h3>
-<p>A programação controla as intensidades de vermelho, verde e azul para formar diferentes cores.</p>
-
-    <p>
-      O circuito utiliza Arduino, LED RGB e resistores.
-      A simulação permitiu testar combinações de cores e identificar
-      possíveis erros.
-    </p>
-
-    <h3>Programação do LED RGB</h3>
-
-    <p>
-      A programação controla as intensidades de vermelho, verde e azul
-      para formar diferentes cores.
-    </p>
-
-    <h3>2. Explicação científica</h3>
-
-    <p>
-      RGB significa Red, Green e Blue. Na mistura aditiva,
-      vermelho + verde produz amarelo, verde + azul produz ciano,
-      vermelho + azul produz magenta e as três cores juntas podem produzir branco.
-    </p>
-
-    <h3>3. Relação com a deficiência visual</h3>
-
-    <p>
-      Cores e contraste ajudam na percepção de textos, objetos e sinais.
-      Porém, informações acessíveis não devem depender somente da cor;
-      textos, símbolos, formas e contraste também devem ser usados.
-    </p>
-
-    <h3>4. Tecnologias existentes</h3>
-
-    <ul>
-      <li>
-        <strong>Envision Glasses:</strong>
-        câmera, IA e reconhecimento de cores.
-      </li>
-
-      <li>
-        <strong>Seeing AI:</strong>
-        aplicativo que reconhece textos, objetos e cores.
-      </li>
-
-      <li>
-        <strong>OrCam MyEye:</strong>
-        fornece informações visuais por áudio.
-      </li>
-
-      <li>
-        <strong>eSight:</strong>
-        usa processamento de imagens, contraste e cores.
-      </li>
-
-      <li>
-        <strong>TOPAZ EZ HD:</strong>
-        ampliação, iluminação e modos de contraste.
-      </li>
-    </ul>
-
-    <h3>5. Nossa proposta – Color Assist</h3>
-
-    <p>
-      O Color Assist seria um dispositivo para pessoas com dificuldade
-      de identificar cores. Um sensor ou câmera identificaria a cor;
-      o Arduino processaria os dados; o LED RGB mostraria a cor e um
-      buzzer ou alto-falante poderia dizer seu nome.
-    </p>
-
-    <div class="fluxo-tecnologia">
-
+  <div class="atividade-imagem">
+    <div class="imagem-placeholder">
+      <img src="img/fade-out.png"
+           alt="Circuito de LED Fade-Out montado no Tinkercad">
       <p>
-        <strong>
-          Objeto → Sensor/Câmera → Arduino/IA → Processamento →
-          LED RGB + Áudio → Informação ao usuário
-        </strong>
+        Circuito utilizado para realizar o efeito LED Fade-Out no Tinkercad.
       </p>
-
     </div>
+  </div>
 
+  <h3>Programação</h3>
+
+  <p>
+    No Fade-In, o brilho do LED começa baixo e aumenta gradualmente.
+    No Fade-Out, o brilho começa alto e diminui até chegar a zero.
+    O comando <code>analogWrite()</code> controla o PWM, enquanto
+    <code>delay(50)</code> torna a transição mais suave.
+  </p>
+
+  <h3>2. Explicação científica</h3>
+
+  <p>
+    LED significa Diodo Emissor de Luz. É um componente semicondutor
+    que transforma energia elétrica em luz por meio da eletroluminescência.
+  </p>
+
+  <p>
+    O PWM permite controlar a potência média fornecida ao LED,
+    fazendo com que ele pareça mais claro ou mais fraco.
+  </p>
+
+  <h3>3. Relação com a deficiência visual</h3>
+
+  <p>
+    A iluminação interfere na segurança, orientação e percepção.
+    Pouca luz pode dificultar a identificação de objetos e obstáculos,
+    enquanto o excesso de brilho pode causar desconforto e ofuscamento.
+    Por isso, uma iluminação ajustável pode contribuir para maior conforto
+    e acessibilidade.
+  </p>
+
+  <h3>4. Tecnologias existentes</h3>
+
+  <ul>
+    <li>
+      <strong>Magno Lumina Max:</strong>
+      iluminação LED regulável.
+    </li>
+
+    <li>
+      <strong>Mobilux Digital Touch HD:</strong>
+      lupa eletrônica com ampliação, contraste e iluminação LED.
+    </li>
+
+    <li>
+      <strong>Quick Look Zoom:</strong>
+      lupa digital com controle de brilho e iluminação.
+    </li>
+
+    <li>
+      <strong>BenQ e-Reading Lamp:</strong>
+      iluminação ampla com recursos de ajuste automático.
+    </li>
+
+    <li>
+      <strong>eSight 4:</strong>
+      utiliza câmeras e telas para melhorar a visualização de imagens.
+    </li>
+  </ul>
+
+  <h3>5. Nossa proposta – Luz Assist</h3>
+
+  <p>
+    A Luz Assist seria um sistema que utilizaria sensores para medir
+    a intensidade da luz e um Arduino para controlar automaticamente
+    a intensidade de uma lâmpada LED.
+  </p>
+
+  <p>
+    Em ambientes escuros, o sistema aumentaria gradualmente a iluminação.
+    Quando houvesse luz suficiente, reduziria o brilho para evitar excesso
+    de luminosidade.
+  </p>
+
+  <div class="fluxo-tecnologia">
     <p>
-      Componentes: Arduino, LED RGB, sensor de cor, resistores,
-      buzzer ou alto-falante, câmera, comunicação, bateria e estrutura.
+      <strong>
+        Sensor de luminosidade → Arduino → Processamento →
+        Controle do LED → Iluminação adequada
+      </strong>
     </p>
+  </div>
 
-    <h3>6. Inteligência Artificial</h3>
+  <p>
+    Os componentes necessários seriam Arduino, sensor de luminosidade,
+    LED, resistores, fios e uma fonte de energia.
+  </p>
 
+  <p>
+    Uma versão mais avançada poderia utilizar Inteligência Artificial
+    para aprender os níveis de iluminação mais adequados para cada usuário.
+  </p>
+
+  <h3>6. Uso da Inteligência Artificial</h3>
+
+  <p>
+    A Inteligência Artificial foi utilizada como apoio à pesquisa,
+    organização das ideias e compreensão dos conteúdos relacionados
+    à eletrônica, iluminação, acessibilidade e programação.
+  </p>
+
+  <p>
+    Em uma versão avançada da Luz Assist, a IA poderia analisar padrões
+    de utilização e ajudar a personalizar automaticamente a iluminação
+    de acordo com as preferências do usuário.
+  </p>
+
+  <h3>7. Conclusão</h3>
+
+  <p>
+    A atividade mostrou como o Arduino, o PWM e o controle da intensidade
+    luminosa podem ser utilizados para criar soluções tecnológicas.
+    O controle gradual da iluminação pode contribuir para segurança,
+    conforto e acessibilidade, principalmente em situações nas quais
+    diferentes níveis de luminosidade são necessários.
+  </p>
+
+</section>
+
+
+<!-- =========================
+     ATIVIDADE 3
+     ========================= -->
+<section id="atividade-3">
+
+  <h2>Atividade 3 – LED RGB</h2>
+
+  <h3>1. Apresentação da atividade</h3>
+
+  <p>
+    Utilizamos o Tinkercad para montar e simular um circuito com LED RGB.
+    O componente possui três cores principais: vermelho, verde e azul,
+    que podem ser controladas separadamente para produzir diferentes cores.
+  </p>
+
+  <h3>Montagem do circuito</h3>
+
+  <p>
+    O circuito utiliza Arduino, LED RGB e resistores. A simulação permitiu
+    testar diferentes combinações de cores e identificar possíveis erros
+    durante a montagem.
+  </p>
+
+  <div class="atividade-imagem">
+    <div class="imagem-placeholder">
+      <img src="img/led-rgb.png"
+           alt="Circuito com LED RGB montado no Tinkercad">
+      <p>
+        Circuito com LED RGB, Arduino e resistores montado e simulado no Tinkercad.
+      </p>
+    </div>
+  </div>
+
+  <h3>Programação do LED RGB</h3>
+
+  <p>
+    A programação controla separadamente as intensidades das cores
+    vermelho, verde e azul. Com diferentes combinações dessas três cores,
+    é possível produzir diversas outras cores.
+  </p>
+
+  <h3>2. Explicação científica</h3>
+
+  <p>
+    RGB significa Red, Green e Blue, ou seja, vermelho, verde e azul.
+    Essas são as três cores utilizadas na mistura aditiva da luz.
+  </p>
+
+  <p>
+    Na mistura aditiva:
+  </p>
+
+  <ul>
+    <li><strong>Vermelho + Verde = Amarelo</strong></li>
+    <li><strong>Verde + Azul = Ciano</strong></li>
+    <li><strong>Vermelho + Azul = Magenta</strong></li>
+    <li><strong>Vermelho + Verde + Azul = Branco</strong></li>
+  </ul>
+
+  <h3>3. Relação com a deficiência visual</h3>
+
+  <p>
+    Cores e contraste podem ajudar na percepção de textos, objetos,
+    sinais e informações visuais.
+  </p>
+
+  <p>
+    Porém, informações acessíveis não devem depender somente das cores.
+    Textos, símbolos, formas, padrões e contraste também devem ser
+    utilizados para facilitar a compreensão por pessoas com diferentes
+    características visuais.
+  </p>
+
+  <h3>4. Tecnologias existentes</h3>
+
+  <ul>
+    <li>
+      <strong>Envision Glasses:</strong>
+      utiliza câmera e Inteligência Artificial para auxiliar na interpretação
+      de informações visuais.
+    </li>
+
+    <li>
+      <strong>Seeing AI:</strong>
+      aplicativo capaz de reconhecer textos, objetos e algumas características
+      visuais.
+    </li>
+
+    <li>
+      <strong>OrCam MyEye:</strong>
+      dispositivo que fornece informações visuais por meio de áudio.
+    </li>
+
+    <li>
+      <strong>eSight:</strong>
+      utiliza processamento de imagens, contraste e outros recursos
+      para auxiliar pessoas com baixa visão.
+    </li>
+
+    <li>
+      <strong>TOPAZ EZ HD:</strong>
+      equipamento de ampliação com iluminação e diferentes modos de contraste.
+    </li>
+  </ul>
+
+  <h3>5. Nossa proposta – Color Assist</h3>
+
+  <p>
+    O Color Assist seria um dispositivo desenvolvido para auxiliar pessoas
+    que possuem dificuldade para identificar determinadas cores.
+  </p>
+
+  <p>
+    Um sensor ou câmera identificaria a cor de um objeto. O Arduino ou
+    outro microcontrolador processaria as informações e o LED RGB poderia
+    representar a cor identificada. Além disso, um buzzer ou alto-falante
+    poderia informar o nome da cor por áudio.
+  </p>
+
+  <div class="fluxo-tecnologia">
     <p>
-      Em uma versão avançada, a IA poderia identificar cores,
-      objetos e textos. No trabalho, o ChatGPT ajudou na pesquisa
-      e organização, e as informações importantes foram verificadas
-      em fontes confiáveis.
+      <strong>
+        Objeto → Sensor/Câmera → Arduino/IA → Processamento →
+        LED RGB + Áudio → Informação ao usuário
+      </strong>
     </p>
+  </div>
 
-    <h3>7. Conclusão</h3>
+  <p>
+    Os componentes poderiam incluir Arduino, LED RGB, sensor de cor,
+    resistores, buzzer ou alto-falante, câmera, sistema de comunicação,
+    bateria e uma estrutura para o dispositivo.
+  </p>
 
-    <p>
-      A atividade mostrou como RGB, contraste, programação e eletrônica
-      podem ser usados em soluções acessíveis, combinando informação
-      visual e sonora para aumentar a autonomia.
-    </p>
+  <h3>6. Inteligência Artificial</h3>
 
-  </section>
+  <p>
+    Em uma versão avançada, a Inteligência Artificial poderia ajudar
+    a identificar cores, objetos e textos captados pela câmera.
+  </p>
 
-  <!-- INTELIGÊNCIA ARTIFICIAL -->
-  <section id="ia">
+  <p>
+    Durante o desenvolvimento do trabalho, o ChatGPT foi utilizado como
+    apoio à pesquisa, organização das informações e compreensão dos
+    conteúdos. As informações importantes foram conferidas em fontes
+    de referência.
+  </p>
 
-    <h2>6. Uso da Inteligência Artificial no Desenvolvimento do Trabalho</h2>
+  <h3>7. Conclusão</h3>
 
-    <p>
-      Usamos a IA como apoio à pesquisa, organização das ideias
-      e compreensão dos conteúdos. O ChatGPT ajudou a explicar luz,
-      cores, óptica, Disco de Newton e acessibilidade.
-    </p>
+  <p>
+    A atividade mostrou como o LED RGB, a mistura aditiva das cores,
+    a programação e a eletrônica podem ser utilizados no desenvolvimento
+    de soluções acessíveis.
+  </p>
 
-    <p>
-      Os prompts foram baseados nos tópicos do trabalho, e as respostas
-      ajudaram na compreensão e organização das informações.
-    </p>
+  <p>
+    A combinação de informações visuais e sonoras pode ajudar a tornar
+    determinadas tecnologias mais acessíveis e aumentar a autonomia
+    dos usuários.
+  </p>
 
-    <p>
-      As informações importantes foram conferidas em fontes confiáveis.
-      Assim, a IA foi utilizada como apoio, e não como única fonte.
-    </p>
+</section>
 
-  </section>
+<!-- =========================
+     REFERÊNCIAS
+     ========================= -->
+<section id="referencias">
 
-  <!-- CONCLUSÃO -->
-  <section id="conclusao">
+  <h2>Referências</h2>
 
-    <h2>7. Conclusão</h2>
+  <ol class="referencias">
 
-    <p>
-      O Disco de Newton ajudou a compreender a relação entre a luz branca
-      e as cores do espectro visível, além da mistura visual causada
-      pela rotação rápida.
-    </p>
+    <li>
+      BRASIL ESCOLA.
+      <strong>Disco de Newton.</strong>
+      Disponível em:
+      https://brasilescola.uol.com.br/fisica/disco-newton.htm.
+      Acesso em: 18 ago. 2026.
+    </li>
 
-    <p>
-      Também aprendemos que iluminação, cores e características da visão
-      influenciam a percepção dos objetos.
-    </p>
+    <li>
+      TODA MATÉRIA.
+      <strong>Disco de Newton.</strong>
+      Disponível em:
+      https://www.todamateria.com.br/disco-de-newton/.
+      Acesso em: 18 ago. 2026.
+    </li>
 
-    <p>
-      Esses conhecimentos são importantes para desenvolver tecnologias
-      que auxiliem pessoas com deficiência visual ou baixa visão.
-    </p>
+    <li>
+      MUNDO EDUCAÇÃO.
+      <strong>Disco de Newton.</strong>
+      Disponível em:
+      https://mundoeducacao.uol.com.br/fisica/disco-newton.htm.
+      Acesso em: 18 ago. 2026.
+    </li>
 
-  </section>
+    <li>
+      NASA.
+      <strong>Isaac Newton.</strong>
+      Disponível em:
+      https://science.nasa.gov/people/isaac-newton/.
+      Acesso em: 18 ago. 2026.
+    </li>
 
-  <!-- REFERÊNCIAS -->
-  <section id="referencias">
+    <li>
+      WORLD HEALTH ORGANIZATION.
+      <strong>Blindness and vision impairment.</strong>
+      Disponível em:
+      https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment.
+      Acesso em: 18 ago. 2026.
+    </li>
 
-    <h2>8. Referências</h2>
+    <li>
+      OPENAI.
+      <strong>ChatGPT.</strong>
+      Disponível em:
+      https://chatgpt.com/.
+      Acesso em: 18 ago. 2026.
+    </li>
 
-    <ol class="referencias">
+  </ol>
 
-      <li>
-        BRASIL ESCOLA. <strong>Disco de Newton.</strong>
-        Disponível em:
-        https://brasilescola.uol.com.br/fisica/disco-newton.htm.
-        Acesso em: 18 ago. 2026.
-      </li>
-
-      <li>
-        TODA MATÉRIA. <strong>Disco de Newton.</strong>
-        Disponível em:
-        https://www.todamateria.com.br/disco-de-newton/.
-        Acesso em: 18 ago. 2026.
-      </li>
-
-      <li>
-        MUNDO EDUCAÇÃO. <strong>Disco de Newton.</strong>
-        Disponível em:
-        https://mundoeducacao.uol.com.br/fisica/disco-newton.htm.
-        Acesso em: 18 ago. 2026.
-      </li>
-
-      <li>
-        NASA. <strong>Isaac Newton.</strong>
-        Disponível em:
-        https://science.nasa.gov/people/isaac-newton/.
-        Acesso em: 18 ago. 2026.
-      </li>
-
-      <li>
-        WORLD HEALTH ORGANIZATION.
-        <strong>Blindness and vision impairment.</strong>
-        Disponível em:
-        https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment.
-        Acesso em: 18 ago. 2026.
-      </li>
-
-      <li>
-        OPENAI. <strong>ChatGPT.</strong>
-        Disponível em:
-        https://chatgpt.com/.
-        Acesso em: 18 ago. 2026.
-      </li>
-
-    </ol>
-
-  </section>
+</section>
 
 </main>
 
