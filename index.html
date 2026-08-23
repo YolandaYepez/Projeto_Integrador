@@ -431,6 +431,67 @@
       font-weight: 900;
     }
 
+    /* IMAGENS DAS ATIVIDADES */
+    .atividade-imagem {
+      margin: 28px auto;
+      max-width: 900px;
+    }
+
+    .atividade-imagem .imagem-placeholder {
+      padding: 15px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #f8f1ff, #ffffff);
+      border: 1px solid rgba(123,31,199,.12);
+      box-shadow: 0 12px 30px rgba(53,16,93,.08);
+      text-align: center;
+    }
+
+    .atividade-imagem img {
+      width: 100%;
+      max-width: 850px;
+      height: auto;
+      border-radius: 16px;
+      display: block;
+      margin: auto;
+    }
+
+    .atividade-imagem p {
+      margin-bottom: 5px;
+      color: var(--wow-muted);
+      font-size: .95rem;
+    }
+
+    .fluxo-tecnologia {
+      margin: 24px 0;
+      padding: 22px;
+      border-radius: 18px;
+      text-align: center;
+      background: linear-gradient(135deg, #f2e7ff, #ffe8f3);
+      border: 1px solid rgba(123,31,199,.12);
+      color: var(--wow-purple-dark);
+      box-shadow: inset 0 0 30px rgba(255,255,255,.65);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 25px;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+
+    th,
+    td {
+      padding: 14px;
+      border: 1px solid rgba(123,31,199,.12);
+      text-align: left;
+    }
+
+    th {
+      background: linear-gradient(135deg, #7b1fc7, #9d35d5);
+      color: white;
+    }
+
     footer {
       margin-top: 55px !important;
       background: linear-gradient(135deg, #25103f, #5d1595, #7b1fc7) !important;
@@ -495,7 +556,9 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
+      html {
+        scroll-behavior: auto;
+      }
 
       *, *::before, *::after {
         animation-duration: .01ms !important;
@@ -532,19 +595,17 @@
   <nav aria-label="Navegação principal">
     <ul>
       <li><a href="#optica">Óptica</a></li>
-      <li><a href="#tecnociencia">Tecnociência</a></li>
       <li><a href="#thomas-young">Thomas Young</a></li>
       <li><a href="#optica-contextos">Óptica em Diversos Contextos</a></li>
-      <li><a href="#robotica">Robótica</a></li>
       <li><a href="#disco-newton">Disco de Newton</a></li>
       <li><a href="#ciencia-luz">Ciência da Luz</a></li>
       <li><a href="#deficiencia-visual">Deficiência Visual</a></li>
       <li><a href="#tecnologias">Tecnologias</a></li>
       <li><a href="#proposta">Nossa Proposta</a></li>
-      <li><a href="#ia">Inteligência Artificial</a></li>
-      <li><a href="#conclusao">Conclusão</a></li>
       <li><a href="#atividade-2">Atividade 2</a></li>
       <li><a href="#atividade-3">Atividade 3</a></li>
+      <li><a href="#ia">Inteligência Artificial</a></li>
+      <li><a href="#conclusao">Conclusão</a></li>
       <li><a href="#referencias">Referências</a></li>
     </ul>
   </nav>
@@ -562,23 +623,15 @@
       PROJETO INTEGRADOR • IA E TECNOLOGIAS
     </div>
 
-    <h1>
-      Descobrindo a <span>LUZ</span>
-    </h1>
+    <h1>Descobrindo a <span>LUZ</span></h1>
 
     <p class="hero-subtitle">
       Óptica, tecnologia, ciência e acessibilidade em uma só experiência.
     </p>
 
     <div class="hero-wave" aria-hidden="true">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
     </div>
 
     <div class="hero-chips">
@@ -594,23 +647,18 @@
     </a>
 
   </div>
-
 </section>
 
 <main id="main-content">
 
   <div class="explore-strip" aria-label="Áreas do projeto">
     <div><strong>01</strong><span>Óptica</span></div>
-    <div><strong>02</strong><span>Tecnociência</span></div>
+    <div><strong>02</strong><span>Thomas Young</span></div>
     <div><strong>03</strong><span>Tecnologias</span></div>
     <div><strong>04</strong><span>Acessibilidade</span></div>
   </div>
 
-
-  <!-- =========================
-       ÓPTICA
-       ========================= -->
-
+  <!-- ÓPTICA -->
   <section id="optica">
 
     <h1>Tecnociência, Óptica e Informação</h1>
@@ -631,38 +679,28 @@
 
   </section>
 
-
-  <!-- =========================
-       TECNOCIÊNCIA
-       ========================= -->
-
-  <section id="tecnociencia">
-
-    <h2>Tecnociência</h2>
-
-    <p>
-      A tecnociência une investigação científica e aplicação tecnológica
-      para transformar conhecimentos em soluções para problemas do cotidiano.
-    </p>
-
-    <p>
-      Na acessibilidade, isso contribui para leitores de tela,
-      reconhecimento de imagens, inteligência artificial, ampliação,
-      sensores e interfaces acessíveis.
-    </p>
-
-  </section>
-
-
-  <!-- =========================
-       ÓPTICA EM DIVERSOS CONTEXTOS
-       ========================= -->
-
+  <!-- ÓPTICA EM DIVERSOS CONTEXTOS -->
   <section id="optica-contextos">
 
     <h2>
       IA e Tecnologias: Desvendando a Óptica Aplicada em Diversos Contextos
     </h2>
+
+    <section id="tecnociencia">
+
+      <h2>Tecnociência</h2>
+
+      <p>
+        A tecnociência une investigação científica e aplicação tecnológica
+        para transformar conhecimentos em soluções para problemas do cotidiano.
+      </p>
+
+      <p>
+        Na acessibilidade, isso contribui para leitores de tela,
+        reconhecimento de imagens, IA, ampliação, sensores e interfaces acessíveis.
+      </p>
+
+    </section>
 
     <div class="infografico-optica">
 
@@ -675,11 +713,7 @@
 
   </section>
 
-
-  <!-- =========================
-       THOMAS YOUNG
-       ========================= -->
-
+  <!-- THOMAS YOUNG -->
   <section id="thomas-young">
 
     <h2>AFINAL, O QUE É A LUZ?</h2>
@@ -771,7 +805,6 @@
     <h4>O que acontece no experimento?</h4>
 
     <ul>
-
       <li>
         A luz passa por uma abertura estreita e é direcionada para duas
         pequenas aberturas.
@@ -790,7 +823,6 @@
         Em uma tela, aparecem regiões claras e escuras formando um padrão
         de interferência.
       </li>
-
     </ul>
 
     <div class="fluxo-tecnologia">
@@ -857,11 +889,7 @@
 
   </section>
 
-
-  <!-- =========================
-       ROBÓTICA
-       ========================= -->
-
+  <!-- ROBÓTICA -->
   <section id="robotica">
 
     <h2>Robótica</h2>
@@ -878,11 +906,7 @@
 
   </section>
 
-
-  <!-- =========================
-       DISCO DE NEWTON
-       ========================= -->
-
+  <!-- DISCO DE NEWTON -->
   <section id="disco-newton">
 
     <h2>1. Apresentação da Atividade: Disco de Newton</h2>
@@ -916,12 +940,10 @@
 
       <div class="imagem-placeholder">
 
-        <p>
-          <img
-            src="img/disco.png"
-            alt="Imagem disco de Newton"
-          >
-        </p>
+        <img
+          src="img/disco.png"
+          alt="Imagem disco de Newton"
+        >
 
         <p>
           Disco de Newton dividido em sete partes com as cores do espectro visível.
@@ -959,11 +981,7 @@
 
   </section>
 
-
-  <!-- =========================
-       CIÊNCIA DA LUZ
-       ========================= -->
-
+  <!-- CIÊNCIA DA LUZ -->
   <section id="ciencia-luz">
 
     <h2>2. Explicação Científica</h2>
@@ -971,9 +989,9 @@
     <h3>2.1 Quem foi Isaac Newton?</h3>
 
     <p>
-      Isaac Newton (1643–1727) foi um importante físico, matemático e
-      astrônomo. Seus estudos de óptica, incluindo experimentos com prismas,
-      ajudaram a compreender melhor a luz e as cores.
+      Isaac Newton (1643–1727) foi um importante físico, matemático e astrônomo.
+      Seus estudos de óptica, incluindo experimentos com prismas, ajudaram
+      a compreender melhor a luz e as cores.
     </p>
 
     <h3>2.2 O que é a Luz Branca?</h3>
@@ -992,7 +1010,6 @@
     </p>
 
     <ul>
-
       <li>
         <strong>Vermelho:</strong> maior comprimento de onda na faixa visível.
       </li>
@@ -1000,7 +1017,6 @@
       <li>
         <strong>Violeta:</strong> menor comprimento de onda na faixa visível.
       </li>
-
     </ul>
 
     <h3>2.4 O Espectro Visível</h3>
@@ -1010,7 +1026,6 @@
     </p>
 
     <ol>
-
       <li>Vermelho</li>
       <li>Laranja</li>
       <li>Amarelo</li>
@@ -1018,7 +1033,6 @@
       <li>Azul</li>
       <li>Anil ou Índigo</li>
       <li>Violeta</li>
-
     </ol>
 
     <h3>2.5 Mistura das Cores: Adição x Subtração</h3>
@@ -1053,8 +1067,8 @@
     <h4>Sobreposição visual</h4>
 
     <p>
-      O cérebro integra as cores apresentadas sucessivamente e deixa de
-      percebê-las isoladamente.
+      O cérebro integra as cores apresentadas sucessivamente e deixa
+      de percebê-las isoladamente.
     </p>
 
     <h4>Fusão das cores</h4>
@@ -1066,11 +1080,7 @@
 
   </section>
 
-
-  <!-- =========================
-       DEFICIÊNCIA VISUAL
-       ========================= -->
-
+  <!-- DEFICIÊNCIA VISUAL -->
   <section id="deficiencia-visual">
 
     <h2>3. Relação com a Deficiência Visual</h2>
@@ -1138,18 +1148,20 @@
     <h4>Volume</h4>
 
     <p>
-      Regiões claras e escuras ajudam a interpretar profundidade e tridimensionalidade.
+      Regiões claras e escuras ajudam a interpretar profundidade
+      e tridimensionalidade.
     </p>
 
     <h4>Textura e acabamento</h4>
 
     <p>
-      Superfícies polidas produzem mais reflexos; superfícies foscas espalham a luz.
+      Superfícies polidas produzem mais reflexos; superfícies foscas
+      espalham a luz.
     </p>
 
     <h3>
-      3.4 Por que compreender a formação das cores é importante
-      para desenvolver tecnologias de acessibilidade?
+      3.4 Por que compreender a formação das cores é importante para
+      desenvolver tecnologias de acessibilidade?
     </h3>
 
     <p>
@@ -1161,11 +1173,7 @@
 
   </section>
 
-
-  <!-- =========================
-       TECNOLOGIAS
-       ========================= -->
-
+  <!-- TECNOLOGIAS -->
   <section id="tecnologias">
 
     <h2>4. Tecnologias Existentes</h2>
@@ -1173,8 +1181,8 @@
     <h3>4.1 Óculos Eletrônicos para Baixa Visão</h3>
 
     <p>
-      Utilizam câmeras e telas para apresentar imagens ampliadas, com recursos
-      de brilho, contraste e cores.
+      Utilizam câmeras e telas para apresentar imagens ampliadas,
+      com recursos de brilho, contraste e cores.
     </p>
 
     <h4>Como funcionam?</h4>
@@ -1198,15 +1206,15 @@
     <h3>4.2 Leitores de Cor</h3>
 
     <p>
-      Usam sensores ópticos para analisar a luz refletida e identificar cores,
-      podendo informar o resultado por áudio.
+      Usam sensores ópticos para analisar a luz refletida e identificar
+      cores, podendo informar o resultado por áudio.
     </p>
 
     <h4>Como funcionam?</h4>
 
     <p>
-      O usuário aponta o sensor para uma superfície e o dispositivo processa
-      e informa a cor.
+      O usuário aponta o sensor para uma superfície e o dispositivo
+      processa e informa a cor.
     </p>
 
     <p>
@@ -1278,8 +1286,8 @@
     </p>
 
     <p>
-      Podem detectar carros, galhos, portas, placas, paredes, objetos
-      suspensos e desníveis.
+      Podem detectar carros, galhos, portas, placas, paredes,
+      objetos suspensos e desníveis.
     </p>
 
     <h4>Como a pessoa recebe o alerta?</h4>
@@ -1293,8 +1301,8 @@
     <h4>Sensores ópticos</h4>
 
     <p>
-      LiDAR usa luz para medir distâncias; câmeras podem trabalhar com IA
-      para analisar objetos.
+      LiDAR usa luz para medir distâncias; câmeras podem trabalhar
+      com IA para analisar objetos.
     </p>
 
     <p>
@@ -1307,8 +1315,7 @@
 
     <p>
       O projeto BIA, no Paraná, pesquisa o uso de IA e sensores em bengalas.
-      Sistemas eletrônicos devem ser vistos como complementares à bengala
-      branca tradicional.
+      Sistemas eletrônicos devem ser vistos como complementares à bengala branca tradicional.
     </p>
 
     <h3>4.5 Sistemas de Visão Artificial com Inteligência Artificial</h3>
@@ -1384,8 +1391,8 @@
 
     <p>
       A IA pode errar, especialmente com pouca iluminação ou imagens ruins.
-      Por isso, não substitui completamente recursos tradicionais de orientação
-      e mobilidade.
+      Por isso, não substitui completamente recursos tradicionais de
+      orientação e mobilidade.
     </p>
 
     <h3>Comparação entre algumas tecnologias</h3>
@@ -1427,11 +1434,7 @@
 
   </section>
 
-
-  <!-- =========================
-       NOSSA PROPOSTA
-       ========================= -->
-
+  <!-- NOSSA PROPOSTA -->
   <section id="proposta">
 
     <h2>5. Nossa Proposta</h2>
@@ -1501,8 +1504,8 @@
     <h4>Predição e automação</h4>
 
     <p>
-      Poderia usar horários e condições de iluminação para ajustar o
-      sistema automaticamente.
+      Poderia usar horários e condições de iluminação para ajustar
+      o sistema automaticamente.
     </p>
 
     <h4>Gestão de energia</h4>
@@ -1513,67 +1516,7 @@
 
   </section>
 
-
-  <!-- =========================
-       INTELIGÊNCIA ARTIFICIAL
-       ========================= -->
-
-  <section id="ia">
-
-    <h2>
-      6. Uso da Inteligência Artificial no Desenvolvimento do Trabalho
-    </h2>
-
-    <p>
-      Usamos a IA como apoio à pesquisa, organização das ideias e compreensão
-      dos conteúdos. O ChatGPT ajudou a explicar luz, cores, óptica,
-      Disco de Newton e acessibilidade.
-    </p>
-
-    <p>
-      Os prompts foram baseados nos tópicos do trabalho, e as respostas
-      ajudaram na compreensão e organização das informações.
-    </p>
-
-    <p>
-      As informações importantes foram conferidas em fontes confiáveis.
-      Assim, a IA foi utilizada como apoio, e não como única fonte.
-    </p>
-
-  </section>
-
-
-  <!-- =========================
-       CONCLUSÃO
-       ========================= -->
-
-  <section id="conclusao">
-
-    <h2>7. Conclusão</h2>
-
-    <p>
-      O Disco de Newton ajudou a compreender a relação entre a luz branca
-      e as cores do espectro visível, além da mistura visual causada pela
-      rotação rápida.
-    </p>
-
-    <p>
-      Também aprendemos que iluminação, cores e características da visão
-      influenciam a percepção dos objetos.
-    </p>
-
-    <p>
-      Esses conhecimentos são importantes para desenvolver tecnologias que
-      auxiliem pessoas com deficiência visual ou baixa visão.
-    </p>
-
-  </section>
-
-
-  <!-- =========================
-       ATIVIDADE 2
-       ========================= -->
-
+  <!-- ATIVIDADE 2 -->
   <section id="atividade-2">
 
     <h2>Atividade 2 – LED Fade-In e Fade-Out</h2>
@@ -1594,13 +1537,57 @@
       e o GND fecha o circuito.
     </p>
 
+    <!-- IMAGEM FADE-IN -->
+
+    <div class="atividade-imagem">
+
+      <div class="imagem-placeholder">
+
+        <img
+          src="img/led-fade-in.png"
+          alt="Circuito do LED Fade-In montado no Tinkercad"
+        >
+
+        <p>
+          Figura 1 – Circuito do LED Fade-In montado e simulado no Tinkercad.
+        </p>
+
+      </div>
+
+    </div>
+
     <h3>Programação</h3>
 
     <p>
-      No Fade-Out, o brilho começa em 255 e diminui até 0.
-      O <code>analogWrite()</code> controla o PWM e
-      <code>delay(50)</code> torna a transição suave.
+      No Fade-In, o brilho do LED começa baixo e aumenta gradualmente
+      até atingir uma intensidade maior.
     </p>
+
+    <p>
+      No Fade-Out, o brilho começa em 255 e diminui até 0.
+      O <code>analogWrite()</code> controla o PWM e o <code>delay(50)</code>
+      torna a transição suave.
+    </p>
+
+    <!-- IMAGEM FADE-OUT -->
+
+    <div class="atividade-imagem">
+
+      <div class="imagem-placeholder">
+
+        <img
+          src="img/led-fade-out.png"
+          alt="Circuito do LED Fade-Out montado no Tinkercad"
+        >
+
+        <p>
+          Figura 2 – Circuito utilizado para realizar o efeito Fade-Out
+          no LED, diminuindo gradualmente sua intensidade luminosa.
+        </p>
+
+      </div>
+
+    </div>
 
     <h3>2. Explicação científica</h3>
 
@@ -1621,19 +1608,38 @@
     <h3>4. Tecnologias existentes</h3>
 
     <ul>
-      <li><strong>Magno Lumina Max:</strong> iluminação LED regulável.</li>
-      <li><strong>Mobilux Digital Touch HD:</strong> lupa eletrônica com ampliação, contraste e LED.</li>
-      <li><strong>Quick Look Zoom:</strong> lupa digital com controle de brilho e luz.</li>
-      <li><strong>BenQ e-Reading Lamp:</strong> iluminação ampla e ajuste automático.</li>
-      <li><strong>eSight 4:</strong> câmeras e telas para melhorar imagens.</li>
+      <li>
+        <strong>Magno Lumina Max:</strong> iluminação LED regulável.
+      </li>
+
+      <li>
+        <strong>Mobilux Digital Touch HD:</strong>
+        lupa eletrônica com ampliação, contraste e LED.
+      </li>
+
+      <li>
+        <strong>Quick Look Zoom:</strong>
+        lupa digital com controle de brilho e luz.
+      </li>
+
+      <li>
+        <strong>BenQ e-Reading Lamp:</strong>
+        iluminação ampla e ajuste automático.
+      </li>
+
+      <li>
+        <strong>eSight 4:</strong>
+        câmeras e telas para melhorar imagens.
+      </li>
     </ul>
 
     <h3>5. Nossa proposta – Luz Assist</h3>
 
     <p>
-      A Luz Assist usaria sensores para medir a luz e um Arduino para ajustar
-      automaticamente a intensidade de uma lâmpada LED. Em ambientes escuros,
-      aumentaria gradualmente; com luz suficiente, reduziria o brilho.
+      A Luz Assist usaria sensores para medir a luz e um Arduino
+      para ajustar automaticamente a intensidade de uma lâmpada LED.
+      Em ambientes escuros, aumentaria gradualmente; com luz suficiente,
+      reduziria o brilho.
     </p>
 
     <div class="fluxo-tecnologia">
@@ -1665,17 +1671,13 @@
 
     <p>
       A atividade mostrou que controlar a intensidade da luz pode contribuir
-      para segurança, conforto e autonomia, relacionando Arduino, PWM
-      e acessibilidade.
+      para segurança, conforto e autonomia, relacionando Arduino,
+      PWM e acessibilidade.
     </p>
 
   </section>
 
-
-  <!-- =========================
-       ATIVIDADE 3
-       ========================= -->
-
+  <!-- ATIVIDADE 3 -->
   <section id="atividade-3">
 
     <h2>Atividade 3 – LED RGB</h2>
@@ -1691,8 +1693,9 @@
     <h3>Montagem do circuito</h3>
 
     <p>
-      O circuito utiliza Arduino, LED RGB e resistores. A simulação permitiu
-      testar combinações de cores e identificar possíveis erros.
+      O circuito utiliza Arduino, LED RGB e resistores.
+      A simulação permitiu testar combinações de cores e identificar
+      possíveis erros.
     </p>
 
     <h3>Programação do LED RGB</h3>
@@ -1705,9 +1708,9 @@
     <h3>2. Explicação científica</h3>
 
     <p>
-      RGB significa Red, Green e Blue. Na mistura aditiva, vermelho + verde
-      produz amarelo, verde + azul produz ciano, vermelho + azul produz
-      magenta e as três cores juntas podem produzir branco.
+      RGB significa Red, Green e Blue. Na mistura aditiva,
+      vermelho + verde produz amarelo, verde + azul produz ciano,
+      vermelho + azul produz magenta e as três cores juntas podem produzir branco.
     </p>
 
     <h3>3. Relação com a deficiência visual</h3>
@@ -1721,11 +1724,30 @@
     <h3>4. Tecnologias existentes</h3>
 
     <ul>
-      <li><strong>Envision Glasses:</strong> câmera, IA e reconhecimento de cores.</li>
-      <li><strong>Seeing AI:</strong> aplicativo que reconhece textos, objetos e cores.</li>
-      <li><strong>OrCam MyEye:</strong> fornece informações visuais por áudio.</li>
-      <li><strong>eSight:</strong> usa processamento de imagens, contraste e cores.</li>
-      <li><strong>TOPAZ EZ HD:</strong> ampliação, iluminação e modos de contraste.</li>
+      <li>
+        <strong>Envision Glasses:</strong>
+        câmera, IA e reconhecimento de cores.
+      </li>
+
+      <li>
+        <strong>Seeing AI:</strong>
+        aplicativo que reconhece textos, objetos e cores.
+      </li>
+
+      <li>
+        <strong>OrCam MyEye:</strong>
+        fornece informações visuais por áudio.
+      </li>
+
+      <li>
+        <strong>eSight:</strong>
+        usa processamento de imagens, contraste e cores.
+      </li>
+
+      <li>
+        <strong>TOPAZ EZ HD:</strong>
+        ampliação, iluminação e modos de contraste.
+      </li>
     </ul>
 
     <h3>5. Nossa proposta – Color Assist</h3>
@@ -1749,33 +1771,76 @@
     </div>
 
     <p>
-      Componentes: Arduino, LED RGB, sensor de cor, resistores, buzzer
-      ou alto-falante, câmera, comunicação, bateria e estrutura.
+      Componentes: Arduino, LED RGB, sensor de cor, resistores,
+      buzzer ou alto-falante, câmera, comunicação, bateria e estrutura.
     </p>
 
     <h3>6. Inteligência Artificial</h3>
 
     <p>
-      Em uma versão avançada, a IA poderia identificar cores, objetos
-      e textos. No trabalho, o ChatGPT ajudou na pesquisa e organização,
-      e as informações importantes foram verificadas em fontes confiáveis.
+      Em uma versão avançada, a IA poderia identificar cores,
+      objetos e textos. No trabalho, o ChatGPT ajudou na pesquisa
+      e organização, e as informações importantes foram verificadas
+      em fontes confiáveis.
     </p>
 
     <h3>7. Conclusão</h3>
 
     <p>
       A atividade mostrou como RGB, contraste, programação e eletrônica
-      podem ser usados em soluções acessíveis, combinando informação visual
-      e sonora para aumentar a autonomia.
+      podem ser usados em soluções acessíveis, combinando informação
+      visual e sonora para aumentar a autonomia.
     </p>
 
   </section>
 
+  <!-- INTELIGÊNCIA ARTIFICIAL -->
+  <section id="ia">
 
-  <!-- =========================
-       REFERÊNCIAS — ÚNICO LOCAL
-       ========================= -->
+    <h2>6. Uso da Inteligência Artificial no Desenvolvimento do Trabalho</h2>
 
+    <p>
+      Usamos a IA como apoio à pesquisa, organização das ideias
+      e compreensão dos conteúdos. O ChatGPT ajudou a explicar luz,
+      cores, óptica, Disco de Newton e acessibilidade.
+    </p>
+
+    <p>
+      Os prompts foram baseados nos tópicos do trabalho, e as respostas
+      ajudaram na compreensão e organização das informações.
+    </p>
+
+    <p>
+      As informações importantes foram conferidas em fontes confiáveis.
+      Assim, a IA foi utilizada como apoio, e não como única fonte.
+    </p>
+
+  </section>
+
+  <!-- CONCLUSÃO -->
+  <section id="conclusao">
+
+    <h2>7. Conclusão</h2>
+
+    <p>
+      O Disco de Newton ajudou a compreender a relação entre a luz branca
+      e as cores do espectro visível, além da mistura visual causada
+      pela rotação rápida.
+    </p>
+
+    <p>
+      Também aprendemos que iluminação, cores e características da visão
+      influenciam a percepção dos objetos.
+    </p>
+
+    <p>
+      Esses conhecimentos são importantes para desenvolver tecnologias
+      que auxiliem pessoas com deficiência visual ou baixa visão.
+    </p>
+
+  </section>
+
+  <!-- REFERÊNCIAS -->
   <section id="referencias">
 
     <h2>8. Referências</h2>
@@ -1783,32 +1848,28 @@
     <ol class="referencias">
 
       <li>
-        BRASIL ESCOLA.
-        <strong>Disco de Newton.</strong>
+        BRASIL ESCOLA. <strong>Disco de Newton.</strong>
         Disponível em:
         https://brasilescola.uol.com.br/fisica/disco-newton.htm.
         Acesso em: 18 ago. 2026.
       </li>
 
       <li>
-        TODA MATÉRIA.
-        <strong>Disco de Newton.</strong>
+        TODA MATÉRIA. <strong>Disco de Newton.</strong>
         Disponível em:
         https://www.todamateria.com.br/disco-de-newton/.
         Acesso em: 18 ago. 2026.
       </li>
 
       <li>
-        MUNDO EDUCAÇÃO.
-        <strong>Disco de Newton.</strong>
+        MUNDO EDUCAÇÃO. <strong>Disco de Newton.</strong>
         Disponível em:
         https://mundoeducacao.uol.com.br/fisica/disco-newton.htm.
         Acesso em: 18 ago. 2026.
       </li>
 
       <li>
-        NASA.
-        <strong>Isaac Newton.</strong>
+        NASA. <strong>Isaac Newton.</strong>
         Disponível em:
         https://science.nasa.gov/people/isaac-newton/.
         Acesso em: 18 ago. 2026.
@@ -1823,60 +1884,10 @@
       </li>
 
       <li>
-        OPENAI.
-        <strong>ChatGPT.</strong>
+        OPENAI. <strong>ChatGPT.</strong>
         Disponível em:
         https://chatgpt.com/.
         Acesso em: 18 ago. 2026.
-      </li>
-
-      <li>
-        ROYAL SOCIETY.
-        <strong>Thomas Young e estudos sobre interferência da luz.</strong>
-      </li>
-
-      <li>
-        OPENSTAX.
-        <strong>Young's Double-Slit Interference.</strong>
-        Material didático sobre interferência da luz.
-      </li>
-
-      <li>
-        AMERICAN PHYSICAL SOCIETY.
-        <strong>Thomas Young e interferência da luz.</strong>
-      </li>
-
-      <li>
-        ARDUINO.
-        <strong>Documentação e recursos sobre Arduino.</strong>
-      </li>
-
-      <li>
-        W3C.
-        <strong>Diretrizes de acessibilidade para conteúdo digital.</strong>
-      </li>
-
-      <li>
-        MICROSOFT.
-        <strong>Seeing AI.</strong>
-        Tecnologia de assistência baseada em inteligência artificial.
-      </li>
-
-      <li>
-        ENVISION.
-        <strong>Envision Glasses.</strong>
-        Tecnologia assistiva para reconhecimento visual.
-      </li>
-
-      <li>
-        ORCAM.
-        <strong>OrCam MyEye.</strong>
-        Tecnologia assistiva para reconhecimento de informações visuais.
-      </li>
-
-      <li>
-        FREEDOM SCIENTIFIC.
-        <strong>Tecnologias assistivas para pessoas com deficiência visual.</strong>
       </li>
 
     </ol>
@@ -1884,7 +1895,6 @@
   </section>
 
 </main>
-
 
 <footer>
 
