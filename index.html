@@ -32,7 +32,6 @@
       color: var(--wow-ink);
     }
 
-    /* Barra de acessibilidade mais moderna */
     .accessibility-bar {
       background: linear-gradient(90deg, #35105d, #7b1fc7, #9d35d5) !important;
       box-shadow: 0 5px 22px rgba(62, 18, 98, .22);
@@ -50,7 +49,6 @@
       box-shadow: 0 8px 18px rgba(0,0,0,.14);
     }
 
-    /* Menu */
     nav {
       position: sticky !important;
       top: 0;
@@ -80,7 +78,6 @@
       box-shadow: 0 7px 18px rgba(123,31,199,.22);
     }
 
-    /* Capa principal */
     .hero-wow {
       position: relative;
       min-height: 520px;
@@ -259,7 +256,6 @@
       top: 16%;
     }
 
-    /* Faixa de navegação visual */
     .explore-strip {
       width: min(1120px, 90%);
       margin: 32px auto 8px;
@@ -298,7 +294,6 @@
       color: var(--wow-purple-dark);
     }
 
-    /* Todas as seções viram cartões modernos */
     main > section {
       position: relative;
       width: min(1120px, 90%);
@@ -363,7 +358,6 @@
       line-height: 1.75;
     }
 
-    /* Destaque especial para a atividade dos quatro contextos */
     #optica-contextos {
       background:
         linear-gradient(180deg, rgba(239,226,255,.55), rgba(255,255,255,.94) 24%),
@@ -393,7 +387,6 @@
       margin: auto;
     }
 
-    /* Thomas Young com destaque de "experimento" */
     #thomas-young {
       background:
         radial-gradient(circle at 95% 10%, rgba(255,79,163,.11), transparent 25%),
@@ -428,7 +421,6 @@
       margin: auto;
     }
 
-    /* Listas mais bonitas */
     main > section ul,
     main > section ol {
       padding-left: 1.35rem;
@@ -439,7 +431,6 @@
       font-weight: 900;
     }
 
-    /* Footer */
     footer {
       margin-top: 55px !important;
       background: linear-gradient(135deg, #25103f, #5d1595, #7b1fc7) !important;
@@ -463,7 +454,6 @@
       color: rgba(255,255,255,.88) !important;
     }
 
-    /* Responsivo */
     @media (max-width: 800px) {
       .hero-wow {
         min-height: 470px;
@@ -506,1489 +496,1415 @@
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
+
       *, *::before, *::after {
         animation-duration: .01ms !important;
         transition-duration: .01ms !important;
       }
     }
   </style>
-
 </head>
 
 <body>
 
-  <!-- =========================
-       MENU DE ACESSIBILIDADE
-       ========================= -->
-  <header>
+<header>
 
-    <div class="accessibility-bar" role="region" aria-label="Menu de Acessibilidade">
-      <span>Acessibilidade:</span>
+  <div class="accessibility-bar" role="region" aria-label="Menu de Acessibilidade">
+    <span>Acessibilidade:</span>
 
-      <button id="btn-contrast" aria-label="Alternar Alto Contraste">
-        Alto Contraste
-      </button>
+    <button id="btn-contrast" aria-label="Alternar Alto Contraste">
+      Alto Contraste
+    </button>
 
-      <button id="btn-increase" aria-label="Aumentar Fonte">
-        A+
-      </button>
+    <button id="btn-increase" aria-label="Aumentar Fonte">
+      A+
+    </button>
 
-      <button id="btn-decrease" aria-label="Diminuir Fonte">
-        A-
-      </button>
+    <button id="btn-decrease" aria-label="Diminuir Fonte">
+      A-
+    </button>
 
-      <button id="btn-reset" aria-label="Resetar Tamanho da Fonte">
-        Tamanho Normal
-      </button>
+    <button id="btn-reset" aria-label="Resetar Tamanho da Fonte">
+      Tamanho Normal
+    </button>
+  </div>
+
+  <nav aria-label="Navegação principal">
+    <ul>
+      <li><a href="#optica">Óptica</a></li>
+      <li><a href="#tecnociencia">Tecnociência</a></li>
+      <li><a href="#thomas-young">Thomas Young</a></li>
+      <li><a href="#optica-contextos">Óptica em Diversos Contextos</a></li>
+      <li><a href="#robotica">Robótica</a></li>
+      <li><a href="#disco-newton">Disco de Newton</a></li>
+      <li><a href="#ciencia-luz">Ciência da Luz</a></li>
+      <li><a href="#deficiencia-visual">Deficiência Visual</a></li>
+      <li><a href="#tecnologias">Tecnologias</a></li>
+      <li><a href="#proposta">Nossa Proposta</a></li>
+      <li><a href="#ia">Inteligência Artificial</a></li>
+      <li><a href="#conclusao">Conclusão</a></li>
+      <li><a href="#atividade-2">Atividade 2</a></li>
+      <li><a href="#atividade-3">Atividade 3</a></li>
+      <li><a href="#referencias">Referências</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<section class="hero-wow" aria-label="Apresentação do projeto">
+
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+
+  <div class="hero-content">
+
+    <div class="hero-badge">
+      PROJETO INTEGRADOR • IA E TECNOLOGIAS
     </div>
 
+    <h1>
+      Descobrindo a <span>LUZ</span>
+    </h1>
 
-    <!-- =========================
-         NAVEGAÇÃO PRINCIPAL
-         ========================= -->
-    <nav aria-label="Navegação principal">
-      <ul>
-        <li><a href="#optica">Óptica</a></li>
-        <li><a href="#thomas-young">Thomas Young</a></li>
-        <li><a href="#optica-contextos">Óptica em Diversos Contextos</a></li>
-        <li><a href="#disco-newton">Disco de Newton</a></li>
-        <li><a href="#ciencia-luz">Ciência da Luz</a></li>
-        <li><a href="#deficiencia-visual">Deficiência Visual</a></li>
-        <li><a href="#tecnologias">Tecnologias</a></li>
-        <li><a href="#proposta">Nossa Proposta</a></li>
-        <li><a href="#ia">Inteligência Artificial</a></li>
-        <li><a href="#fakenews">Fake News</a></li>
-        <li><a href="#conclusao">Conclusão</a></li>
-        <li><a href="#referencias">Referências</a></li>
-      </ul>
-    </nav>
+    <p class="hero-subtitle">
+      Óptica, tecnologia, ciência e acessibilidade em uma só experiência.
+    </p>
 
-  </header>
-
-
-  
-  <!-- =========================
-       HERO / CAPA DO SITE
-       ========================= -->
-  <section class="hero-wow" aria-label="Apresentação do projeto">
-    <div class="hero-glow hero-glow-1"></div>
-    <div class="hero-glow hero-glow-2"></div>
-
-    <div class="hero-content">
-      <div class="hero-badge">PROJETO INTEGRADOR • IA E TECNOLOGIAS</div>
-
-      <h1>Descobrindo a <span>LUZ</span></h1>
-
-      <p class="hero-subtitle">
-        Óptica, tecnologia, ciência e acessibilidade em uma só experiência.
-      </p>
-
-      <div class="hero-wave" aria-hidden="true">
-        <span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span>
-      </div>
-
-      <div class="hero-chips">
-        <span>Óptica</span>
-        <span>Thomas Young</span>
-        <span>Tecnociência</span>
-        <span>IA</span>
-        <span>Acessibilidade</span>
-      </div>
-
-      <a class="hero-button" href="#optica">Explorar o projeto ↓</a>
-    </div>
-  </section>
-
-  <main id="main-content">
-
-
-    <div class="explore-strip" aria-label="Áreas do projeto">
-      <div><strong>01</strong><span>Óptica</span></div>
-      <div><strong>02</strong><span>Thomas Young</span></div>
-      <div><strong>03</strong><span>Tecnologias</span></div>
-      <div><strong>04</strong><span>Acessibilidade</span></div>
+    <div class="hero-wave" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
 
-    <!-- =========================
-         ÓPTICA
-         ========================= -->
-    <section id="optica">
+    <div class="hero-chips">
+      <span>Óptica</span>
+      <span>Thomas Young</span>
+      <span>Tecnociência</span>
+      <span>IA</span>
+      <span>Acessibilidade</span>
+    </div>
 
-      <h1>Tecnociência, Óptica e Informação</h1>
+    <a class="hero-button" href="#optica">
+      Explorar o projeto ↓
+    </a>
 
-      <h2>Introdução à Óptica</h2>
-
-      <p>
-        A óptica é o ramo da Física responsável por estudar a luz,
-        suas formas de propagação e a maneira como ela interage com a matéria.
-      </p>
-
-      <p>
-        Para pessoas com baixa visão, a óptica é a base teórica e prática
-        para a criação de lupas, óculos especiais, lentes de aumento e
-        filtros de contraste, permitindo maior inclusão e autonomia
-        na leitura e na navegação visual.
-      </p>
-
-    </section>
-
-
-    <!-- =========================
-     ÓPTICA EM DIVERSOS CONTEXTOS
-     ========================= -->
-<section id="optica-contextos">
-
-  <h2>IA e Tecnologias: Desvendando a Óptica Aplicada em Diversos Contextos</h2>
-
-  <div class="infografico-optica">
-    <img 
-      src="img/infografico-optica.jpg" 
-      alt="Infográfico sobre Óptica Aplicada em Diversos Contextos"
-    >
   </div>
 
 </section>
 
-    <!-- =========================
-         AFINAL, O QUE É A LUZ? - GRUPO 5
-         ========================= -->
-    <section id="thomas-young">
-
-      <h2>AFINAL, O QUE É A LUZ?</h2>
-
-      <h3>Thomas Young e a evidência do comportamento ondulatório</h3>
-
-      <p>
-        A compreensão sobre a natureza da luz mudou ao longo da História.
-        No início do século XIX, o físico e médico inglês Thomas Young realizou
-        estudos que trouxeram novas evidências para a ideia de que a luz apresenta
-        comportamento ondulatório.
-      </p>
-
-      <h4>Contexto histórico</h4>
-
-      <p>
-        Thomas Young viveu entre 1773 e 1829. No final do século XVIII e início
-        do século XIX, existiam diferentes explicações para a natureza da luz.
-        A teoria corpuscular de Isaac Newton tinha grande influência, enquanto
-        a proposta de que a luz poderia se comportar como uma onda, associada
-        anteriormente a Christiaan Huygens, ainda precisava de evidências
-        experimentais mais convincentes.
-      </p>
-
-      <p>
-        O problema investigado era entender como a luz se comportava e encontrar
-        evidências que ajudassem a decidir entre diferentes explicações sobre
-        sua natureza.
-      </p>
-
-      <h4>Quem foi Thomas Young?</h4>
-
-      <p>
-        Thomas Young foi um cientista inglês que atuou em diferentes áreas,
-        incluindo Física e Medicina. No estudo da Óptica, ficou conhecido por
-        suas pesquisas sobre interferência e pelo desenvolvimento de experimentos
-        que ajudaram a sustentar a teoria ondulatória da luz.
-      </p>
-
-      <h4>A ideia sobre a luz</h4>
-
-      <p>
-        Young defendia que a luz poderia apresentar comportamento semelhante ao
-        de uma onda. Para explicar determinados fenômenos ópticos, ele utilizou
-        o conceito de interferência: quando ondas se encontram, elas podem se
-        reforçar ou se enfraquecer.
-      </p>
-
-      <p>
-        Essa ideia permitia explicar fenômenos que eram difíceis de compreender
-        utilizando somente a teoria corpuscular. Quando duas partes da luz
-        interferem de maneira construtiva, podem produzir regiões mais claras.
-        Quando interferem de maneira destrutiva, podem produzir regiões mais
-        escuras.
-      </p>
-
-      <h4>Experimento e evidência</h4>
-
-      <p>
-        Uma das contribuições mais importantes de Young foi o estudo da
-        interferência da luz. Em seus experimentos, a luz era dividida em
-        caminhos diferentes e depois observada novamente. A sobreposição das
-        ondas produzia franjas claras e escuras, um padrão característico de
-        interferência.
-      </p>
-
-      <p>
-        Em 1801, Young apresentou sua pesquisa sobre a teoria da luz e das
-        cores. Nos anos seguintes, descreveu demonstrações de interferência
-        utilizando luz. A experiência associada às duas fendas tornou-se
-        especialmente conhecida por mostrar como duas partes da luz podem
-        produzir um padrão de interferência.
-      </p>
-
-      <div class="imagem-placeholder">
-        <img src="img/thomas-young.jpg"
-             alt="Thomas Young e representação do experimento de interferência da luz">
-        <p>
-          Representação relacionada aos estudos de Thomas Young sobre a
-          interferência da luz.
-        </p>
-      </div>
-
-      <h4>O que acontece no experimento?</h4>
-
-      <ul>
-        <li>
-          A luz passa por uma abertura estreita e é direcionada para duas
-          pequenas aberturas.
-        </li>
-        <li>
-          A luz que passa pelas duas aberturas se espalha e forma ondas.
-        </li>
-        <li>
-          As ondas se encontram e podem sofrer interferência construtiva
-          ou destrutiva.
-        </li>
-        <li>
-          Em uma tela, aparecem regiões claras e escuras formando um padrão
-          de interferência.
-        </li>
-      </ul>
-
-      <div class="fluxo-tecnologia">
-        <p>
-          <strong>
-            Luz → Duas aberturas → Interferência → Franjas claras e escuras
-          </strong>
-        </p>
-      </div>
-
-      <h4>Importância para a Física</h4>
-
-      <p>
-        Os estudos de Young foram importantes porque forneceram evidências
-        experimentais para o comportamento ondulatório da luz. Seus resultados
-        ajudaram a fortalecer a teoria ondulatória e contribuíram para que
-        os cientistas buscassem novas explicações para fenômenos relacionados
-        à luz.
-      </p>
-
-      <p>
-        A interferência passou a ser uma evidência importante para compreender
-        a luz como uma onda, principalmente porque o padrão de regiões claras
-        e escuras podia ser explicado pela superposição de ondas.
-      </p>
-
-      <h4>Conexão com a Física atual</h4>
-
-      <p>
-        Atualmente, a Física entende que a luz apresenta uma natureza
-        quântica e pode manifestar comportamentos associados tanto a ondas
-        quanto a partículas. O experimento de interferência de Young continua
-        sendo fundamental para o estudo da Óptica e da Física Quântica.
-      </p>
-
-      <p>
-        O conceito de interferência também está relacionado a diversas
-        aplicações modernas, como técnicas ópticas, instrumentos científicos
-        e estudos de fenômenos quânticos.
-      </p>
-
-      <h4>Curiosidade</h4>
-
-      <p>
-        Embora o experimento seja frequentemente chamado de "experimento da
-        dupla fenda", a primeira demonstração de interferência realizada por
-        Young não utilizou exatamente duas fendas. Ele utilizou um pequeno
-        cartão para dividir o feixe de luz e observar as franjas produzidas
-        pela interferência.
-      </p>
-
-      <h4>Como utilizamos a IA?</h4>
-
-      <p>
-        Utilizamos uma ferramenta de Inteligência Artificial para auxiliar na
-        compreensão dos estudos de Thomas Young, na organização das informações
-        e na explicação do experimento de interferência em uma linguagem adequada
-        para estudantes do Ensino Médio. As informações foram conferidas em
-        fontes de referência sobre História da Física e Óptica antes de serem
-        organizadas para publicação no site.
-      </p>
-
-      <h4>Fontes consultadas</h4>
-
-      <ol class="referencias">
-        <li>
-          ROYAL SOCIETY. Registros e documentos históricos sobre Thomas Young
-          e seus estudos sobre a interferência da luz.
-        </li>
-        <li>
-          OPENSTAX. <strong>Young's Double-Slit Interference.</strong>
-          Material didático sobre o experimento de dupla fenda e interferência.
-        </li>
-        <li>
-          AMERICAN PHYSICAL SOCIETY. Material histórico sobre Thomas Young,
-          interferência da luz e o desenvolvimento do experimento.
-        </li>
-      </ol>
-
-    </section>
-
-
-    <!-- =========================
-         DISCO DE NEWTON
-         ========================= -->
-    <section id="disco-newton">
-
-      <h2>1. Apresentação da Atividade: Disco de Newton</h2>
-
-      <p>
-        O objetivo principal desta atividade foi compreender, de forma prática,
-        como a luz branca está relacionada às diferentes cores do espectro visível,
-        utilizando como ferramenta prática o Disco de Newton.
-      </p>
-
-      <p>
-        A atividade foi realizada individualmente, e cada aluno construiu seu
-        próprio disco utilizando materiais simples e acessíveis, como papel
-        sulfite, papelão, lápis de cor, tesoura e um palito de madeira para
-        servir de eixo de rotação.
-      </p>
-
-      <p>
-        Primeiro, desenhou-se um círculo dividido em sete partes iguais.
-        Cada setor foi pintado cuidadosamente com as cores do arco-íris:
-        vermelho, laranja, amarelo, verde, azul, anil e violeta.
-      </p>
-
-      <p>
-        Em seguida, o disco foi fixado ao suporte do palito para garantir
-        que girasse de maneira estável. Após a montagem, foram realizados
-        testes práticos em casa, girando o disco em diferentes velocidades
-        e observando o comportamento visual das cores durante o movimento.
-      </p>
-
-      <p>
-        Durante a aula de robótica, os alunos compartilharam suas observações
-        e discutiram os resultados obtidos com o professor e a turma.
-      </p>
-
-      <h3>Resultado do experimento</h3>
-
-      <p>
-        Quando o disco atinge uma rotação rápida e constante, as cores individuais
-        deixam de ser percebidas separadamente e ocorre uma mistura visual,
-        resultando em uma tonalidade clara, branca ou acinzentada, dependendo
-        das condições do experimento.
-      </p>
-
-      <p>
-        Com essa experiência, foi possível observar na prática a relação entre
-        as cores do espectro visível e a percepção da luz branca.
-      </p>
-
-      <div class="atividade-imagem">
-
-        <div class="imagem-placeholder">
-          <p>
-            <img src="img/disco.png" alt="imagem disco de Newton">
-          </p>
-
-          <p>
-            Disco de Newton desenhado e dividido em sete partes iguais,
-            pintado com as cores do espectro visível:
-            vermelho, laranja, amarelo, verde, azul, anil e violeta.
-          </p>
-        </div>
-
-      </div>
-
-
-      <h3>Princípios envolvidos</h3>
-
-      <h4>Percepção e mistura das cores</h4>
-
-      <p>
-        Cada setor do disco possui uma cor diferente. Quando o disco gira
-        rapidamente, a sucessão das cores ocorre em um intervalo muito curto
-        e o sistema visual humano não consegue perceber cada setor
-        completamente separado.
-      </p>
-
-      <h4>Persistência da visão</h4>
-
-      <p>
-        A percepção visual possui um tempo de processamento. Quando imagens
-        diferentes são apresentadas rapidamente, nosso sistema visual pode
-        integrá-las, produzindo a sensação de continuidade ou de mistura.
-      </p>
-
-
-      <!-- SEGUNDA IMAGEM -->
-<div class="imagem-placeholder">
-    <img src="img/Newton.jpg" alt="Disco de Newton em funcionamento">
-</div>
-    </section>
-
-
-    <!-- =========================
-         EXPLICAÇÃO CIENTÍFICA
-         ========================= -->
-    <section id="ciencia-luz">
-
-      <h2>2. Explicação Científica</h2>
-
-
-      <h3>2.1 Quem foi Isaac Newton?</h3>
-
-      <p>
-        Sir Isaac Newton (1643–1727) foi um dos físicos, matemáticos e
-        astrônomos mais influentes da história da ciência.
-      </p>
-
-      <p>
-        Além de formular as famosas Leis do Movimento e a Lei da Gravitação
-        Universal, Newton realizou importantes estudos no campo da óptica,
-        área da Física relacionada ao estudo da luz.
-      </p>
-
-      <p>
-        No século XVII, por meio de experimentos com prismas de vidro,
-        Newton contribuiu para transformar a compreensão científica sobre
-        as cores e a natureza da luz solar.
-      </p>
-
-
-      <h3>2.2 O que é a Luz Branca?</h3>
-
-      <p>
-        A luz branca, como a luz emitida pelo Sol, é composta por diferentes
-        componentes do espectro visível. Por isso, pode ser considerada uma
-        luz policromática.
-      </p>
-
-      <p>
-        Quando a luz branca atravessa determinados materiais, como um prisma
-        de vidro, seus diferentes comprimentos de onda podem sofrer desvios
-        diferentes, permitindo observar as cores que a compõem.
-      </p>
-
-
-      <h3>2.3 Refração da Luz</h3>
-
-      <p>
-        Quando a luz muda de meio, como do ar para o vidro, sua velocidade
-        muda e sua trajetória pode sofrer um desvio. Esse fenômeno é chamado
-        de refração.
-      </p>
-
-      <p>
-        Como as diferentes cores possuem diferentes comprimentos de onda,
-        elas podem sofrer desvios diferentes ao atravessar determinados
-        materiais.
-      </p>
-
-      <ul>
-        <li>
-          <strong>Vermelho:</strong> possui maior comprimento de onda
-          dentro da faixa visível.
-        </li>
-
-        <li>
-          <strong>Violeta:</strong> possui menor comprimento de onda
-          dentro da faixa visível.
-        </li>
-      </ul>
-
-
-      <h3>2.4 O Espectro Visível</h3>
-
-      <p>
-        O espectro visível é a faixa do espectro eletromagnético que pode
-        ser detectada pelo olho humano.
-      </p>
-
-      <ol>
-        <li>Vermelho</li>
-        <li>Laranja</li>
-        <li>Amarelo</li>
-        <li>Verde</li>
-        <li>Azul</li>
-        <li>Anil ou Índigo</li>
-        <li>Violeta</li>
-      </ol>
-
-
-      <h3>2.5 Mistura das Cores: Adição x Subtração</h3>
-
-      <p>
-        Existem diferentes formas de compreender a mistura de cores.
-      </p>
-
-      <h4>Mistura aditiva</h4>
-
-      <p>
-        A mistura aditiva ocorre com luzes coloridas. Na combinação adequada
-        de luzes, a luminosidade aumenta e diferentes combinações podem
-        produzir a percepção de branco.
-      </p>
-
-      <h4>Mistura subtrativa</h4>
-
-      <p>
-        A mistura subtrativa ocorre com pigmentos, tintas e materiais que
-        absorvem determinadas partes da luz incidente.
-      </p>
-
-      <p>
-        O Disco de Newton é especialmente interessante porque permite observar
-        uma mistura visual das cores durante a rotação rápida do disco.
-      </p>
-
-
-      <h3>2.6 Por que o Disco de Newton parece branco quando gira rapidamente?</h3>
-
-      <p>
-        O efeito observado está relacionado à forma como o sistema visual
-        humano processa informações que mudam rapidamente.
-      </p>
-
-      <h4>Retenção da informação visual</h4>
-
-      <p>
-        Quando o disco gira rapidamente, cada setor colorido passa pelo
-        campo visual em um intervalo muito curto.
-      </p>
-
-      <h4>Sobreposição visual</h4>
-
-      <p>
-        Como as cores são apresentadas sucessivamente em alta velocidade,
-        o cérebro integra essas informações e deixa de perceber cada setor
-        de maneira completamente isolada.
-      </p>
-
-      <h4>Fusão das cores</h4>
-
-      <p>
-        O resultado é a percepção de uma superfície muito mais clara,
-        podendo apresentar uma tonalidade próxima do branco, cinza ou creme,
-        dependendo da distribuição das cores, velocidade de rotação,
-        iluminação e características do disco.
-      </p>
-
-    </section>
-
-
-    <!-- =========================
-         DEFICIÊNCIA VISUAL
-         ========================= -->
-    <section id="deficiencia-visual">
-
-      <h2>3. Relação com a Deficiência Visual</h2>
-
-
-      <h3>3.1 Como pessoas com baixa visão percebem a luz?</h3>
-
-      <p>
-        Pessoas com baixa visão podem manter diferentes graus de visão
-        residual. Dependendo da condição visual, podem distinguir claridade,
-        sombras, formas ou a direção de uma fonte luminosa.
-      </p>
-
-      <h4>Visão residual</h4>
-
-      <p>
-        Algumas pessoas conseguem perceber a presença de luz natural ou
-        artificial, o que pode ajudar a identificar se determinado ambiente
-        está claro ou escuro.
-      </p>
-
-      <h4>Fotofobia</h4>
-
-      <p>
-        Algumas pessoas apresentam sensibilidade elevada à luz, podendo
-        sentir desconforto em ambientes muito claros ou diante da luz solar
-        intensa.
-      </p>
-
-      <h4>Ofuscamento</h4>
-
-      <p>
-        O excesso de luminosidade pode dificultar a adaptação visual,
-        principalmente durante mudanças entre ambientes muito claros e
-        muito escuros.
-      </p>
-
-
-      <h3>3.2 Todas as pessoas enxergam as cores da mesma maneira?</h3>
-
-      <p>
-        Não. A percepção das cores pode variar entre as pessoas.
-        Fatores biológicos, condições visuais, daltonismo, envelhecimento
-        dos olhos e características individuais do sistema visual podem
-        modificar a maneira como determinadas cores são percebidas.
-      </p>
-
-
-      <h3>3.3 Como a iluminação interfere na percepção dos objetos?</h3>
-
-      <p>
-        A iluminação interfere diretamente na maneira como percebemos
-        objetos, cores, texturas, formas, sombras e reflexos.
-      </p>
-
-      <h4>Cor e tonalidade</h4>
-
-      <p>
-        Os objetos refletem determinadas faixas da luz que recebem e
-        absorvem outras. Por isso, a iluminação disponível interfere
-        diretamente na aparência das cores.
-      </p>
-
-      <h4>Temperatura da luz</h4>
-
-      <p>
-        Luzes quentes, geralmente mais amareladas, podem alterar a aparência
-        de tons quentes. Luzes frias, mais azuladas, também modificam a
-        aparência de diferentes cores.
-      </p>
-
-      <h4>Forma e relevo</h4>
-
-      <p>
-        A luz direta pode produzir sombras mais marcadas, ajudando a revelar
-        texturas e relevos. A luz difusa tende a suavizar os contornos.
-      </p>gem do Disco de Newton
-
-      <h4>Volume</h4>
-
-      <p>
-        A combinação entre regiões claras e escuras ajuda o cérebro a
-        interpretar profundidade e tridimensionalidade.
-      </p>
-
-      <h4>Textura e acabamento</h4>
-
-      <p>
-        Superfícies polidas ou metálicas podem produzir reflexos intensos,
-        enquanto superfícies foscas espalham a luz em várias direções.
-      </p>
-
-
-      <h3>
-        3.4 Por que compreender a formação das cores é importante para
-        desenvolver tecnologias de acessibilidade?
-      </h3>
-
-      <p>
-        Compreender a formação dagem do Disco de Newtons cores permite desenvolver tecnologias
-        mais acessíveis para pessoas que apresentam diferentes formas de
-        percepção visual.
-      </p>
-
-      <p>
-        Aplicativos, telas, gráficos e sistemas de sinalização não devem
-        depender exclusivamente das cores para transmitir informações.
-      </p>
-
-      <p>
-        É possível combinar cores com textos, símbolos, padrões, formas e
-        contrastes, tornando as tecnologias mais inclusivas para pessoas
-        com daltonismo ou baixa visão.
-      </p>
-
-    </section>
-
-
-    <!-- =========================
-         ROBÓTICA
-         ========================= -->
-    <section id="robotica">
-
-      <h2>Robótica</h2>
-
-      <p>
-        A robótica integra engenharia, computação e eletrônica para criar
-        dispositivos capazes de automatizar tarefas e auxiliar os seres humanos.
-      </p>
-
-      <p>
-        No campo da acessibilidade, a robótica pode contribuir para o
-        desenvolvimento de bengalas inteligentes, próteses motorizadas,
-        dispositivos de navegação e sistemas de auxílio à mobilidade.
-      </p>
-
-    </section>
-
-
-    <!-- =========================
-         TECNOLOGIAS EXISTENTES
-         ========================= -->
-    <section id="tecnologias">
-
-      <h2>4. Tecnologias Existentes</h2>
-
-
-      <h3>4.1 Óculos Eletrônicos para Baixa Visão</h3>
-
-      <p>
-        Óculos eletrônicos podem utilizar câmeras e pequenas telas para
-        captar e apresentar imagens de forma ampliada ao usuário.
-      </p>
-
-      <p>
-        Dependendo do equipamento, é possível ajustar recursos como
-        ampliação, brilho, contraste e cores.
-      </p>
-
-      <h4>Como funcionam?</h4>
-
-      <ul>
-        <li>A câmera capta a imagem do ambiente.</li>
-        <li>O sistema processa a imagem.</li>
-        <li>A imagem pode ser ampliada.</li>
-        <li>O contraste pode ser ajustado.</li>
-        <li>As cores podem ser modificadas.</li>
-        <li>Alguns equipamentos possuem recursos de leitura de texto.</li>
-      </ul>
-
-      <h4>Possíveis aplicações</h4>
-
-      <ul>
-        <li>Leitura de livros.</li>
-        <li>Leitura de jornais.</li>
-        <li>Visualização de placas.</li>
-        <li>Identificação de objetos.</li>
-        <li>Visualização de rostos.</li>
-        <li>Auxílio na utilização de telas.</li>
-      </ul>
-
-
-      <h3>4.2 Leitores de Cor</h3>
-
-      <p>
-        Leitores de cor são dispositivos equipados com sensores ópticos
-        capazes de analisar a luz refletida por superfícies e identificar
-        suas cores.
-      </p>
-
-      <h4>Como funcionam?</h4>
-
-      <p>
-        O usuário aponta o sensor para uma superfície, como uma roupa,
-        parede, objeto ou embalagem. O dispositivo processa a informação
-        e pode informar a cor por meio de áudio.
-      </p>
-
-      <p>Exemplos de respostas:</p>
-
-      <ul>
-        <li>“Vermelho.”</li>
-        <li>“Azul escuro.”</li>
-        <li>“Verde.”</li>
-        <li>“Amarelo.”</li>
-      </ul>
-
-      <h4>Possíveis usos</h4>
-
-      <ul>
-        <li>Escolher roupas.</li>
-        <li>Identificar acessórios.</li>
-        <li>Organizar objetos por cor.</li>
-        <li>Identificar embalagens.</li>
-        <li>Identificar alimentos.</li>
-        <li>Verificar indicadores luminosos.</li>
-      </ul>
-
-
-      <h3>4.3 Lupas Eletrônicas e Vídeo Ampliadores</h3>
-
-      <p>
-        As lupas eletrônicas utilizam câmeras e sistemas ópticos para
-        ampliar textos, imagens e pequenos detalhes.
-      </p>
-
-      <h4>Como funcionam?</h4>
-
-      <ul>
-        <li>A câmera captura o material.</li>
-        <li>A imagem é apresentada em uma tela.</li>
-        <li>O usuário pode aumentar ou diminuir o zoom.</li>
-        <li>O contraste pode ser ajustado.</li>
-        <li>Algumas cores podem ser invertidas.</li>
-        <li>A imagem pode ser congelada.</li>
-        <li>Alguns modelos permitem controlar a iluminação.</li>
-      </ul>
-
-      <h4>Para que servem?</h4>
-
-      <ul>
-        <li>Ler livros e jornais.</li>
-        <li>Ler receitas e bulas.</li>
-        <li>Preencher formulários.</li>
-        <li>Estudar.</li>
-        <li>Observar fotografias.</li>
-        <li>Identificar etiquetas e embalagens.</li>
-        <li>Realizar trabalhos manuais.</li>
-        <li>Observar objetos pequenos.</li>
-      </ul>
-
-
-      <h4>Tipos de lupa eletrônica</h4>
-
-      <p>
-        <strong>Portáteis:</strong> possuem câmera, tela e bateria no
-        próprio aparelho e podem ser transportadas para diferentes lugares.
-      </p>
-
-      <p>
-        <strong>De mesa:</strong> ficam apoiadas sobre uma bancada e são
-        especialmente úteis para leitura prolongada e estudos.
-      </p>
-
-      <p>
-        <strong>Celular ou tablet:</strong> aplicativos podem utilizar a
-        câmera do smartphone para oferecer recursos de ampliação,
-        contraste e iluminação.
-      </p>
-
-      <h4>Principal vantagem</h4>
-
-      <p>
-        A principal vantagem é permitir combinar ampliação, contraste,
-        cores e iluminação de acordo com as necessidades do usuário.
-      </p>
-
-      <p>
-        A lupa eletrônica é uma tecnologia assistiva e não trata nem cura
-        a causa da baixa visão.
-      </p>
-
-
-      <h3>4.4 Bengalas Inteligentes com Sensores Ópticos</h3>
-
-      <p>
-        Alguns modelos de bengalas inteligentes utilizam sensores eletrônicos
-        para detectar obstáculos e auxiliar pessoas cegas ou com baixa visão
-        durante a locomoção.
-      </p>
-
-      <h4>Como funcionam?</h4>
-
-      <p>
-        Dependendo do projeto, a bengala pode utilizar sensores ultrassônicos,
-        LiDAR ou câmeras para analisar o espaço à frente.
-      </p>
-
-      <p>Entre os possíveis obstáculos detectados estão:</p>
-
-      <ul>
-        <li>Carros ou objetos estacionados.</li>
-        <li>Galhos de árvores.</li>
-        <li>Portas e janelas abertas.</li>
-        <li>Placas.</li>
-        <li>Paredes.</li>
-        <li>Objetos suspensos.</li>
-        <li>Desníveis e obstáculos no caminho.</li>
-      </ul>
-
-      <h4>Como a pessoa recebe o alerta?</h4>
-
-      <ul>
-        <li><strong>Vibração:</strong> a bengala pode vibrar quando identifica um obstáculo.</li>
-        <li><strong>Som:</strong> alguns sistemas utilizam sinais sonoros.</li>
-        <li><strong>Voz:</strong> sistemas mais avançados podem transmitir informações por áudio.</li>
-      </ul>
-
-      <h4>Sensores ópticos</h4>
-
-      <p>
-        O LiDAR utiliza luz laser para realizar medições de distância.
-        Câmeras também podem ser utilizadas em conjunto com inteligência
-        artificial para analisar e identificar objetos.
-      </p>
-
-      <p>
-        Dessa maneira, podemos imaginar uma evolução:
-      </p>
-
-      <ul>
-        <li>
-          <strong>Bengala tradicional:</strong>
-          identifica obstáculos por contato.
-        </li>
-
-        <li>
-          <strong>Bengala com sensor:</strong>
-          pode detectar um obstáculo antes do contato.
-        </li>
-
-        <li>
-          <strong>Bengala com câmera e IA:</strong>
-          pode tentar identificar o tipo de objeto.
-        </li>
-      </ul>
-
-      <h4>Exemplo no Brasil</h4>
-
-      <p>
-        Um exemplo de pesquisa nessa área é o projeto BIA
-        (Bengala com Inteligência Artificial), desenvolvido no Paraná,
-        que busca incorporar inteligência artificial e sensores para
-        auxiliar pessoas cegas e com baixa visão.
-      </p>
-
-      <p>
-        É importante destacar que sistemas eletrônicos não devem ser
-        considerados substitutos completos da bengala branca tradicional.
-        Eles podem funcionar como recursos complementares.
-      </p>
-
-
-      <h3>4.5 Sistemas de Visão Artificial com Inteligência Artificial</h3>
-
-      <p>
-        Alguns dispositivos combinam câmeras, sensores e inteligência
-        artificial para analisar imagens do mundo real.
-      </p>
-
-      <p>
-        Diferentemente de uma lupa eletrônica, que principalmente aumenta
-        uma imagem, um sistema de visão artificial procura interpretar
-        aquilo que a câmera está observando.
-      </p>
-
-      <div class="fluxo-tecnologia">
-
-        <p>
-          <strong>Câmera → Inteligência Artificial → Interpretação → Voz</strong>
-        </p>
-
-      </div>
-
-      <h4>Reconhecimento de textos</h4>
-
-      <p>
-        Sistemas de OCR podem reconhecer textos presentes em placas,
-        documentos, livros, embalagens e telas e transformá-los em
-        informações que podem ser lidas em voz alta.
-      </p>
-
-      <h4>Reconhecimento de pessoas</h4>
-
-      <p>
-        Alguns sistemas podem reconhecer rostos previamente cadastrados
-        e informar quem está diante do usuário.
-      </p>
-
-      <h4>Reconhecimento de objetos</h4>
-
-      <p>
-        A inteligência artificial pode tentar identificar objetos do
-        cotidiano, como copos, cadeiras, celulares, garrafas e livros.
-      </p>
-
-      <h4>Identificação de dinheiro</h4>
-
-      <p>
-        Alguns dispositivos possuem recursos destinados a identificar
-        diferentes cédulas.
-      </p>
-
-      <h4>Identificação de cores</h4>
-
-      <p>
-        Sistemas de visão computacional também podem analisar cores
-        presentes em roupas e objetos.
-      </p>
-
-      <h4>Descrição do ambiente</h4>
-
-      <p>
-        Sistemas mais avançados podem analisar uma cena e produzir
-        descrições sobre os objetos presentes no ambiente.
-      </p>
-
-      <h4>Onde podem ser utilizados?</h4>
-
-      <ul>
-        <li>Óculos inteligentes.</li>
-        <li>Celulares.</li>
-        <li>Tablets.</li>
-        <li>Câmeras portáteis.</li>
-        <li>Dispositivos presos à roupa.</li>
-        <li>Equipamentos de tecnologia assistiva.</li>
-      </ul>
-
-      <h4>Exemplo prático</h4>
-
-      <p>
-        Imagine uma pessoa com baixa visão entrando em um supermercado.
-        Ela poderia apontar a câmera para uma prateleira e perguntar:
-        “Qual é o produto à minha frente?”
-      </p>
-
-      <p>
-        O sistema poderia analisar a imagem e responder por áudio.
-        Também poderia tentar localizar e ler informações presentes
-        na embalagem.
-      </p>
-
-      <h4>Uma limitação importante</h4>
-
-      <p>
-        A inteligência artificial pode cometer erros. Imagens com pouca
-        iluminação, baixa qualidade ou informações parcialmente visíveis
-        podem dificultar a identificação.
-      </p>
-
-      <p>
-        Por isso, esses sistemas não devem ser considerados substitutos
-        completos de recursos tradicionais de orientação e mobilidade,
-        principalmente em situações que envolvam segurança.
-      </p>
-
-
-      <h3>Comparação entre algumas tecnologias</h3>
-
-      <table>
-
-        <thead>
-          <tr>
-            <th>Tecnologia</th>
-            <th>Principal função</th>
-          </tr>
-        </thead>
-
-        <tbody>
-
-          <tr>
-            <td>Lupa eletrônica</td>
-            <td>Aumenta aquilo que a pessoa está observando.</td>
-          </tr>
-
-          <tr>
-            <td>Leitor de cor</td>
-            <td>Identifica cores.</td>
-          </tr>
-
-          <tr>
-            <td>Bengala inteligente</td>
-            <td>Detecta obstáculos.</td>
-          </tr>
-
-          <tr>
-            <td>Visão artificial com IA</td>
-            <td>Analisa e interpreta informações visuais.</td>
-          </tr>
-
-        </tbody>
-
-      </table>
-
-    </section>
-
-
-    <!-- =========================
-         NOSSA PROPOSTA
-         ========================= -->
-    <section id="proposta">
-
-      <h2>5. Nossa Proposta</h2>
-
-
-      <h3>5.1 O Problema que Será Resolvido</h3>
-
-      <p>
-        Pessoas que utilizam óculos de grau podem enfrentar desconforto
-        visual causado por mudanças de luminosidade entre diferentes
-        ambientes e pela exposição prolongada às telas.
-      </p>
-
-      <p>
-        As lentes fotocromáticas tradicionais podem não reagir na velocidade
-        ou intensidade ideal para todas as situações.
-      </p>
-
-
-      <h3>5.2 O Público-Alvo</h3>
-
-      <ul>
-        <li>Pessoas que utilizam óculos continuamente.</li>
-        <li>Estudantes.</li>
-        <li>Trabalhadores.</li>
-        <li>Pessoas que alternam entre ambientes internos e externos.</li>
-        <li>Pessoas sensíveis à luz.</li>
-        <li>Pessoas com diferentes necessidades de conforto visual.</li>
-      </ul>
-
-
-      <h3>5.3 Funcionamento da Tecnologia</h3>
-
-      <p>
-        A proposta consiste em desenvolver óculos inteligentes capazes
-        de monitorar continuamente as condições de iluminação.
-      </p>
-
-      <p>
-        Sensores integrados à armação poderiam medir os níveis de luz
-        ambiente e enviar os dados para um microcontrolador.
-      </p>
-
-      <p>
-        O microcontrolador processaria essas informações e poderia controlar
-        uma película ou lente eletrocrômica, ajustando sua transparência
-        de acordo com a luminosidade.
-      </p>
-
-      <div class="fluxo-tecnologia">
-
-        <p>
-          <strong>
-            Sensor de luz → Microcontrolador → Processamento →
-            Lente ativa → Ajuste da luminosidade
-          </strong>
-        </p>
-
-      </div>
-
-
-      <h3>5.4 Componentes Necessários</h3>
-
-      <ul>
-
-        <li>
-          <strong>Sensores de iluminação:</strong>
-          LDR ou BH1750 para medir a intensidade luminosa.
-        </li>
-
-        <li>
-          <strong>Microcontrolador:</strong>
-          ESP32 ou Arduino Nano.
-        </li>
-
-        <li>
-          <strong>Filme eletrocrômico ou lente ativa:</strong>
-          material capaz de alterar sua transparência.
-        </li>
-
-        <li>
-          <strong>Bateria de lítio:</strong>
-          fonte de energia compacta e recarregável.
-        </li>
-
-        <li>
-          <strong>Módulo Bluetooth:</strong>
-          possibilita a comunicação com um smartphone.
-        </li>
-
-      </ul>
-
-
-      <h3>5.5 Controle da Intensidade Luminosa</h3>
-
-      <p>
-        Os conhecimentos sobre sensores de luz e modulação por largura
-        de pulso (PWM) podem ser utilizados para desenvolver um sistema
-        de ajuste gradual.
-      </p>
-
-      <p>
-        Em vez de uma alteração brusca, o sistema poderia realizar ajustes
-        progressivos, buscando proporcionar maior conforto visual.
-      </p>
-
-
-      <h3>5.6 Como a Inteligência Artificial Ampliará a Eficiência</h3>
-
-      <h4>Aprendizado de preferências</h4>
-
-      <p>
-        A inteligência artificial poderia aprender quais níveis de
-        luminosidade são mais confortáveis para cada usuário.
-      </p>
-
-      <h4>Predição e automação</h4>
-
-      <p>
-        Analisando padrões de utilização, horários e condições de iluminação,
-        o sistema poderia realizar ajustes automaticamente.
-      </p>
-
-      <h4>Gestão de energia</h4>
-
-      <p>
-        A IA também poderia auxiliar na otimização do consumo de energia,
-        contribuindo para aumentar a autonomia da bateria.
-      </p>
-
-    </section>
-
-
-    <!-- =========================
-         TECNOCIÊNCIA
-         ========================= -->
-    <section id="tecnociencia">
-
-      <h2>Tecnociência</h2>
-
-      <p>
-        A tecnociência representa a união entre a investigação científica
-        e a aplicação tecnológica.
-      </p>
-
-      <p>
-        É por meio dessa relação que conhecimentos científicos podem ser
-        transformados em tecnologias capazes de solucionar problemas
-        presentes no cotidiano.
-      </p>
-
-      <p>
-        No campo da acessibilidade, essa integração contribui para o
-        desenvolvimento de leitores de tela, sistemas de reconhecimento
-        de imagens, inteligência artificial, dispositivos de ampliação,
-        sensores e novas interfaces acessíveis.
-      </p>
-
-    </section>
-
-
-    <!-- =========================
-         INTELIGÊNCIA ARTIFICIAL
-         ========================= -->
-    <section id="ia">
-
-      <h2>6. Uso da Inteligência Artificial no Desenvolvimento do Trabalho</h2>
-
-      <p>
-        Durante o desenvolvimento deste trabalho, utilizamos a Inteligência
-        Artificial como ferramenta de apoio à pesquisa, à organização das
-        ideias e à compreensão dos conteúdos.
-      </p>
-
-      <p>
-        A ferramenta utilizada foi o ChatGPT, principalmente para esclarecer
-        dúvidas e explicar de forma mais simples conceitos relacionados à
-        luz, às cores, à óptica e ao Disco de Newton.
-      </p>
-
-      <p>
-        As perguntas e prompts realizados foram baseados nos próprios tópicos
-        do trabalho. Pesquisamos, por exemplo, sobre Isaac Newton, a luz
-        branca, o espectro visível, a mistura das cores, o funcionamento
-        do Disco de Newton e a relação entre percepção das cores e
-        deficiência visual.
-      </p>
-
-      <p>
-        As respostas auxiliaram na compreensão dos conteúdos e na organização
-        das informações.
-      </p>
-
-      <p>
-        Antes de utilizar as informações, foi necessário verificar se elas
-        estavam corretas e confiáveis. Por isso, informações importantes
-        foram conferidas em fontes confiáveis, como sites educacionais,
-        instituições científicas e organizações relacionadas à acessibilidade.
-      </p>
-
-      <p>
-        Dessa forma, entendemos que a Inteligência Artificial deve ser
-        utilizada como uma ferramenta de apoio, enquanto as informações
-        precisam ser verificadas antes de serem utilizadas em um trabalho.
-      </p>
-
-    </section>
-
-
-    <!-- =========================
-         FAKE NEWS
-         ========================= -->
-    <section id="fakenews">
-
-      <h2>7. Orientações sobre Fake News</h2>
-
-      <p>
-        A desinformação afeta a todos no meio digital. Por isso, é importante
-        verificar informações antes de compartilhá-las.
-      </p>
-
-      <ul>
-
-        <li>
-          <strong>Analise a fonte:</strong>
-          verifique se o portal de notícias é confiável e se possui
-          histórico de jornalismo responsável.
-        </li>
-
-        <li>
-          <strong>Não leia apenas a manchete:</strong>
-          títulos podem ser exagerados para atrair cliques.
-        </li>
-
-        <li>
-          <strong>Confira a data:</strong>
-          fatos antigos podem ser compartilhados fora de contexto.
-        </li>
-
-        <li>
-          <strong>Consulte outras fontes:</strong>
-          compare a informação com diferentes veículos.
-        </li>
-
-        <li>
-          <strong>Consulte agências de checagem:</strong>
-          procure serviços especializados em verificar informações.
-        </li>
-
-      </ul>
-
-    </section>
-
-
-    <!-- =========================
-         CONCLUSÃO
-         ========================= -->
-    <section id="conclusao">
-
-      <h2>8. Conclusão</h2>
-
-      <p>
-        Os conhecimentos adquiridos com o Disco de Newton contribuíram para
-        compreender melhor como a luz branca está relacionada às diferentes
-        cores que conseguimos perceber.
-      </p>
-
-      <p>
-        Durante a atividade, aprendemos que a luz branca está relacionada
-        a diferentes componentes do espectro visível e que, quando as cores
-        do disco são observadas em rápida sucessão, ocorre uma mistura visual.
-      </p>
-
-      <p>
-        O experimento também ajudou a entender melhor alguns princípios
-        da óptica e a relação entre a luz e a visão humana.
-      </p>
-
-      <p>
-        Percebemos que a forma como enxergamos os objetos depende da
-        iluminação, das cores, das características da superfície e do
-        funcionamento do nosso sistema visual.
-      </p>
-
-      <p>
-        A partir das pesquisas, compreendemos que esses conhecimentos
-        são importantes para desenvolver tecnologias que auxiliam pessoas
-        com deficiência visual ou baixa visão.
-      </p>
-
-      <p>
-        Tecnologias como lupas eletrônicas, dispositivos de ampliação,
-        sistemas de aumento de contraste, leitores de cor, bengalas
-        inteligentes e equipamentos que utilizam câmeras e processamento
-        de imagens utilizam conhecimentos relacionados à luz e à óptica.
-      </p>
-
-      <p>
-        Assim, o Disco de Newton foi importante não apenas para observar
-        as cores, mas também para perceber que os conhecimentos sobre a
-        luz podem ser utilizados para resolver problemas do cotidiano.
-      </p>
-
-      <p>
-        A atividade mostrou que a Física e a tecnologia podem trabalhar
-        juntas para desenvolver soluções que promovam mais acessibilidade,
-        autonomia e qualidade de vida para pessoas com deficiência visual
-        ou baixa visão.
-      </p>
-
-    </section>
-
-
-    <!-- =========================
-         REFERÊNCIAS
-         ========================= -->
-    <section id="referencias">
-
-      <h2>9. Referências</h2>
-
-      <ol class="referencias">
-
-        <li>
-          BRASIL ESCOLA. <strong>Disco de Newton.</strong>
-          Disponível em:
-          https://brasilescola.uol.com.br/fisica/disco-newton.htm.
-          Acesso em: 18 ago. 2026.
-        </li>
-
-        <li>
-          TODA MATÉRIA. <strong>Disco de Newton.</strong>
-          Disponível em:
-          https://www.todamateria.com.br/disco-de-newton/.
-          Acesso em: 18 ago. 2026.
-        </li>
-
-        <li>
-          MUNDO EDUCAÇÃO. <strong>Disco de Newton.</strong>
-          Disponível em:
-          https://mundoeducacao.uol.com.br/fisica/disco-newton.htm.
-          Acesso em: 18 ago. 2026.
-        </li>
-
-        <li>
-          NASA. <strong>Isaac Newton.</strong>
-          Disponível em:
-          https://science.nasa.gov/people/isaac-newton/.
-          Acesso em: 18 ago. 2026.
-        </li>
-
-        <li>
-          WORLD HEALTH ORGANIZATION.
-          <strong>Blindness and vision impairment.</strong>
-          Disponível em:
-          https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment.
-          Acesso em: 18 ago. 2026.
-        </li>
-
-        <li>
-          OPENAI. <strong>ChatGPT.</strong>
-          Disponível em:
-          https://chatgpt.com/.
-          Acesso em: 18 ago. 2026.
-        </li>
-
-      </ol>
-
-    </section>
-
-  </main>
+<main id="main-content">
+
+  <div class="explore-strip" aria-label="Áreas do projeto">
+    <div><strong>01</strong><span>Óptica</span></div>
+    <div><strong>02</strong><span>Tecnociência</span></div>
+    <div><strong>03</strong><span>Tecnologias</span></div>
+    <div><strong>04</strong><span>Acessibilidade</span></div>
+  </div>
 
 
   <!-- =========================
-       RODAPÉ
+       ÓPTICA
        ========================= -->
-  <footer>
+
+  <section id="optica">
+
+    <h1>Tecnociência, Óptica e Informação</h1>
+
+    <h2>Introdução à Óptica</h2>
 
     <p>
-      &copy; Portal de Acessibilidade e Ciência
+      A óptica é o ramo da Física responsável por estudar a luz,
+      suas formas de propagação e a maneira como ela interage com a matéria.
     </p>
 
     <p>
-      Trabalho sobre Óptica, Disco de Newton, Tecnociência e Acessibilidade
+      Para pessoas com baixa visão, a óptica é a base teórica e prática
+      para a criação de lupas, óculos especiais, lentes de aumento e
+      filtros de contraste, permitindo maior inclusão e autonomia
+      na leitura e na navegação visual.
     </p>
 
-    <p>Alunos:<br>
-      Yolanda Barrera  Samira Agata<br>
-      Emannuelle Machado Wuilmer Rivas
+  </section>
+
+
+  <!-- =========================
+       TECNOCIÊNCIA
+       ========================= -->
+
+  <section id="tecnociencia">
+
+    <h2>Tecnociência</h2>
+
+    <p>
+      A tecnociência une investigação científica e aplicação tecnológica
+      para transformar conhecimentos em soluções para problemas do cotidiano.
     </p>
 
-  </footer>
+    <p>
+      Na acessibilidade, isso contribui para leitores de tela,
+      reconhecimento de imagens, inteligência artificial, ampliação,
+      sensores e interfaces acessíveis.
+    </p>
+
+  </section>
 
 
-  <!-- JAVASCRIPT -->
-  <script src="script.js"></script>
+  <!-- =========================
+       ÓPTICA EM DIVERSOS CONTEXTOS
+       ========================= -->
+
+  <section id="optica-contextos">
+
+    <h2>
+      IA e Tecnologias: Desvendando a Óptica Aplicada em Diversos Contextos
+    </h2>
+
+    <div class="infografico-optica">
+
+      <img
+        src="img/infografico-optica.jpg"
+        alt="Infográfico sobre Óptica Aplicada em Diversos Contextos"
+      >
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       THOMAS YOUNG
+       ========================= -->
+
+  <section id="thomas-young">
+
+    <h2>AFINAL, O QUE É A LUZ?</h2>
+
+    <h3>Thomas Young e a evidência do comportamento ondulatório</h3>
+
+    <p>
+      A compreensão sobre a natureza da luz mudou ao longo da História.
+      No início do século XIX, o físico e médico inglês Thomas Young realizou
+      estudos que trouxeram novas evidências para a ideia de que a luz apresenta
+      comportamento ondulatório.
+    </p>
+
+    <h4>Contexto histórico</h4>
+
+    <p>
+      Thomas Young viveu entre 1773 e 1829. No final do século XVIII e início
+      do século XIX, existiam diferentes explicações para a natureza da luz.
+      A teoria corpuscular de Isaac Newton tinha grande influência, enquanto
+      a proposta de que a luz poderia se comportar como uma onda, associada
+      anteriormente a Christiaan Huygens, ainda precisava de evidências
+      experimentais mais convincentes.
+    </p>
+
+    <p>
+      O problema investigado era entender como a luz se comportava e encontrar
+      evidências que ajudassem a decidir entre diferentes explicações sobre
+      sua natureza.
+    </p>
+
+    <h4>Quem foi Thomas Young?</h4>
+
+    <p>
+      Thomas Young foi um cientista inglês que atuou em diferentes áreas,
+      incluindo Física e Medicina. No estudo da Óptica, ficou conhecido por
+      suas pesquisas sobre interferência e pelo desenvolvimento de experimentos
+      que ajudaram a sustentar a teoria ondulatória da luz.
+    </p>
+
+    <h4>A ideia sobre a luz</h4>
+
+    <p>
+      Young defendia que a luz poderia apresentar comportamento semelhante ao
+      de uma onda. Para explicar determinados fenômenos ópticos, ele utilizou
+      o conceito de interferência: quando ondas se encontram, elas podem se
+      reforçar ou se enfraquecer.
+    </p>
+
+    <p>
+      Essa ideia permitia explicar fenômenos que eram difíceis de compreender
+      utilizando somente a teoria corpuscular. Quando duas partes da luz
+      interferem de maneira construtiva, podem produzir regiões mais claras.
+      Quando interferem de maneira destrutiva, podem produzir regiões mais
+      escuras.
+    </p>
+
+    <h4>Experimento e evidência</h4>
+
+    <p>
+      Uma das contribuições mais importantes de Young foi o estudo da
+      interferência da luz. Em seus experimentos, a luz era dividida em
+      caminhos diferentes e depois observada novamente. A sobreposição das
+      ondas produzia franjas claras e escuras, um padrão característico de
+      interferência.
+    </p>
+
+    <p>
+      Em 1801, Young apresentou sua pesquisa sobre a teoria da luz e das
+      cores. Nos anos seguintes, descreveu demonstrações de interferência
+      utilizando luz. A experiência associada às duas fendas tornou-se
+      especialmente conhecida por mostrar como duas partes da luz podem
+      produzir um padrão de interferência.
+    </p>
+
+    <div class="imagem-placeholder">
+
+      <img
+        src="img/thomas-young.jpg"
+        alt="Thomas Young e representação do experimento de interferência da luz"
+      >
+
+      <p>
+        Representação relacionada aos estudos de Thomas Young sobre a
+        interferência da luz.
+      </p>
+
+    </div>
+
+    <h4>O que acontece no experimento?</h4>
+
+    <ul>
+
+      <li>
+        A luz passa por uma abertura estreita e é direcionada para duas
+        pequenas aberturas.
+      </li>
+
+      <li>
+        A luz que passa pelas duas aberturas se espalha e forma ondas.
+      </li>
+
+      <li>
+        As ondas se encontram e podem sofrer interferência construtiva
+        ou destrutiva.
+      </li>
+
+      <li>
+        Em uma tela, aparecem regiões claras e escuras formando um padrão
+        de interferência.
+      </li>
+
+    </ul>
+
+    <div class="fluxo-tecnologia">
+
+      <p>
+        <strong>
+          Luz → Duas aberturas → Interferência → Franjas claras e escuras
+        </strong>
+      </p>
+
+    </div>
+
+    <h4>Importância para a Física</h4>
+
+    <p>
+      Os estudos de Young foram importantes porque forneceram evidências
+      experimentais para o comportamento ondulatório da luz. Seus resultados
+      ajudaram a fortalecer a teoria ondulatória e contribuíram para que
+      os cientistas buscassem novas explicações para fenômenos relacionados
+      à luz.
+    </p>
+
+    <p>
+      A interferência passou a ser uma evidência importante para compreender
+      a luz como uma onda, principalmente porque o padrão de regiões claras
+      e escuras podia ser explicado pela superposição de ondas.
+    </p>
+
+    <h4>Conexão com a Física atual</h4>
+
+    <p>
+      Atualmente, a Física entende que a luz apresenta uma natureza
+      quântica e pode manifestar comportamentos associados tanto a ondas
+      quanto a partículas. O experimento de interferência de Young continua
+      sendo fundamental para o estudo da Óptica e da Física Quântica.
+    </p>
+
+    <p>
+      O conceito de interferência também está relacionado a diversas
+      aplicações modernas, como técnicas ópticas, instrumentos científicos
+      e estudos de fenômenos quânticos.
+    </p>
+
+    <h4>Curiosidade</h4>
+
+    <p>
+      Embora o experimento seja frequentemente chamado de "experimento da
+      dupla fenda", a primeira demonstração de interferência realizada por
+      Young não utilizou exatamente duas fendas. Ele utilizou um pequeno
+      cartão para dividir o feixe de luz e observar as franjas produzidas
+      pela interferência.
+    </p>
+
+    <h4>Como utilizamos a IA?</h4>
+
+    <p>
+      Utilizamos uma ferramenta de Inteligência Artificial para auxiliar na
+      compreensão dos estudos de Thomas Young, na organização das informações
+      e na explicação do experimento de interferência em uma linguagem adequada
+      para estudantes do Ensino Médio. As informações foram conferidas em
+      fontes de referência sobre História da Física e Óptica antes de serem
+      organizadas para publicação no site.
+    </p>
+
+  </section>
+
+
+  <!-- =========================
+       ROBÓTICA
+       ========================= -->
+
+  <section id="robotica">
+
+    <h2>Robótica</h2>
+
+    <p>
+      A robótica integra engenharia, computação e eletrônica para criar
+      dispositivos que automatizam tarefas e auxiliam as pessoas.
+    </p>
+
+    <p>
+      Na acessibilidade, pode contribuir para bengalas inteligentes,
+      próteses, dispositivos de navegação e outros sistemas de auxílio.
+    </p>
+
+  </section>
+
+
+  <!-- =========================
+       DISCO DE NEWTON
+       ========================= -->
+
+  <section id="disco-newton">
+
+    <h2>1. Apresentação da Atividade: Disco de Newton</h2>
+
+    <p>
+      O objetivo foi compreender, de forma prática, a relação entre a luz
+      branca e as cores do espectro visível usando o Disco de Newton.
+    </p>
+
+    <p>
+      Cada aluno construiu seu disco com papel, papelão, lápis de cor,
+      tesoura e um palito. O círculo foi dividido em sete partes e pintado
+      com vermelho, laranja, amarelo, verde, azul, anil e violeta.
+    </p>
+
+    <p>
+      Depois da montagem, o disco foi girado em diferentes velocidades
+      e as observações foram discutidas em aula.
+    </p>
+
+    <h3>Resultado do experimento</h3>
+
+    <p>
+      Quando gira rapidamente, as cores deixam de ser percebidas
+      separadamente e ocorre uma mistura visual, produzindo uma aparência
+      clara, branca ou acinzentada. Assim, foi possível observar na prática
+      a relação entre as cores e a percepção da luz branca.
+    </p>
+
+    <div class="atividade-imagem">
+
+      <div class="imagem-placeholder">
+
+        <p>
+          <img
+            src="img/disco.png"
+            alt="Imagem disco de Newton"
+          >
+        </p>
+
+        <p>
+          Disco de Newton dividido em sete partes com as cores do espectro visível.
+        </p>
+
+      </div>
+
+    </div>
+
+    <h3>Princípios envolvidos</h3>
+
+    <h4>Percepção e mistura das cores</h4>
+
+    <p>
+      Com a rotação rápida, as cores passam pelo campo visual em pouco tempo
+      e deixam de ser percebidas completamente separadas, produzindo uma
+      mistura visual.
+    </p>
+
+    <h4>Persistência da visão</h4>
+
+    <p>
+      O sistema visual integra informações apresentadas rapidamente,
+      criando uma sensação de continuidade e mistura.
+    </p>
+
+    <div class="imagem-placeholder">
+
+      <img
+        src="img/Newton.jpg"
+        alt="Disco de Newton em funcionamento"
+      >
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CIÊNCIA DA LUZ
+       ========================= -->
+
+  <section id="ciencia-luz">
+
+    <h2>2. Explicação Científica</h2>
+
+    <h3>2.1 Quem foi Isaac Newton?</h3>
+
+    <p>
+      Isaac Newton (1643–1727) foi um importante físico, matemático e
+      astrônomo. Seus estudos de óptica, incluindo experimentos com prismas,
+      ajudaram a compreender melhor a luz e as cores.
+    </p>
+
+    <h3>2.2 O que é a Luz Branca?</h3>
+
+    <p>
+      A luz branca, como a do Sol, é policromática, pois contém diferentes
+      componentes do espectro visível. Ao atravessar certos materiais,
+      essas cores podem ser separadas.
+    </p>
+
+    <h3>2.3 Refração da Luz</h3>
+
+    <p>
+      Refração é o desvio da luz quando ela muda de meio, como do ar para
+      o vidro. Diferentes comprimentos de onda podem sofrer desvios diferentes.
+    </p>
+
+    <ul>
+
+      <li>
+        <strong>Vermelho:</strong> maior comprimento de onda na faixa visível.
+      </li>
+
+      <li>
+        <strong>Violeta:</strong> menor comprimento de onda na faixa visível.
+      </li>
+
+    </ul>
+
+    <h3>2.4 O Espectro Visível</h3>
+
+    <p>
+      É a faixa do espectro eletromagnético detectada pelo olho humano.
+    </p>
+
+    <ol>
+
+      <li>Vermelho</li>
+      <li>Laranja</li>
+      <li>Amarelo</li>
+      <li>Verde</li>
+      <li>Azul</li>
+      <li>Anil ou Índigo</li>
+      <li>Violeta</li>
+
+    </ol>
+
+    <h3>2.5 Mistura das Cores: Adição x Subtração</h3>
+
+    <p>
+      <strong>Mistura aditiva:</strong> ocorre com luzes coloridas;
+      suas combinações podem produzir a percepção de branco.
+    </p>
+
+    <p>
+      <strong>Mistura subtrativa:</strong> ocorre com pigmentos e materiais
+      que absorvem partes da luz.
+    </p>
+
+    <p>
+      O Disco de Newton permite observar uma mistura visual das cores
+      durante a rotação rápida.
+    </p>
+
+    <h3>2.6 Por que o Disco de Newton parece branco quando gira rapidamente?</h3>
+
+    <p>
+      O efeito está ligado ao processamento visual de informações rápidas.
+    </p>
+
+    <h4>Retenção da informação visual</h4>
+
+    <p>
+      Cada setor passa pelo campo visual em um intervalo muito curto.
+    </p>
+
+    <h4>Sobreposição visual</h4>
+
+    <p>
+      O cérebro integra as cores apresentadas sucessivamente e deixa de
+      percebê-las isoladamente.
+    </p>
+
+    <h4>Fusão das cores</h4>
+
+    <p>
+      O resultado pode ser uma aparência próxima do branco, cinza ou creme,
+      dependendo das condições do experimento.
+    </p>
+
+  </section>
+
+
+  <!-- =========================
+       DEFICIÊNCIA VISUAL
+       ========================= -->
+
+  <section id="deficiencia-visual">
+
+    <h2>3. Relação com a Deficiência Visual</h2>
+
+    <h3>3.1 Como pessoas com baixa visão percebem a luz?</h3>
+
+    <p>
+      Pessoas com baixa visão podem ter diferentes níveis de visão residual
+      e perceber claridade, sombras, formas ou direção da luz.
+    </p>
+
+    <h4>Visão residual</h4>
+
+    <p>
+      Algumas pessoas percebem luz natural ou artificial, ajudando a
+      identificar ambientes claros ou escuros.
+    </p>
+
+    <h4>Fotofobia</h4>
+
+    <p>
+      Algumas pessoas possuem maior sensibilidade à luz e podem sentir
+      desconforto em ambientes muito claros.
+    </p>
+
+    <h4>Ofuscamento</h4>
+
+    <p>
+      O excesso de luminosidade pode dificultar a adaptação visual,
+      especialmente nas mudanças entre ambientes claros e escuros.
+    </p>
+
+    <h3>3.2 Todas as pessoas enxergam as cores da mesma maneira?</h3>
+
+    <p>
+      Não. A percepção pode variar por fatores biológicos, daltonismo,
+      envelhecimento e outras características visuais.
+    </p>
+
+    <h3>3.3 Como a iluminação interfere na percepção dos objetos?</h3>
+
+    <p>
+      A iluminação interfere na percepção de objetos, cores, texturas,
+      formas, sombras e reflexos.
+    </p>
+
+    <h4>Cor e tonalidade</h4>
+
+    <p>
+      A luz disponível influencia a aparência das cores refletidas pelos objetos.
+    </p>
+
+    <h4>Temperatura da luz</h4>
+
+    <p>
+      Luzes quentes ou frias podem alterar a aparência das cores.
+    </p>
+
+    <h4>Forma e relevo</h4>
+
+    <p>
+      A luz e as sombras ajudam a revelar texturas, contornos e relevos.
+    </p>
+
+    <h4>Volume</h4>
+
+    <p>
+      Regiões claras e escuras ajudam a interpretar profundidade e tridimensionalidade.
+    </p>
+
+    <h4>Textura e acabamento</h4>
+
+    <p>
+      Superfícies polidas produzem mais reflexos; superfícies foscas espalham a luz.
+    </p>
+
+    <h3>
+      3.4 Por que compreender a formação das cores é importante
+      para desenvolver tecnologias de acessibilidade?
+    </h3>
+
+    <p>
+      Compreender as cores ajuda a desenvolver tecnologias mais acessíveis.
+      Aplicativos, telas e sinalizações podem combinar cores com textos,
+      símbolos, padrões e contrastes para incluir pessoas com baixa visão
+      ou daltonismo.
+    </p>
+
+  </section>
+
+
+  <!-- =========================
+       TECNOLOGIAS
+       ========================= -->
+
+  <section id="tecnologias">
+
+    <h2>4. Tecnologias Existentes</h2>
+
+    <h3>4.1 Óculos Eletrônicos para Baixa Visão</h3>
+
+    <p>
+      Utilizam câmeras e telas para apresentar imagens ampliadas, com recursos
+      de brilho, contraste e cores.
+    </p>
+
+    <h4>Como funcionam?</h4>
+
+    <ul>
+      <li>Câmera capta a imagem.</li>
+      <li>O sistema processa e amplia.</li>
+      <li>Brilho, contraste e cores podem ser ajustados.</li>
+      <li>Alguns fazem leitura de texto.</li>
+    </ul>
+
+    <h4>Possíveis aplicações</h4>
+
+    <ul>
+      <li>Leitura.</li>
+      <li>Placas e objetos.</li>
+      <li>Rostos.</li>
+      <li>Telas.</li>
+    </ul>
+
+    <h3>4.2 Leitores de Cor</h3>
+
+    <p>
+      Usam sensores ópticos para analisar a luz refletida e identificar cores,
+      podendo informar o resultado por áudio.
+    </p>
+
+    <h4>Como funcionam?</h4>
+
+    <p>
+      O usuário aponta o sensor para uma superfície e o dispositivo processa
+      e informa a cor.
+    </p>
+
+    <p>
+      Exemplos: “Vermelho”, “Azul escuro”, “Verde” e “Amarelo”.
+    </p>
+
+    <h4>Possíveis usos</h4>
+
+    <ul>
+      <li>Escolher roupas.</li>
+      <li>Organizar objetos.</li>
+      <li>Identificar embalagens e alimentos.</li>
+      <li>Verificar indicadores luminosos.</li>
+    </ul>
+
+    <h3>4.3 Lupas Eletrônicas e Vídeo Ampliadores</h3>
+
+    <p>
+      Usam câmeras e sistemas ópticos para ampliar textos, imagens e detalhes.
+    </p>
+
+    <h4>Como funcionam?</h4>
+
+    <ul>
+      <li>Câmera captura o material.</li>
+      <li>Imagem aparece na tela.</li>
+      <li>Zoom, contraste, cores e iluminação podem ser ajustados.</li>
+    </ul>
+
+    <h4>Para que servem?</h4>
+
+    <ul>
+      <li>Leitura e estudo.</li>
+      <li>Receitas, bulas e formulários.</li>
+      <li>Etiquetas e trabalhos manuais.</li>
+    </ul>
+
+    <h4>Tipos de lupa eletrônica</h4>
+
+    <p>
+      <strong>Portáteis:</strong> câmera, tela e bateria no aparelho.
+    </p>
+
+    <p>
+      <strong>De mesa:</strong> úteis para leitura prolongada.
+    </p>
+
+    <p>
+      <strong>Celular ou tablet:</strong> usam a câmera e aplicativos.
+    </p>
+
+    <h4>Principal vantagem</h4>
+
+    <p>
+      Permitem combinar ampliação, contraste, cores e iluminação conforme
+      a necessidade. São tecnologias assistivas e não tratam a causa da baixa visão.
+    </p>
+
+    <h3>4.4 Bengalas Inteligentes com Sensores Ópticos</h3>
+
+    <p>
+      Usam sensores para detectar obstáculos e auxiliar na locomoção.
+    </p>
+
+    <h4>Como funcionam?</h4>
+
+    <p>
+      Podem usar ultrassom, LiDAR ou câmeras para analisar o espaço.
+    </p>
+
+    <p>
+      Podem detectar carros, galhos, portas, placas, paredes, objetos
+      suspensos e desníveis.
+    </p>
+
+    <h4>Como a pessoa recebe o alerta?</h4>
+
+    <ul>
+      <li><strong>Vibração</strong></li>
+      <li><strong>Som</strong></li>
+      <li><strong>Voz</strong></li>
+    </ul>
+
+    <h4>Sensores ópticos</h4>
+
+    <p>
+      LiDAR usa luz para medir distâncias; câmeras podem trabalhar com IA
+      para analisar objetos.
+    </p>
+
+    <p>
+      <strong>Bengala tradicional:</strong> detecta por contato.
+      <strong>Com sensor:</strong> pode detectar antes do contato.
+      <strong>Com câmera e IA:</strong> pode tentar identificar o objeto.
+    </p>
+
+    <h4>Exemplo no Brasil</h4>
+
+    <p>
+      O projeto BIA, no Paraná, pesquisa o uso de IA e sensores em bengalas.
+      Sistemas eletrônicos devem ser vistos como complementares à bengala
+      branca tradicional.
+    </p>
+
+    <h3>4.5 Sistemas de Visão Artificial com Inteligência Artificial</h3>
+
+    <p>
+      Combinam câmeras, sensores e IA para analisar imagens e interpretar
+      informações visuais.
+    </p>
+
+    <div class="fluxo-tecnologia">
+
+      <p>
+        <strong>
+          Câmera → Inteligência Artificial → Interpretação → Voz
+        </strong>
+      </p>
+
+    </div>
+
+    <h4>Reconhecimento de textos</h4>
+
+    <p>
+      OCR pode reconhecer textos e transformá-los em áudio.
+    </p>
+
+    <h4>Reconhecimento de pessoas</h4>
+
+    <p>
+      Alguns sistemas reconhecem rostos cadastrados.
+    </p>
+
+    <h4>Reconhecimento de objetos</h4>
+
+    <p>
+      A IA pode identificar objetos do cotidiano.
+    </p>
+
+    <h4>Identificação de dinheiro</h4>
+
+    <p>
+      Alguns dispositivos identificam cédulas.
+    </p>
+
+    <h4>Identificação de cores</h4>
+
+    <p>
+      Sistemas de visão computacional podem analisar cores.
+    </p>
+
+    <h4>Descrição do ambiente</h4>
+
+    <p>
+      Sistemas avançados podem descrever uma cena.
+    </p>
+
+    <h4>Onde podem ser utilizados?</h4>
+
+    <ul>
+      <li>Óculos inteligentes.</li>
+      <li>Celulares e tablets.</li>
+      <li>Câmeras portáteis.</li>
+      <li>Dispositivos de tecnologia assistiva.</li>
+    </ul>
+
+    <h4>Exemplo prático</h4>
+
+    <p>
+      Uma pessoa poderia apontar a câmera para uma prateleira e perguntar
+      qual produto está à frente; o sistema poderia responder por áudio.
+    </p>
+
+    <h4>Uma limitação importante</h4>
+
+    <p>
+      A IA pode errar, especialmente com pouca iluminação ou imagens ruins.
+      Por isso, não substitui completamente recursos tradicionais de orientação
+      e mobilidade.
+    </p>
+
+    <h3>Comparação entre algumas tecnologias</h3>
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>Tecnologia</th>
+          <th>Principal função</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>Lupa eletrônica</td>
+          <td>Aumenta o que a pessoa observa.</td>
+        </tr>
+
+        <tr>
+          <td>Leitor de cor</td>
+          <td>Identifica cores.</td>
+        </tr>
+
+        <tr>
+          <td>Bengala inteligente</td>
+          <td>Detecta obstáculos.</td>
+        </tr>
+
+        <tr>
+          <td>Visão artificial com IA</td>
+          <td>Analisa informações visuais.</td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </section>
+
+
+  <!-- =========================
+       NOSSA PROPOSTA
+       ========================= -->
+
+  <section id="proposta">
+
+    <h2>5. Nossa Proposta</h2>
+
+    <h3>5.1 O Problema que Será Resolvido</h3>
+
+    <p>
+      Mudanças de luminosidade e exposição às telas podem causar desconforto
+      visual. Lentes fotocromáticas também podem não reagir idealmente
+      em todas as situações.
+    </p>
+
+    <h3>5.2 O Público-Alvo</h3>
+
+    <ul>
+      <li>Pessoas que usam óculos.</li>
+      <li>Estudantes e trabalhadores.</li>
+      <li>Pessoas que alternam entre ambientes internos e externos.</li>
+      <li>Pessoas sensíveis à luz.</li>
+    </ul>
+
+    <h3>5.3 Funcionamento da Tecnologia</h3>
+
+    <p>
+      A proposta é criar óculos inteligentes que monitorem a iluminação.
+      Sensores mediriam a luz e um microcontrolador controlaria uma película
+      ou lente eletrocrômica, ajustando a transparência.
+    </p>
+
+    <div class="fluxo-tecnologia">
+
+      <p>
+        <strong>
+          Sensor de luz → Microcontrolador → Processamento →
+          Lente ativa → Ajuste da luminosidade
+        </strong>
+      </p>
+
+    </div>
+
+    <h3>5.4 Componentes Necessários</h3>
+
+    <ul>
+      <li><strong>Sensores:</strong> LDR ou BH1750.</li>
+      <li><strong>Microcontrolador:</strong> ESP32 ou Arduino Nano.</li>
+      <li><strong>Lente ativa:</strong> filme eletrocrômico.</li>
+      <li><strong>Bateria:</strong> fonte compacta e recarregável.</li>
+      <li><strong>Bluetooth:</strong> comunicação com smartphone.</li>
+    </ul>
+
+    <h3>5.5 Controle da Intensidade Luminosa</h3>
+
+    <p>
+      Sensores e PWM podem permitir ajustes graduais, evitando mudanças
+      bruscas e buscando maior conforto visual.
+    </p>
+
+    <h3>5.6 Como a Inteligência Artificial Ampliará a Eficiência</h3>
+
+    <h4>Aprendizado de preferências</h4>
+
+    <p>
+      A IA poderia aprender os níveis de luminosidade mais confortáveis
+      para cada usuário.
+    </p>
+
+    <h4>Predição e automação</h4>
+
+    <p>
+      Poderia usar horários e condições de iluminação para ajustar o
+      sistema automaticamente.
+    </p>
+
+    <h4>Gestão de energia</h4>
+
+    <p>
+      Poderia ajudar a otimizar o consumo e aumentar a autonomia da bateria.
+    </p>
+
+  </section>
+
+
+  <!-- =========================
+       INTELIGÊNCIA ARTIFICIAL
+       ========================= -->
+
+  <section id="ia">
+
+    <h2>
+      6. Uso da Inteligência Artificial no Desenvolvimento do Trabalho
+    </h2>
+
+    <p>
+      Usamos a IA como apoio à pesquisa, organização das ideias e compreensão
+      dos conteúdos. O ChatGPT ajudou a explicar luz, cores, óptica,
+      Disco de Newton e acessibilidade.
+    </p>
+
+    <p>
+      Os prompts foram baseados nos tópicos do trabalho, e as respostas
+      ajudaram na compreensão e organização das informações.
+    </p>
+
+    <p>
+      As informações importantes foram conferidas em fontes confiáveis.
+      Assim, a IA foi utilizada como apoio, e não como única fonte.
+    </p>
+
+  </section>
+
+
+  <!-- =========================
+       CONCLUSÃO
+       ========================= -->
+
+  <section id="conclusao">
+
+    <h2>7. Conclusão</h2>
+
+    <p>
+      O Disco de Newton ajudou a compreender a relação entre a luz branca
+      e as cores do espectro visível, além da mistura visual causada pela
+      rotação rápida.
+    </p>
+
+    <p>
+      Também aprendemos que iluminação, cores e características da visão
+      influenciam a percepção dos objetos.
+    </p>
+
+    <p>
+      Esses conhecimentos são importantes para desenvolver tecnologias que
+      auxiliem pessoas com deficiência visual ou baixa visão.
+    </p>
+
+  </section>
+
+
+  <!-- =========================
+       ATIVIDADE 2
+       ========================= -->
+
+  <section id="atividade-2">
+
+    <h2>Atividade 2 – LED Fade-In e Fade-Out</h2>
+
+    <h3>1. Apresentação da atividade</h3>
+
+    <p>
+      Desenvolvemos e simulamos no Tinkercad um circuito com Arduino,
+      resistor e LED para compreender, na prática, a relação entre
+      eletrônica e programação. O circuito foi montado, testado e ajustado
+      até funcionar corretamente.
+    </p>
+
+    <h3>Montagem do circuito</h3>
+
+    <p>
+      O Arduino controla o LED pelo pino 11; o resistor limita a corrente
+      e o GND fecha o circuito.
+    </p>
+
+    <h3>Programação</h3>
+
+    <p>
+      No Fade-Out, o brilho começa em 255 e diminui até 0.
+      O <code>analogWrite()</code> controla o PWM e
+      <code>delay(50)</code> torna a transição suave.
+    </p>
+
+    <h3>2. Explicação científica</h3>
+
+    <p>
+      LED significa Diodo Emissor de Luz. É um semicondutor que transforma
+      energia elétrica em luz por eletroluminescência.
+    </p>
+
+    <h3>3. Relação com a deficiência visual</h3>
+
+    <p>
+      A iluminação interfere na segurança, orientação e percepção.
+      Pouca luz dificulta a identificação de objetos e obstáculos,
+      enquanto excesso de brilho pode causar ofuscamento.
+      Por isso, a iluminação deve ser ajustável.
+    </p>
+
+    <h3>4. Tecnologias existentes</h3>
+
+    <ul>
+      <li><strong>Magno Lumina Max:</strong> iluminação LED regulável.</li>
+      <li><strong>Mobilux Digital Touch HD:</strong> lupa eletrônica com ampliação, contraste e LED.</li>
+      <li><strong>Quick Look Zoom:</strong> lupa digital com controle de brilho e luz.</li>
+      <li><strong>BenQ e-Reading Lamp:</strong> iluminação ampla e ajuste automático.</li>
+      <li><strong>eSight 4:</strong> câmeras e telas para melhorar imagens.</li>
+    </ul>
+
+    <h3>5. Nossa proposta – Luz Assist</h3>
+
+    <p>
+      A Luz Assist usaria sensores para medir a luz e um Arduino para ajustar
+      automaticamente a intensidade de uma lâmpada LED. Em ambientes escuros,
+      aumentaria gradualmente; com luz suficiente, reduziria o brilho.
+    </p>
+
+    <div class="fluxo-tecnologia">
+
+      <p>
+        <strong>
+          Sensor de luminosidade → Arduino → Processamento →
+          Controle do LED → Iluminação adequada
+        </strong>
+      </p>
+
+    </div>
+
+    <p>
+      Componentes: Arduino, sensor de luminosidade, LED, resistores,
+      fios e fonte. Uma versão avançada poderia usar IA para aprender
+      os níveis mais adequados.
+    </p>
+
+    <h3>6. Uso da Inteligência Artificial</h3>
+
+    <p>
+      A IA foi usada como apoio à pesquisa e organização das ideias,
+      com conferência das informações em fontes confiáveis.
+      Também poderia tornar a Luz Assist mais personalizada.
+    </p>
+
+    <h3>7. Conclusão</h3>
+
+    <p>
+      A atividade mostrou que controlar a intensidade da luz pode contribuir
+      para segurança, conforto e autonomia, relacionando Arduino, PWM
+      e acessibilidade.
+    </p>
+
+  </section>
+
+
+  <!-- =========================
+       ATIVIDADE 3
+       ========================= -->
+
+  <section id="atividade-3">
+
+    <h2>Atividade 3 – LED RGB</h2>
+
+    <h3>1. Apresentação da atividade</h3>
+
+    <p>
+      Usamos o Tinkercad para montar e simular um circuito com LED RGB.
+      O componente possui vermelho, verde e azul, que podem ser controlados
+      separadamente para produzir outras cores.
+    </p>
+
+    <h3>Montagem do circuito</h3>
+
+    <p>
+      O circuito utiliza Arduino, LED RGB e resistores. A simulação permitiu
+      testar combinações de cores e identificar possíveis erros.
+    </p>
+
+    <h3>Programação do LED RGB</h3>
+
+    <p>
+      A programação controla as intensidades de vermelho, verde e azul
+      para formar diferentes cores.
+    </p>
+
+    <h3>2. Explicação científica</h3>
+
+    <p>
+      RGB significa Red, Green e Blue. Na mistura aditiva, vermelho + verde
+      produz amarelo, verde + azul produz ciano, vermelho + azul produz
+      magenta e as três cores juntas podem produzir branco.
+    </p>
+
+    <h3>3. Relação com a deficiência visual</h3>
+
+    <p>
+      Cores e contraste ajudam na percepção de textos, objetos e sinais.
+      Porém, informações acessíveis não devem depender somente da cor;
+      textos, símbolos, formas e contraste também devem ser usados.
+    </p>
+
+    <h3>4. Tecnologias existentes</h3>
+
+    <ul>
+      <li><strong>Envision Glasses:</strong> câmera, IA e reconhecimento de cores.</li>
+      <li><strong>Seeing AI:</strong> aplicativo que reconhece textos, objetos e cores.</li>
+      <li><strong>OrCam MyEye:</strong> fornece informações visuais por áudio.</li>
+      <li><strong>eSight:</strong> usa processamento de imagens, contraste e cores.</li>
+      <li><strong>TOPAZ EZ HD:</strong> ampliação, iluminação e modos de contraste.</li>
+    </ul>
+
+    <h3>5. Nossa proposta – Color Assist</h3>
+
+    <p>
+      O Color Assist seria um dispositivo para pessoas com dificuldade
+      de identificar cores. Um sensor ou câmera identificaria a cor;
+      o Arduino processaria os dados; o LED RGB mostraria a cor e um
+      buzzer ou alto-falante poderia dizer seu nome.
+    </p>
+
+    <div class="fluxo-tecnologia">
+
+      <p>
+        <strong>
+          Objeto → Sensor/Câmera → Arduino/IA → Processamento →
+          LED RGB + Áudio → Informação ao usuário
+        </strong>
+      </p>
+
+    </div>
+
+    <p>
+      Componentes: Arduino, LED RGB, sensor de cor, resistores, buzzer
+      ou alto-falante, câmera, comunicação, bateria e estrutura.
+    </p>
+
+    <h3>6. Inteligência Artificial</h3>
+
+    <p>
+      Em uma versão avançada, a IA poderia identificar cores, objetos
+      e textos. No trabalho, o ChatGPT ajudou na pesquisa e organização,
+      e as informações importantes foram verificadas em fontes confiáveis.
+    </p>
+
+    <h3>7. Conclusão</h3>
+
+    <p>
+      A atividade mostrou como RGB, contraste, programação e eletrônica
+      podem ser usados em soluções acessíveis, combinando informação visual
+      e sonora para aumentar a autonomia.
+    </p>
+
+  </section>
+
+
+  <!-- =========================
+       REFERÊNCIAS — ÚNICO LOCAL
+       ========================= -->
+
+  <section id="referencias">
+
+    <h2>8. Referências</h2>
+
+    <ol class="referencias">
+
+      <li>
+        BRASIL ESCOLA.
+        <strong>Disco de Newton.</strong>
+        Disponível em:
+        https://brasilescola.uol.com.br/fisica/disco-newton.htm.
+        Acesso em: 18 ago. 2026.
+      </li>
+
+      <li>
+        TODA MATÉRIA.
+        <strong>Disco de Newton.</strong>
+        Disponível em:
+        https://www.todamateria.com.br/disco-de-newton/.
+        Acesso em: 18 ago. 2026.
+      </li>
+
+      <li>
+        MUNDO EDUCAÇÃO.
+        <strong>Disco de Newton.</strong>
+        Disponível em:
+        https://mundoeducacao.uol.com.br/fisica/disco-newton.htm.
+        Acesso em: 18 ago. 2026.
+      </li>
+
+      <li>
+        NASA.
+        <strong>Isaac Newton.</strong>
+        Disponível em:
+        https://science.nasa.gov/people/isaac-newton/.
+        Acesso em: 18 ago. 2026.
+      </li>
+
+      <li>
+        WORLD HEALTH ORGANIZATION.
+        <strong>Blindness and vision impairment.</strong>
+        Disponível em:
+        https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment.
+        Acesso em: 18 ago. 2026.
+      </li>
+
+      <li>
+        OPENAI.
+        <strong>ChatGPT.</strong>
+        Disponível em:
+        https://chatgpt.com/.
+        Acesso em: 18 ago. 2026.
+      </li>
+
+      <li>
+        ROYAL SOCIETY.
+        <strong>Thomas Young e estudos sobre interferência da luz.</strong>
+      </li>
+
+      <li>
+        OPENSTAX.
+        <strong>Young's Double-Slit Interference.</strong>
+        Material didático sobre interferência da luz.
+      </li>
+
+      <li>
+        AMERICAN PHYSICAL SOCIETY.
+        <strong>Thomas Young e interferência da luz.</strong>
+      </li>
+
+      <li>
+        ARDUINO.
+        <strong>Documentação e recursos sobre Arduino.</strong>
+      </li>
+
+      <li>
+        W3C.
+        <strong>Diretrizes de acessibilidade para conteúdo digital.</strong>
+      </li>
+
+      <li>
+        MICROSOFT.
+        <strong>Seeing AI.</strong>
+        Tecnologia de assistência baseada em inteligência artificial.
+      </li>
+
+      <li>
+        ENVISION.
+        <strong>Envision Glasses.</strong>
+        Tecnologia assistiva para reconhecimento visual.
+      </li>
+
+      <li>
+        ORCAM.
+        <strong>OrCam MyEye.</strong>
+        Tecnologia assistiva para reconhecimento de informações visuais.
+      </li>
+
+      <li>
+        FREEDOM SCIENTIFIC.
+        <strong>Tecnologias assistivas para pessoas com deficiência visual.</strong>
+      </li>
+
+    </ol>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <p>
+    &copy; Portal de Acessibilidade e Ciência
+  </p>
+
+  <p>
+    Trabalho sobre Óptica, Disco de Newton, Tecnociência e Acessibilidade
+  </p>
+
+  <p>
+    Alunos:<br>
+    Yolanda Barrera &nbsp; Samira Agata<br>
+    Emannuelle Machado &nbsp; Wuilmer Rivas
+  </p>
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
