@@ -3,19 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description"
-        content="Projeto sobre Óptica, Tecnociência, Inteligência Artificial e Acessibilidade.">
-
   <title>Tecnociência, Óptica e Informação – Projeto IA e Tecnologias</title>
-
   <link rel="stylesheet" href="style.css">
 
-  <style>
-    /* =====================================================
-       TEMA VISUAL DO SITE
-       ===================================================== */
-
+  <style id="wow-theme">
     :root {
       --wow-purple: #7b1fc7;
       --wow-purple-dark: #35105d;
@@ -41,112 +32,22 @@
       color: var(--wow-ink);
     }
 
-    /* =====================================================
-       BARRA DE ACESSIBILIDADE
-       ===================================================== */
-
     .accessibility-bar {
       background: linear-gradient(90deg, #35105d, #7b1fc7, #9d35d5) !important;
       box-shadow: 0 5px 22px rgba(62, 18, 98, .22);
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px;
-
-      padding: 12px 15px;
-    }
-
-    .accessibility-bar span {
-      color: white;
-      font-weight: 900;
-      margin-right: 5px;
     }
 
     .accessibility-bar button {
       border: 0 !important;
       border-radius: 12px !important;
       font-weight: 800;
-      padding: 9px 12px;
-      cursor: pointer;
-
-      background: white;
-      color: #35105d;
-
-      transition:
-        transform .2s ease,
-        box-shadow .2s ease,
-        background .2s ease;
+      transition: transform .2s ease, box-shadow .2s ease;
     }
 
     .accessibility-bar button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 18px rgba(0,0,0,.20);
-      background: #ffe8f5;
+      box-shadow: 0 8px 18px rgba(0,0,0,.14);
     }
-
-    .accessibility-bar button:focus-visible {
-      outline: 4px solid #ffff00 !important;
-      outline-offset: 3px;
-    }
-
-    /* =====================================================
-       ACESSIBILIDADE EXTRA
-       ===================================================== */
-
-    /* Foco para navegação pelo teclado */
-    a:focus-visible,
-    button:focus-visible,
-    input:focus-visible,
-    textarea:focus-visible,
-    select:focus-visible {
-      outline: 4px solid #ffd400 !important;
-      outline-offset: 4px;
-      box-shadow: 0 0 0 7px rgba(255, 212, 0, .35) !important;
-    }
-
-    /* Cursor maior */
-    body.cursor-grande,
-    body.cursor-grande * {
-      cursor: crosshair !important;
-    }
-
-    /* Links destacados */
-    body.destacar-links a {
-      background: #fff000 !important;
-      color: #000 !important;
-      text-decoration: underline !important;
-      text-decoration-thickness: 3px !important;
-      border: 2px solid #000 !important;
-    }
-
-    /* Espaçamento de texto */
-    body.espacamento-texto p,
-    body.espacamento-texto li {
-      letter-spacing: .06em !important;
-      word-spacing: .12em !important;
-      line-height: 2 !important;
-    }
-
-    /* Fonte acessível */
-    body.fonte-legivel,
-    body.fonte-legivel * {
-      font-family: Arial, Helvetica, sans-serif !important;
-    }
-
-    /* Reduzir animações */
-    body.reduzir-animacoes *,
-    body.reduzir-animacoes *::before,
-    body.reduzir-animacoes *::after {
-      animation: none !important;
-      transition: none !important;
-      scroll-behavior: auto !important;
-    }
-
-    /* =====================================================
-       NAVEGAÇÃO
-       ===================================================== */
 
     nav {
       position: sticky !important;
@@ -177,10 +78,6 @@
       box-shadow: 0 7px 18px rgba(123,31,199,.22);
     }
 
-    /* =====================================================
-       HERO
-       ===================================================== */
-
     .hero-wow {
       position: relative;
       min-height: 520px;
@@ -188,12 +85,10 @@
       overflow: hidden;
       display: grid;
       place-items: center;
-
       background:
         radial-gradient(circle at 20% 25%, rgba(255,255,255,.16), transparent 20%),
         radial-gradient(circle at 80% 30%, rgba(255,79,163,.20), transparent 24%),
         linear-gradient(135deg, #24103f 0%, #5d1595 48%, #8b27c9 100%);
-
       color: white;
       isolation: isolate;
     }
@@ -212,7 +107,6 @@
     .hero-wow::before {
       left: -230px;
       bottom: -280px;
-
       box-shadow:
         0 0 0 60px rgba(255,255,255,.025),
         0 0 0 120px rgba(255,255,255,.018);
@@ -221,7 +115,6 @@
     .hero-wow::after {
       right: -260px;
       top: -300px;
-
       box-shadow:
         0 0 0 70px rgba(255,255,255,.025),
         0 0 0 140px rgba(255,255,255,.018);
@@ -289,56 +182,18 @@
       animation: lightWave 1.2s ease-in-out infinite alternate;
     }
 
-    .hero-wave span:nth-child(1) {
-      height: 25px;
-      animation-delay: -.1s;
-    }
-
-    .hero-wave span:nth-child(2) {
-      height: 42px;
-      animation-delay: -.2s;
-    }
-
-    .hero-wave span:nth-child(3) {
-      height: 62px;
-      animation-delay: -.3s;
-    }
-
-    .hero-wave span:nth-child(4) {
-      height: 78px;
-      animation-delay: -.4s;
-    }
-
-    .hero-wave span:nth-child(5) {
-      height: 78px;
-      animation-delay: -.5s;
-    }
-
-    .hero-wave span:nth-child(6) {
-      height: 62px;
-      animation-delay: -.6s;
-    }
-
-    .hero-wave span:nth-child(7) {
-      height: 42px;
-      animation-delay: -.7s;
-    }
-
-    .hero-wave span:nth-child(8) {
-      height: 25px;
-      animation-delay: -.8s;
-    }
+    .hero-wave span:nth-child(1) { height: 25px; animation-delay: -.1s; }
+    .hero-wave span:nth-child(2) { height: 42px; animation-delay: -.2s; }
+    .hero-wave span:nth-child(3) { height: 62px; animation-delay: -.3s; }
+    .hero-wave span:nth-child(4) { height: 78px; animation-delay: -.4s; }
+    .hero-wave span:nth-child(5) { height: 78px; animation-delay: -.5s; }
+    .hero-wave span:nth-child(6) { height: 62px; animation-delay: -.6s; }
+    .hero-wave span:nth-child(7) { height: 42px; animation-delay: -.7s; }
+    .hero-wave span:nth-child(8) { height: 25px; animation-delay: -.8s; }
 
     @keyframes lightWave {
-      from {
-        transform: scaleY(.65);
-        opacity: .65;
-      }
-
-      to {
-        transform: scaleY(1.15);
-        opacity: 1;
-      }
+      from { transform: scaleY(.65); opacity: .65; }
+      to { transform: scaleY(1.15); opacity: 1; }
     }
 
     .hero-chips {
@@ -401,10 +256,6 @@
       top: 16%;
     }
 
-    /* =====================================================
-       ÁREAS
-       ===================================================== */
-
     .explore-strip {
       width: min(1120px, 90%);
       margin: 32px auto 8px;
@@ -443,10 +294,6 @@
       color: var(--wow-purple-dark);
     }
 
-    /* =====================================================
-       SEÇÕES
-       ===================================================== */
-
     main > section {
       position: relative;
       width: min(1120px, 90%);
@@ -467,12 +314,7 @@
       top: 0;
       width: 100%;
       height: 5px;
-      background: linear-gradient(
-        90deg,
-        var(--wow-purple),
-        var(--wow-pink),
-        var(--wow-blue)
-      );
+      background: linear-gradient(90deg, var(--wow-purple), var(--wow-pink), var(--wow-blue));
     }
 
     main > section:hover {
@@ -504,11 +346,7 @@
       height: 4px;
       border-radius: 99px;
       margin-top: 9px;
-      background: linear-gradient(
-        90deg,
-        var(--wow-purple),
-        var(--wow-pink)
-      );
+      background: linear-gradient(90deg, var(--wow-purple), var(--wow-pink));
     }
 
     main > section h4 {
@@ -520,68 +358,16 @@
       line-height: 1.75;
     }
 
-    main > section ul,
-    main > section ol {
-      padding-left: 1.35rem;
-    }
-
-    main > section li::marker {
-      color: var(--wow-purple);
-      font-weight: 900;
-    }
-
-    /* =====================================================
-       IMAGENS
-       ===================================================== */
-
-    .atividade-imagem {
-      margin: 28px auto;
-      max-width: 900px;
-    }
-
-    .atividade-imagem .imagem-placeholder {
-      padding: 15px;
-      border-radius: 22px;
-      background: linear-gradient(135deg, #f8f1ff, #ffffff);
-      border: 1px solid rgba(123,31,199,.12);
-      box-shadow: 0 12px 30px rgba(53,16,93,.08);
-      text-align: center;
-    }
-
-    .atividade-imagem img {
-      width: 100%;
-      max-width: 850px;
-      height: auto;
-      border-radius: 16px;
-      display: block;
-      margin: auto;
-    }
-
-    .atividade-imagem p {
-      margin-bottom: 5px;
-      color: var(--wow-muted);
-      font-size: .95rem;
-    }
-
     #optica-contextos {
       background:
-        linear-gradient(
-          180deg,
-          rgba(239,226,255,.55),
-          rgba(255,255,255,.94) 24%
-        ),
+        linear-gradient(180deg, rgba(239,226,255,.55), rgba(255,255,255,.94) 24%),
         var(--wow-card) !important;
     }
 
     #optica-contextos h3 {
       padding: 18px 20px;
       border-radius: 18px;
-      background:
-        linear-gradient(
-          135deg,
-          rgba(123,31,199,.08),
-          rgba(255,79,163,.06)
-        );
+      background: linear-gradient(135deg, rgba(123,31,199,.08), rgba(255,79,163,.06));
       border: 1px solid rgba(123,31,199,.09);
     }
 
@@ -603,16 +389,8 @@
 
     #thomas-young {
       background:
-        radial-gradient(
-          circle at 95% 10%,
-          rgba(255,79,163,.11),
-          transparent 25%
-        ),
-        radial-gradient(
-          circle at 5% 90%,
-          rgba(75,123,236,.09),
-          transparent 25%
-        ),
+        radial-gradient(circle at 95% 10%, rgba(255,79,163,.11), transparent 25%),
+        radial-gradient(circle at 5% 90%, rgba(75,123,236,.09), transparent 25%),
         var(--wow-card) !important;
     }
 
@@ -643,6 +421,45 @@
       margin: auto;
     }
 
+    main > section ul,
+    main > section ol {
+      padding-left: 1.35rem;
+    }
+
+    main > section li::marker {
+      color: var(--wow-purple);
+      font-weight: 900;
+    }
+
+    .atividade-imagem {
+      margin: 28px auto;
+      max-width: 900px;
+    }
+
+    .atividade-imagem .imagem-placeholder {
+      padding: 15px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #f8f1ff, #ffffff);
+      border: 1px solid rgba(123,31,199,.12);
+      box-shadow: 0 12px 30px rgba(53,16,93,.08);
+      text-align: center;
+    }
+
+    .atividade-imagem img {
+      width: 100%;
+      max-width: 850px;
+      height: auto;
+      border-radius: 16px;
+      display: block;
+      margin: auto;
+    }
+
+    .atividade-imagem p {
+      margin-bottom: 5px;
+      color: var(--wow-muted);
+      font-size: .95rem;
+    }
+
     .fluxo-tecnologia {
       margin: 24px 0;
       padding: 22px;
@@ -653,10 +470,6 @@
       color: var(--wow-purple-dark);
       box-shadow: inset 0 0 30px rgba(255,255,255,.65);
     }
-
-    /* =====================================================
-       TABELAS
-       ===================================================== */
 
     table {
       width: 100%;
@@ -678,19 +491,9 @@
       color: white;
     }
 
-    /* =====================================================
-       RODAPÉ
-       ===================================================== */
-
     footer {
       margin-top: 55px !important;
-      background: linear-gradient(
-        135deg,
-        #25103f,
-        #5d1595,
-        #7b1fc7
-      ) !important;
-
+      background: linear-gradient(135deg, #25103f, #5d1595, #7b1fc7) !important;
       color: white !important;
       padding: 45px 20px !important;
       text-align: center;
@@ -711,12 +514,7 @@
       color: rgba(255,255,255,.88) !important;
     }
 
-    /* =====================================================
-       RESPONSIVIDADE
-       ===================================================== */
-
     @media (max-width: 800px) {
-
       .hero-wow {
         min-height: 470px;
       }
@@ -736,25 +534,7 @@
       }
     }
 
-    @media (max-width: 600px) {
-
-      .accessibility-bar {
-        padding: 10px !important;
-      }
-
-      .accessibility-bar span {
-        width: 100%;
-        text-align: center;
-      }
-
-      .accessibility-bar button {
-        font-size: .72rem;
-        padding: 8px 9px;
-      }
-    }
-
     @media (max-width: 520px) {
-
       .hero-content {
         padding: 52px 10px;
       }
@@ -775,82 +555,14 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-
       html {
         scroll-behavior: auto;
       }
 
-      *,
-      *::before,
-      *::after {
+      *, *::before, *::after {
         animation-duration: .01ms !important;
         transition-duration: .01ms !important;
       }
-    }
-
-    /* =====================================================
-       ALTO CONTRASTE
-       ===================================================== */
-
-    body.high-contrast {
-      background: #000 !important;
-      color: #fff !important;
-    }
-
-    body.high-contrast main > section,
-    body.high-contrast .explore-strip div {
-      background: #111 !important;
-      color: #fff !important;
-      border: 2px solid #fff !important;
-    }
-
-    body.high-contrast p,
-    body.high-contrast li,
-    body.high-contrast td {
-      color: #fff !important;
-    }
-
-    body.high-contrast h1,
-    body.high-contrast h2,
-    body.high-contrast h3,
-    body.high-contrast h4 {
-      color: #ffff00 !important;
-    }
-
-    body.high-contrast a {
-      color: #00ffff !important;
-    }
-
-    body.high-contrast th {
-      background: #000 !important;
-      color: #ffff00 !important;
-      border: 2px solid #fff !important;
-    }
-
-    body.high-contrast .hero-wow {
-      background: #000 !important;
-    }
-
-    body.high-contrast .hero-content h1,
-    body.high-contrast .hero-content h1 span {
-      color: #ffff00 !important;
-      background: none !important;
-      -webkit-text-fill-color: #ffff00 !important;
-    }
-
-    body.high-contrast .hero-subtitle {
-      color: #fff !important;
-    }
-
-    body.high-contrast .accessibility-bar {
-      background: #000 !important;
-      border-bottom: 2px solid #fff;
-    }
-
-    body.high-contrast .accessibility-bar button {
-      background: #000 !important;
-      color: #ffff00 !important;
-      border: 2px solid #fff !important;
     }
   </style>
 </head>
@@ -859,194 +571,51 @@
 
 <header>
 
-  <!-- ===================================================
-       BARRA DE ACESSIBILIDADE
-       =================================================== -->
-
-  <div
-    class="accessibility-bar"
-    role="region"
-    aria-label="Menu de Acessibilidade"
-  >
-
+  <div class="accessibility-bar" role="region" aria-label="Menu de Acessibilidade">
     <span>Acessibilidade:</span>
 
-    <!-- Recursos que você já tinha -->
-    <button id="btn-contrast"
-            type="button"
-            aria-label="Alternar Alto Contraste"
-            aria-pressed="false">
+    <button id="btn-contrast" aria-label="Alternar Alto Contraste">
       Alto Contraste
     </button>
 
-    <button id="btn-increase"
-            type="button"
-            aria-label="Aumentar Fonte">
+    <button id="btn-increase" aria-label="Aumentar Fonte">
       A+
     </button>
 
-    <button id="btn-decrease"
-            type="button"
-            aria-label="Diminuir Fonte">
+    <button id="btn-decrease" aria-label="Diminuir Fonte">
       A-
     </button>
 
-    <button id="btn-reset"
-            type="button"
-            aria-label="Resetar Tamanho da Fonte">
+    <button id="btn-reset" aria-label="Resetar Tamanho da Fonte">
       Tamanho Normal
     </button>
-
-    <!-- Novos recursos -->
-    <button id="btn-read"
-            type="button"
-            aria-label="Ler página em voz alta">
-      🔊 Ler Página
-    </button>
-
-    <button id="btn-stop-read"
-            type="button"
-            aria-label="Parar leitura">
-      ⏹ Parar
-    </button>
-
-    <button id="btn-zoom-in"
-            type="button"
-            aria-label="Aumentar zoom da página">
-      🔍 Zoom +
-    </button>
-
-    <button id="btn-zoom-out"
-            type="button"
-            aria-label="Diminuir zoom da página">
-      🔎 Zoom -
-    </button>
-
-    <button id="btn-zoom-reset"
-            type="button"
-            aria-label="Voltar o zoom ao normal">
-      Zoom Normal
-    </button>
-
-    <button id="btn-cursor"
-            type="button"
-            aria-label="Ativar cursor grande"
-            aria-pressed="false">
-      🖱️ Cursor
-    </button>
-
-    <button id="btn-links"
-            type="button"
-            aria-label="Destacar links"
-            aria-pressed="false">
-      🔗 Links
-    </button>
-
-    <button id="btn-spacing"
-            type="button"
-            aria-label="Aumentar espaçamento do texto"
-            aria-pressed="false">
-      ↔ Espaçamento
-    </button>
-
-    <button id="btn-font"
-            type="button"
-            aria-label="Ativar fonte legível"
-            aria-pressed="false">
-      Aa Fonte
-    </button>
-
-    <button id="btn-motion"
-            type="button"
-            aria-label="Reduzir animações"
-            aria-pressed="false">
-      ⏸ Animações
-    </button>
-
   </div>
 
-  <!-- ===================================================
-       NAVEGAÇÃO
-       =================================================== -->
-
   <nav aria-label="Navegação principal">
-
     <ul>
+      <li><a href="#optica">Óptica</a></li>
+      <li><a href="#thomas-young">Thomas Young</a></li>
+      <li><a href="#optica-contextos">Óptica em Diversos Contextos</a></li>
+      <li><a href="#disco-newton">Disco de Newton</a></li>
+      <li><a href="#ciencia-luz">Ciência da Luz</a></li>
+      <li><a href="#deficiencia-visual">Deficiência Visual</a></li>
+      <li><a href="#tecnologias">Tecnologias</a></li>
+      <li><a href="#proposta">Nossa Proposta</a></li>
+      <li><a href="#atividade-2">Atividade 2</a></li>
+      <li><a href="#atividade-3">Atividade 3</a></li>
+      <li><a href="#ia">Inteligência Artificial</a></li>
+      <li><a href="#conclusao">Conclusão</a></li>
 
-      <li>
-        <a href="#optica">Óptica</a>
-      </li>
+      <!-- NOVO ITEM -->
+      <li><a href="#fake-news">Fake News</a></li>
 
-      <li>
-        <a href="#thomas-young">Thomas Young</a>
-      </li>
-
-      <li>
-        <a href="#optica-contextos">
-          Óptica em Diversos Contextos
-        </a>
-      </li>
-
-      <li>
-        <a href="#disco-newton">Disco de Newton</a>
-      </li>
-
-      <li>
-        <a href="#ciencia-luz">Ciência da Luz</a>
-      </li>
-
-      <li>
-        <a href="#deficiencia-visual">
-          Deficiência Visual
-        </a>
-      </li>
-
-      <li>
-        <a href="#tecnologias">Tecnologias</a>
-      </li>
-
-      <li>
-        <a href="#proposta">Nossa Proposta</a>
-      </li>
-
-      <li>
-        <a href="#atividade-2">Atividade 2</a>
-      </li>
-
-      <li>
-        <a href="#atividade-3">Atividade 3</a>
-      </li>
-
-      <li>
-        <a href="#ia">Inteligência Artificial</a>
-      </li>
-
-      <li>
-        <a href="#conclusao">Conclusão</a>
-      </li>
-
-      <li>
-        <a href="#fake-news">Fake News</a>
-      </li>
-
-      <li>
-        <a href="#referencias">Referências</a>
-      </li>
-
+      <li><a href="#referencias">Referências</a></li>
     </ul>
-
   </nav>
 
 </header>
 
-<!-- =====================================================
-     HERO
-     ===================================================== -->
-
-<section
-  class="hero-wow"
-  aria-label="Apresentação do projeto"
->
+<section class="hero-wow" aria-label="Apresentação do projeto">
 
   <div class="hero-glow hero-glow-1"></div>
   <div class="hero-glow hero-glow-2"></div>
@@ -1057,96 +626,47 @@
       PROJETO INTEGRADOR • IA E TECNOLOGIAS
     </div>
 
-    <h1>
-      Descobrindo a <span>LUZ</span>
-    </h1>
+    <h1>Descobrindo a <span>LUZ</span></h1>
 
     <p class="hero-subtitle">
-      Óptica, tecnologia, ciência e acessibilidade
-      em uma só experiência.
+      Óptica, tecnologia, ciência e acessibilidade em uma só experiência.
     </p>
 
-    <div
-      class="hero-wave"
-      aria-hidden="true"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="hero-wave" aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
     </div>
 
     <div class="hero-chips">
-
       <span>Óptica</span>
       <span>Thomas Young</span>
       <span>Tecnociência</span>
       <span>IA</span>
       <span>Acessibilidade</span>
-
     </div>
 
-    <a
-      class="hero-button"
-      href="#optica"
-    >
+    <a class="hero-button" href="#optica">
       Explorar o projeto ↓
     </a>
 
   </div>
-
 </section>
 
 <main id="main-content">
 
-  <!-- ===================================================
-       ÁREAS DO PROJETO
-       =================================================== -->
-
-  <div
-    class="explore-strip"
-    aria-label="Áreas do projeto"
-  >
-
-    <div>
-      <strong>01</strong>
-      <span>Óptica</span>
-    </div>
-
-    <div>
-      <strong>02</strong>
-      <span>Thomas Young</span>
-    </div>
-
-    <div>
-      <strong>03</strong>
-      <span>Tecnologias</span>
-    </div>
-
-    <div>
-      <strong>04</strong>
-      <span>Acessibilidade</span>
-    </div>
-
+  <div class="explore-strip" aria-label="Áreas do projeto">
+    <div><strong>01</strong><span>Óptica</span></div>
+    <div><strong>02</strong><span>Thomas Young</span></div>
+    <div><strong>03</strong><span>Tecnologias</span></div>
+    <div><strong>04</strong><span>Acessibilidade</span></div>
   </div>
 
-  <!-- ===================================================
-       ÓPTICA
-       =================================================== -->
-
+  <!-- ÓPTICA -->
   <section id="optica">
 
-    <h1>
-      Tecnociência, Óptica e Informação
-    </h1>
+    <h1>Tecnociência, Óptica e Informação</h1>
 
-    <h2>
-      Introdução à Óptica
-    </h2>
+    <h2>Introdução à Óptica</h2>
 
     <p>
       A óptica é o ramo da Física responsável por estudar a luz,
@@ -1162,15 +682,11 @@
 
   </section>
 
-  <!-- ===================================================
-       ÓPTICA EM DIVERSOS CONTEXTOS
-       =================================================== -->
-
+  <!-- ÓPTICA EM DIVERSOS CONTEXTOS -->
   <section id="optica-contextos">
 
     <h2>
-      IA e Tecnologias: Desvendando a Óptica Aplicada
-      em Diversos Contextos
+      IA e Tecnologias: Desvendando a Óptica Aplicada em Diversos Contextos
     </h2>
 
     <section id="tecnociencia">
@@ -1200,19 +716,12 @@
 
   </section>
 
-  <!-- ===================================================
-       THOMAS YOUNG
-       =================================================== -->
-
+  <!-- THOMAS YOUNG -->
   <section id="thomas-young">
 
-    <h2>
-      AFINAL, O QUE É A LUZ?
-    </h2>
+    <h2>AFINAL, O QUE É A LUZ?</h2>
 
-    <h3>
-      Thomas Young e a evidência do comportamento ondulatório
-    </h3>
+    <h3>Thomas Young e a evidência do comportamento ondulatório</h3>
 
     <p>
       A compreensão sobre a natureza da luz mudou ao longo da História.
@@ -1299,7 +808,6 @@
     <h4>O que acontece no experimento?</h4>
 
     <ul>
-
       <li>
         A luz passa por uma abertura estreita e é direcionada para duas
         pequenas aberturas.
@@ -1318,15 +826,13 @@
         Em uma tela, aparecem regiões claras e escuras formando um padrão
         de interferência.
       </li>
-
     </ul>
 
     <div class="fluxo-tecnologia">
 
       <p>
         <strong>
-          Luz → Duas aberturas → Interferência →
-          Franjas claras e escuras
+          Luz → Duas aberturas → Interferência → Franjas claras e escuras
         </strong>
       </p>
 
@@ -1366,11 +872,11 @@
     <h4>Curiosidade</h4>
 
     <p>
-      Embora o experimento seja frequentemente chamado de
-      "experimento da dupla fenda", a primeira demonstração de interferência
-      realizada por Young não utilizou exatamente duas fendas. Ele utilizou
-      um pequeno cartão para dividir o feixe de luz e observar as franjas
-      produzidas pela interferência.
+      Embora o experimento seja frequentemente chamado de "experimento da
+      dupla fenda", a primeira demonstração de interferência realizada por
+      Young não utilizou exatamente duas fendas. Ele utilizou um pequeno
+      cartão para dividir o feixe de luz e observar as franjas produzidas
+      pela interferência.
     </p>
 
     <h4>Como utilizamos a IA?</h4>
@@ -1386,10 +892,7 @@
 
   </section>
 
-  <!-- ===================================================
-       ROBÓTICA
-       =================================================== -->
-
+  <!-- ROBÓTICA -->
   <section id="robotica">
 
     <h2>Robótica</h2>
@@ -1406,15 +909,10 @@
 
   </section>
 
-  <!-- ===================================================
-       DISCO DE NEWTON
-       =================================================== -->
-
+  <!-- DISCO DE NEWTON -->
   <section id="disco-newton">
 
-    <h2>
-      1. Apresentação da Atividade: Disco de Newton
-    </h2>
+    <h2>1. Apresentação da Atividade: Disco de Newton</h2>
 
     <p>
       O objetivo foi compreender, de forma prática, a relação entre a luz
@@ -1447,7 +945,7 @@
 
         <img
           src="img/disco.png"
-          alt="Imagem do Disco de Newton dividido nas cores do espectro visível"
+          alt="Imagem disco de Newton"
         >
 
         <p>
@@ -1486,10 +984,7 @@
 
   </section>
 
-  <!-- ===================================================
-       CIÊNCIA DA LUZ
-       =================================================== -->
-
+  <!-- CIÊNCIA DA LUZ -->
   <section id="ciencia-luz">
 
     <h2>2. Explicação Científica</h2>
@@ -1518,17 +1013,13 @@
     </p>
 
     <ul>
-
       <li>
-        <strong>Vermelho:</strong>
-        maior comprimento de onda na faixa visível.
+        <strong>Vermelho:</strong> maior comprimento de onda na faixa visível.
       </li>
 
       <li>
-        <strong>Violeta:</strong>
-        menor comprimento de onda na faixa visível.
+        <strong>Violeta:</strong> menor comprimento de onda na faixa visível.
       </li>
-
     </ul>
 
     <h3>2.4 O Espectro Visível</h3>
@@ -1538,7 +1029,6 @@
     </p>
 
     <ol>
-
       <li>Vermelho</li>
       <li>Laranja</li>
       <li>Amarelo</li>
@@ -1546,20 +1036,17 @@
       <li>Azul</li>
       <li>Anil ou Índigo</li>
       <li>Violeta</li>
-
     </ol>
 
     <h3>2.5 Mistura das Cores: Adição x Subtração</h3>
 
     <p>
-      <strong>Mistura aditiva:</strong>
-      ocorre com luzes coloridas;
+      <strong>Mistura aditiva:</strong> ocorre com luzes coloridas;
       suas combinações podem produzir a percepção de branco.
     </p>
 
     <p>
-      <strong>Mistura subtrativa:</strong>
-      ocorre com pigmentos e materiais
+      <strong>Mistura subtrativa:</strong> ocorre com pigmentos e materiais
       que absorvem partes da luz.
     </p>
 
@@ -1568,9 +1055,7 @@
       durante a rotação rápida.
     </p>
 
-    <h3>
-      2.6 Por que o Disco de Newton parece branco quando gira rapidamente?
-    </h3>
+    <h3>2.6 Por que o Disco de Newton parece branco quando gira rapidamente?</h3>
 
     <p>
       O efeito está ligado ao processamento visual de informações rápidas.
@@ -1598,10 +1083,7 @@
 
   </section>
 
-  <!-- ===================================================
-       DEFICIÊNCIA VISUAL
-       =================================================== -->
-
+  <!-- DEFICIÊNCIA VISUAL -->
   <section id="deficiencia-visual">
 
     <h2>3. Relação com a Deficiência Visual</h2>
@@ -1634,18 +1116,14 @@
       especialmente nas mudanças entre ambientes claros e escuros.
     </p>
 
-    <h3>
-      3.2 Todas as pessoas enxergam as cores da mesma maneira?
-    </h3>
+    <h3>3.2 Todas as pessoas enxergam as cores da mesma maneira?</h3>
 
     <p>
       Não. A percepção pode variar por fatores biológicos, daltonismo,
       envelhecimento e outras características visuais.
     </p>
 
-    <h3>
-      3.3 Como a iluminação interfere na percepção dos objetos?
-    </h3>
+    <h3>3.3 Como a iluminação interfere na percepção dos objetos?</h3>
 
     <p>
       A iluminação interfere na percepção de objetos, cores, texturas,
@@ -1685,8 +1163,8 @@
     </p>
 
     <h3>
-      3.4 Por que compreender a formação das cores é importante
-      para desenvolver tecnologias de acessibilidade?
+      3.4 Por que compreender a formação das cores é importante para
+      desenvolver tecnologias de acessibilidade?
     </h3>
 
     <p>
@@ -1698,10 +1176,7 @@
 
   </section>
 
-  <!-- ===================================================
-       TECNOLOGIAS
-       =================================================== -->
-
+  <!-- TECNOLOGIAS -->
   <section id="tecnologias">
 
     <h2>4. Tecnologias Existentes</h2>
@@ -1716,23 +1191,19 @@
     <h4>Como funcionam?</h4>
 
     <ul>
-
       <li>Câmera capta a imagem.</li>
       <li>O sistema processa e amplia.</li>
       <li>Brilho, contraste e cores podem ser ajustados.</li>
       <li>Alguns fazem leitura de texto.</li>
-
     </ul>
 
     <h4>Possíveis aplicações</h4>
 
     <ul>
-
       <li>Leitura.</li>
       <li>Placas e objetos.</li>
       <li>Rostos.</li>
       <li>Telas.</li>
-
     </ul>
 
     <h3>4.2 Leitores de Cor</h3>
@@ -1756,12 +1227,10 @@
     <h4>Possíveis usos</h4>
 
     <ul>
-
       <li>Escolher roupas.</li>
       <li>Organizar objetos.</li>
       <li>Identificar embalagens e alimentos.</li>
       <li>Verificar indicadores luminosos.</li>
-
     </ul>
 
     <h3>4.3 Lupas Eletrônicas e Vídeo Ampliadores</h3>
@@ -1773,38 +1242,31 @@
     <h4>Como funcionam?</h4>
 
     <ul>
-
       <li>Câmera captura o material.</li>
       <li>Imagem aparece na tela.</li>
       <li>Zoom, contraste, cores e iluminação podem ser ajustados.</li>
-
     </ul>
 
     <h4>Para que servem?</h4>
 
     <ul>
-
       <li>Leitura e estudo.</li>
       <li>Receitas, bulas e formulários.</li>
       <li>Etiquetas e trabalhos manuais.</li>
-
     </ul>
 
     <h4>Tipos de lupa eletrônica</h4>
 
     <p>
-      <strong>Portáteis:</strong>
-      câmera, tela e bateria no aparelho.
+      <strong>Portáteis:</strong> câmera, tela e bateria no aparelho.
     </p>
 
     <p>
-      <strong>De mesa:</strong>
-      úteis para leitura prolongada.
+      <strong>De mesa:</strong> úteis para leitura prolongada.
     </p>
 
     <p>
-      <strong>Celular ou tablet:</strong>
-      usam a câmera e aplicativos.
+      <strong>Celular ou tablet:</strong> usam a câmera e aplicativos.
     </p>
 
     <h4>Principal vantagem</h4>
@@ -1834,11 +1296,9 @@
     <h4>Como a pessoa recebe o alerta?</h4>
 
     <ul>
-
       <li><strong>Vibração</strong></li>
       <li><strong>Som</strong></li>
       <li><strong>Voz</strong></li>
-
     </ul>
 
     <h4>Sensores ópticos</h4>
@@ -1849,12 +1309,9 @@
     </p>
 
     <p>
-      <strong>Bengala tradicional:</strong>
-      detecta por contato.
-      <strong>Com sensor:</strong>
-      pode detectar antes do contato.
-      <strong>Com câmera e IA:</strong>
-      pode tentar identificar o objeto.
+      <strong>Bengala tradicional:</strong> detecta por contato.
+      <strong>Com sensor:</strong> pode detectar antes do contato.
+      <strong>Com câmera e IA:</strong> pode tentar identificar o objeto.
     </p>
 
     <h4>Exemplo no Brasil</h4>
@@ -1864,9 +1321,7 @@
       Sistemas eletrônicos devem ser vistos como complementares à bengala branca tradicional.
     </p>
 
-    <h3>
-      4.5 Sistemas de Visão Artificial com Inteligência Artificial
-    </h3>
+    <h3>4.5 Sistemas de Visão Artificial com Inteligência Artificial</h3>
 
     <p>
       Combinam câmeras, sensores e IA para analisar imagens e interpretar
@@ -1877,8 +1332,7 @@
 
       <p>
         <strong>
-          Câmera → Inteligência Artificial →
-          Interpretação → Voz
+          Câmera → Inteligência Artificial → Interpretação → Voz
         </strong>
       </p>
 
@@ -1923,12 +1377,10 @@
     <h4>Onde podem ser utilizados?</h4>
 
     <ul>
-
       <li>Óculos inteligentes.</li>
       <li>Celulares e tablets.</li>
       <li>Câmeras portáteis.</li>
       <li>Dispositivos de tecnologia assistiva.</li>
-
     </ul>
 
     <h4>Exemplo prático</h4>
@@ -1951,12 +1403,10 @@
     <table>
 
       <thead>
-
         <tr>
           <th>Tecnologia</th>
           <th>Principal função</th>
         </tr>
-
       </thead>
 
       <tbody>
@@ -1986,3 +1436,659 @@
     </table>
 
   </section>
+
+  <!-- NOSSA PROPOSTA -->
+  <section id="proposta">
+
+    <h2>5. Nossa Proposta</h2>
+
+    <h3>5.1 O Problema que Será Resolvido</h3>
+
+    <p>
+      Mudanças de luminosidade e exposição às telas podem causar desconforto
+      visual. Lentes fotocromáticas também podem não reagir idealmente
+      em todas as situações.
+    </p>
+
+    <h3>5.2 O Público-Alvo</h3>
+
+    <ul>
+      <li>Pessoas que usam óculos.</li>
+      <li>Estudantes e trabalhadores.</li>
+      <li>Pessoas que alternam entre ambientes internos e externos.</li>
+      <li>Pessoas sensíveis à luz.</li>
+    </ul>
+
+    <h3>5.3 Funcionamento da Tecnologia</h3>
+
+    <p>
+      A proposta é criar óculos inteligentes que monitorem a iluminação.
+      Sensores mediriam a luz e um microcontrolador controlaria uma película
+      ou lente eletrocrômica, ajustando a transparência.
+    </p>
+
+    <div class="fluxo-tecnologia">
+
+      <p>
+        <strong>
+          Sensor de luz → Microcontrolador → Processamento →
+          Lente ativa → Ajuste da luminosidade
+        </strong>
+      </p>
+
+    </div>
+
+    <h3>5.4 Componentes Necessários</h3>
+
+    <ul>
+      <li><strong>Sensores:</strong> LDR ou BH1750.</li>
+      <li><strong>Microcontrolador:</strong> ESP32 ou Arduino Nano.</li>
+      <li><strong>Lente ativa:</strong> filme eletrocrômico.</li>
+      <li><strong>Bateria:</strong> fonte compacta e recarregável.</li>
+      <li><strong>Bluetooth:</strong> comunicação com smartphone.</li>
+    </ul>
+
+    <h3>5.5 Controle da Intensidade Luminosa</h3>
+
+    <p>
+      Sensores e PWM podem permitir ajustes graduais, evitando mudanças
+      bruscas e buscando maior conforto visual.
+    </p>
+
+    <h3>5.6 Como a Inteligência Artificial Ampliará a Eficiência</h3>
+
+    <h4>Aprendizado de preferências</h4>
+
+    <p>
+      A IA poderia aprender os níveis de luminosidade mais confortáveis
+      para cada usuário.
+    </p>
+
+    <h4>Predição e automação</h4>
+
+    <p>
+      Poderia usar horários e condições de iluminação para ajustar
+      o sistema automaticamente.
+    </p>
+
+    <h4>Gestão de energia</h4>
+
+    <p>
+      Poderia ajudar a otimizar o consumo e aumentar a autonomia da bateria.
+    </p>
+
+  </section>
+
+  <!-- ATIVIDADE 2 -->
+  <section id="atividade-2">
+
+    <h2>Atividade 2 – LED Fade-In e Fade-Out</h2>
+
+    <h3>1. Apresentação da atividade</h3>
+
+    <p>
+      Desenvolvemos e simulamos no Tinkercad um circuito com Arduino,
+      resistor e LED para compreender, na prática, a relação entre
+      eletrônica e programação. O circuito foi montado, testado e
+      ajustado até funcionar corretamente.
+    </p>
+
+    <h3>Montagem do circuito</h3>
+
+    <p>
+      O Arduino controla o LED pelo pino 11. O resistor limita a corrente
+      elétrica e o GND fecha o circuito.
+    </p>
+
+    <div class="atividade-imagem">
+      <div class="imagem-placeholder">
+        <img src="img/fade-in.png"
+             alt="Circuito de LED Fade-In montado no Tinkercad">
+        <p>
+          Circuito utilizado para realizar o efeito LED Fade-In no Tinkercad.
+        </p>
+      </div>
+    </div>
+
+    <div class="atividade-imagem">
+      <div class="imagem-placeholder">
+        <img src="img/fade-out.png"
+             alt="Circuito de LED Fade-Out montado no Tinkercad">
+        <p>
+          Circuito utilizado para realizar o efeito LED Fade-Out no Tinkercad.
+        </p>
+      </div>
+    </div>
+
+    <h3>Programação</h3>
+
+    <p>
+      No Fade-In, o brilho do LED começa baixo e aumenta gradualmente.
+      No Fade-Out, o brilho começa alto e diminui até chegar a zero.
+      O comando <code>analogWrite()</code> controla o PWM, enquanto
+      <code>delay(50)</code> torna a transição mais suave.
+    </p>
+
+    <h3>2. Explicação científica</h3>
+
+    <p>
+      LED significa Diodo Emissor de Luz. É um componente semicondutor
+      que transforma energia elétrica em luz por meio da eletroluminescência.
+    </p>
+
+    <p>
+      O PWM permite controlar a potência média fornecida ao LED,
+      fazendo com que ele pareça mais claro ou mais fraco.
+    </p>
+
+    <h3>3. Relação com a deficiência visual</h3>
+
+    <p>
+      A iluminação interfere na segurança, orientação e percepção.
+      Pouca luz pode dificultar a identificação de objetos e obstáculos,
+      enquanto o excesso de brilho pode causar desconforto e ofuscamento.
+      Por isso, uma iluminação ajustável pode contribuir para maior conforto
+      e acessibilidade.
+    </p>
+
+    <h3>4. Tecnologias existentes</h3>
+
+    <ul>
+      <li><strong>Magno Lumina Max:</strong> iluminação LED regulável.</li>
+      <li><strong>Mobilux Digital Touch HD:</strong> lupa eletrônica com ampliação, contraste e iluminação LED.</li>
+      <li><strong>Quick Look Zoom:</strong> lupa digital com controle de brilho e iluminação.</li>
+      <li><strong>BenQ e-Reading Lamp:</strong> iluminação ampla com recursos de ajuste automático.</li>
+      <li><strong>eSight 4:</strong> utiliza câmeras e telas para melhorar a visualização de imagens.</li>
+    </ul>
+
+    <h3>5. Nossa proposta – Luz Assist</h3>
+
+    <p>
+      A Luz Assist seria um sistema que utilizaria sensores para medir
+      a intensidade da luz e um Arduino para controlar automaticamente
+      a intensidade de uma lâmpada LED.
+    </p>
+
+    <p>
+      Em ambientes escuros, o sistema aumentaria gradualmente a iluminação.
+      Quando houvesse luz suficiente, reduziria o brilho para evitar excesso
+      de luminosidade.
+    </p>
+
+    <div class="fluxo-tecnologia">
+      <p>
+        <strong>
+          Sensor de luminosidade → Arduino → Processamento →
+          Controle do LED → Iluminação adequada
+        </strong>
+      </p>
+    </div>
+
+    <p>
+      Os componentes necessários seriam Arduino, sensor de luminosidade,
+      LED, resistores, fios e uma fonte de energia.
+    </p>
+
+    <p>
+      Uma versão mais avançada poderia utilizar Inteligência Artificial
+      para aprender os níveis de iluminação mais adequados para cada usuário.
+    </p>
+
+    <h3>6. Uso da Inteligência Artificial</h3>
+
+    <p>
+      A Inteligência Artificial foi utilizada como apoio à pesquisa,
+      organização das ideias e compreensão dos conteúdos relacionados
+      à eletrônica, iluminação, acessibilidade e programação.
+    </p>
+
+    <p>
+      Em uma versão avançada da Luz Assist, a IA poderia analisar padrões
+      de utilização e ajudar a personalizar automaticamente a iluminação
+      de acordo com as preferências do usuário.
+    </p>
+
+    <h3>7. Conclusão</h3>
+
+    <p>
+      A atividade mostrou como o Arduino, o PWM e o controle da intensidade
+      luminosa podem ser utilizados para criar soluções tecnológicas.
+      O controle gradual da iluminação pode contribuir para segurança,
+      conforto e acessibilidade, principalmente em situações nas quais
+      diferentes níveis de luminosidade são necessários.
+    </p>
+
+  </section>
+
+  <!-- ATIVIDADE 3 -->
+  <section id="atividade-3">
+
+    <h2>Atividade 3 – LED RGB</h2>
+
+    <h3>1. Apresentação da atividade</h3>
+
+    <p>
+      Utilizamos o Tinkercad para montar e simular um circuito com LED RGB.
+      O componente possui três cores principais: vermelho, verde e azul,
+      que podem ser controladas separadamente para produzir diferentes cores.
+    </p>
+
+    <h3>Montagem do circuito</h3>
+
+    <p>
+      O circuito utiliza Arduino, LED RGB e resistores. A simulação permitiu
+      testar diferentes combinações de cores e identificar possíveis erros
+      durante a montagem.
+    </p>
+
+    <div class="atividade-imagem">
+      <div class="imagem-placeholder">
+        <img src="img/led-rgb.png"
+             alt="Circuito com LED RGB montado no Tinkercad">
+        <p>
+          Circuito com LED RGB, Arduino e resistores montado e simulado no Tinkercad.
+        </p>
+      </div>
+    </div>
+
+    <h3>Programação do LED RGB</h3>
+
+    <p>
+      A programação controla separadamente as intensidades das cores
+      vermelho, verde e azul. Com diferentes combinações dessas três cores,
+      é possível produzir diversas outras cores.
+    </p>
+
+    <h3>2. Explicação científica</h3>
+
+    <p>
+      RGB significa Red, Green e Blue, ou seja, vermelho, verde e azul.
+      Essas são as três cores utilizadas na mistura aditiva da luz.
+    </p>
+
+    <p>Na mistura aditiva:</p>
+
+    <ul>
+      <li><strong>Vermelho + Verde = Amarelo</strong></li>
+      <li><strong>Verde + Azul = Ciano</strong></li>
+      <li><strong>Vermelho + Azul = Magenta</strong></li>
+      <li><strong>Vermelho + Verde + Azul = Branco</strong></li>
+    </ul>
+
+    <h3>3. Relação com a deficiência visual</h3>
+
+    <p>
+      Cores e contraste podem ajudar na percepção de textos, objetos,
+      sinais e informações visuais.
+    </p>
+
+    <p>
+      Porém, informações acessíveis não devem depender somente das cores.
+      Textos, símbolos, formas, padrões e contraste também devem ser
+      utilizados para facilitar a compreensão por pessoas com diferentes
+      características visuais.
+    </p>
+
+    <h3>4. Tecnologias existentes</h3>
+
+    <ul>
+      <li>
+        <strong>Envision Glasses:</strong>
+        utiliza câmera e Inteligência Artificial para auxiliar na interpretação
+        de informações visuais.
+      </li>
+
+      <li>
+        <strong>Seeing AI:</strong>
+        aplicativo capaz de reconhecer textos, objetos e algumas características
+        visuais.
+      </li>
+
+      <li>
+        <strong>OrCam MyEye:</strong>
+        dispositivo que fornece informações visuais por meio de áudio.
+      </li>
+
+      <li>
+        <strong>eSight:</strong>
+        utiliza processamento de imagens, contraste e outros recursos
+        para auxiliar pessoas com baixa visão.
+      </li>
+
+      <li>
+        <strong>TOPAZ EZ HD:</strong>
+        equipamento de ampliação com iluminação e diferentes modos de contraste.
+      </li>
+    </ul>
+
+    <h3>5. Nossa proposta – Color Assist</h3>
+
+    <p>
+      O Color Assist seria um dispositivo desenvolvido para auxiliar pessoas
+      que possuem dificuldade para identificar determinadas cores.
+    </p>
+
+    <p>
+      Um sensor ou câmera identificaria a cor de um objeto. O Arduino ou
+      outro microcontrolador processaria as informações e o LED RGB poderia
+      representar a cor identificada. Além disso, um buzzer ou alto-falante
+      poderia informar o nome da cor por áudio.
+    </p>
+
+    <div class="fluxo-tecnologia">
+      <p>
+        <strong>
+          Objeto → Sensor/Câmera → Arduino/IA → Processamento →
+          LED RGB + Áudio → Informação ao usuário
+        </strong>
+      </p>
+    </div>
+
+    <p>
+      Os componentes poderiam incluir Arduino, LED RGB, sensor de cor,
+      resistores, buzzer ou alto-falante, câmera, sistema de comunicação,
+      bateria e uma estrutura para o dispositivo.
+    </p>
+
+    <h3>6. Inteligência Artificial</h3>
+
+    <p>
+      Em uma versão avançada, a Inteligência Artificial poderia ajudar
+      a identificar cores, objetos e textos captados pela câmera.
+    </p>
+
+    <p>
+      Durante o desenvolvimento do trabalho, o ChatGPT foi utilizado como
+      apoio à pesquisa, organização das informações e compreensão dos
+      conteúdos. As informações importantes foram conferidas em fontes
+      de referência.
+    </p>
+
+    <h3>7. Conclusão</h3>
+
+    <p>
+      A atividade mostrou como o LED RGB, a mistura aditiva das cores,
+      a programação e a eletrônica podem ser utilizados no desenvolvimento
+      de soluções acessíveis.
+    </p>
+
+    <p>
+      A combinação de informações visuais e sonoras pode ajudar a tornar
+      determinadas tecnologias mais acessíveis e aumentar a autonomia
+      dos usuários.
+    </p>
+
+  </section>
+
+  <!-- =========================
+       FAKE NEWS
+       ========================= -->
+  <section id="fake-news">
+
+    <h2>Fake News e Informação Confiável</h2>
+
+    <p>
+      Fake news são informações falsas, enganosas ou apresentadas fora de
+      contexto que são divulgadas como se fossem verdadeiras. Elas podem
+      circular rapidamente pela internet, redes sociais e aplicativos de
+      mensagens.
+    </p>
+
+    <h3>Como identificar uma Fake News?</h3>
+
+    <p>
+      Antes de acreditar ou compartilhar uma informação, é importante
+      verificar sua origem e procurar evidências em fontes confiáveis.
+    </p>
+
+    <ul>
+      <li>
+        <strong>Verifique a fonte:</strong>
+        observe quem publicou a informação e se é uma fonte confiável.
+      </li>
+
+      <li>
+        <strong>Confira a data:</strong>
+        uma notícia antiga pode voltar a circular como se fosse atual.
+      </li>
+
+      <li>
+        <strong>Compare diferentes fontes:</strong>
+        procure a mesma informação em outras fontes confiáveis.
+      </li>
+
+      <li>
+        <strong>Desconfie de títulos exagerados:</strong>
+        títulos que tentam provocar medo, raiva ou choque merecem atenção.
+      </li>
+
+      <li>
+        <strong>Verifique imagens e vídeos:</strong>
+        eles podem estar fora do contexto original ou ter sido manipulados.
+      </li>
+
+      <li>
+        <strong>Não compartilhe imediatamente:</strong>
+        confirme a informação antes de repassá-la.
+      </li>
+    </ul>
+
+    <h3>Fake News e Inteligência Artificial</h3>
+
+    <p>
+      A Inteligência Artificial pode ajudar na pesquisa, organização e
+      compreensão de informações. Entretanto, sistemas de IA também podem
+      apresentar erros, informações desatualizadas ou respostas incorretas.
+    </p>
+
+    <p>
+      Por isso, quando utilizamos Inteligência Artificial em trabalhos
+      escolares, é importante conferir as informações em fontes confiáveis
+      antes de apresentá-las como verdadeiras.
+    </p>
+
+    <h3>Como combater a desinformação?</h3>
+
+    <p>
+      Uma forma de combater as Fake News é desenvolver o pensamento crítico.
+      Isso significa analisar uma informação antes de acreditar nela ou
+      compartilhá-la.
+    </p>
+
+    <div class="fluxo-tecnologia">
+
+      <p>
+        <strong>
+          Informação → Verificação da fonte → Comparação →
+          Evidências → Informação confiável
+        </strong>
+      </p>
+
+    </div>
+
+    <h3>Por que esse assunto é importante para o nosso projeto?</h3>
+
+    <p>
+      Nosso projeto aborda Óptica, Física, Tecnociência, acessibilidade,
+      eletrônica e Inteligência Artificial. Por isso, utilizar informações
+      confiáveis é fundamental para garantir a qualidade do conteúdo
+      apresentado no site.
+    </p>
+
+    <p>
+      Antes de compartilhar uma informação encontrada na internet, devemos
+      verificar sua origem, comparar diferentes fontes e procurar evidências
+      que confirmem aquilo que está sendo apresentado.
+    </p>
+
+  </section>
+
+  <!-- =========================
+       REFERÊNCIAS
+       ========================= -->
+  <section id="referencias">
+
+    <h2>Referências</h2>
+
+    <ol class="referencias">
+
+      <li>
+        OPENSTAX.
+        <strong>Young's Double-Slit Interference.</strong>
+        University Physics Volume 3.
+        Disponível em:
+        https://openstax.org/books/university-physics-volume-3/pages/3-1-youngs-double-slit-interference.
+        Acesso em: 23 ago. 2026.
+      </li>
+
+      <li>
+        OPENSTAX.
+        <strong>Young's Double Slit Experiment.</strong>
+        College Physics.
+        Disponível em:
+        https://openstax.org/books/college-physics/pages/27-3-youngs-double-slit-experiment.
+        Acesso em: 23 ago. 2026.
+      </li>
+
+      <li>
+        BRASIL ESCOLA.
+        <strong>Disco de Newton.</strong>
+        Disponível em:
+        https://brasilescola.uol.com.br/fisica/disco-newton.htm.
+        Acesso em: 23 ago. 2026.
+      </li>
+
+      <li>
+        TODA MATÉRIA.
+        <strong>Disco de Newton.</strong>
+        Disponível em:
+        https://www.todamateria.com.br/disco-de-newton/.
+        Acesso em: 23 ago. 2026.
+      </li>
+
+      <li>
+        MUNDO EDUCAÇÃO.
+        <strong>Disco de Newton.</strong>
+        Disponível em:
+        https://mundoeducacao.uol.com.br/fisica/disco-newton.htm.
+        Acesso em: 23 ago. 2026.
+      </li>
+
+      <li>
+        NASA.
+        <strong>Isaac Newton.</strong>
+        Disponível em:
+        https://science.nasa.gov/people/isaac-newton/.
+        Acesso em: 23 ago. 2026.
+      </li>
+
+      <li>
+        ARDUINO.
+        <strong>analogWrite() – Arduino Reference.</strong>
+        Documentação sobre PWM e controle da intensidade de LEDs.
+        Disponível em:
+        https://github.com/arduino/reference-en/blob/master/Language/Functions/Analog%20IO/analogWrite.adoc.
+        Acesso em: 23 ago. 2026.
+      </li>
+
+      <li>
+        WORLD HEALTH ORGANIZATION (WHO).
+        <strong>Blindness and vision impairment.</strong>
+        Disponível em:
+        https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment.
+        Acesso em: 23 ago. 2026.
+      </li>
+
+      <li>
+        W3C – WORLD WIDE WEB CONSORTIUM.
+        <strong>Web Content Accessibility Guidelines (WCAG).</strong>
+        Diretrizes relacionadas à acessibilidade, contraste e uso de cores.
+        Disponível em:
+        https://www.w3.org/WAI/standards-guidelines/wcag/.
+        Acesso em: 23 ago. 2026.
+      </li>
+
+      <li>
+        MICROSOFT.
+        <strong>Seeing AI.</strong>
+        Tecnologia assistiva para reconhecimento e descrição de informações
+        visuais.
+        Disponível em:
+        https://www.microsoft.com/en-us/ai/seeing-ai.
+        Acesso em: 23 ago. 2026.
+      </li>
+
+      <li>
+        ENVISION.
+        <strong>Envision Glasses.</strong>
+        Tecnologia assistiva baseada em câmera e Inteligência Artificial.
+        Disponível em:
+        https://www.letsenvision.com/.
+        Acesso em: 23 ago. 2026.
+      </li>
+
+      <li>
+        ORCAM.
+        <strong>OrCam MyEye.</strong>
+        Tecnologia assistiva para reconhecimento de informações visuais.
+        Disponível em:
+        https://www.orcam.com/.
+        Acesso em: 23 ago. 2026.
+      </li>
+
+      <li>
+        ESIGHT.
+        <strong>eSight – Assistive Technology.</strong>
+        Tecnologia eletrônica voltada para pessoas com baixa visão.
+        Disponível em:
+        https://esighteyewear.com/.
+        Acesso em: 23 ago. 2026.
+      </li>
+
+      <li>
+        FREEDOM SCIENTIFIC.
+        <strong>TOPAZ EZ HD.</strong>
+        Tecnologia de ampliação eletrônica para baixa visão.
+        Disponível em:
+        https://www.freedomscientific.com/.
+        Acesso em: 23 ago. 2026.
+      </li>
+
+      <li>
+        OPENAI.
+        <strong>ChatGPT.</strong>
+        Ferramenta utilizada como apoio à pesquisa, organização das ideias
+        e compreensão dos conteúdos.
+        Disponível em:
+        https://chatgpt.com/.
+        Acesso em: 23 ago. 2026.
+      </li>
+
+    </ol>
+
+  </section>
+
+</main>
+
+<footer>
+
+  <p>
+    &copy; Portal de Acessibilidade e Ciência
+  </p>
+
+  <p>
+    Trabalho sobre Óptica, Disco de Newton, Tecnociência e Acessibilidade
+  </p>
+
+  <p>
+    Alunos:<br>
+    Yolanda Barrera &nbsp; Samira Agata<br>
+    Emannuelle Machado &nbsp; Wuilmer Rivas
+  </p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
