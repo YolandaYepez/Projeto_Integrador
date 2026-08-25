@@ -332,42 +332,87 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
 
-  function criarBotao(
-    id,
-    texto,
-    ariaLabel
-  ) {
+ function criarBotao(id, texto, ariaLabel) {
 
-    let botao =
-      document.getElementById(id);
+  let botao = document.getElementById(id);
+
+  /*
+   * Se o botão já existir, reutiliza ele.
+   */
+
+  if (botao) {
+    return botao;
+  }
 
 
-    if (!botao && barraAcessibilidade) {
+  /*
+   * Procura um botão que já tenha o mesmo texto.
+   * Isso evita criar botões duplicados.
+   */
 
-      botao =
-        document.createElement("button");
+  if (barraAcessibilidade) {
 
-      botao.id = id;
+    const botoesExistentes =
+      barraAcessibilidade.querySelectorAll("button");
 
-      botao.type = "button";
+    for (const existente of botoesExistentes) {
 
-      botao.textContent = texto;
+      const textoExistente =
+        existente.textContent.trim().toLowerCase();
 
-      botao.setAttribute(
-        "aria-label",
-        ariaLabel
-      );
+      const textoNovo =
+        texto.replace(/^[^\p{L}\p{N}]+/u, "")
+             .trim()
+             .toLowerCase();
 
-      barraAcessibilidade.appendChild(
-        botao
-      );
+      if (
+        textoExistente.includes(textoNovo) ||
+        textoNovo.includes(textoExistente)
+      ) {
+
+        existente.id = id;
+
+        existente.setAttribute(
+          "aria-label",
+          ariaLabel
+        );
+
+        return existente;
+
+      }
 
     }
 
 
-    return botao;
+    /*
+     * Só cria um botão se ele realmente
+     * não existir.
+     */
+
+    botao =
+      document.createElement("button");
+
+    botao.id = id;
+
+    botao.type = "button";
+
+    botao.textContent = texto;
+
+    botao.setAttribute(
+      "aria-label",
+      ariaLabel
+    );
+
+    barraAcessibilidade.appendChild(
+      botao
+    );
 
   }
+
+
+  return botao;
+
+}
 
 
   const btnReader =
