@@ -1075,7 +1075,7 @@ body.alto-contraste b {
 
 /* Links */
 body.alto-contraste a {
-  color: #00ffff !important;
+  color: #6f00ff !important;
   text-decoration: underline !important;
 }
 
@@ -1087,7 +1087,7 @@ body.alto-contraste a:focus-visible {
 /* Menu */
 body.alto-contraste nav {
   background: #000000 !important;
-  border-bottom: 2px solid #ffffff !important;
+  border-bottom: 2px solid #ffffff !important;s
   box-shadow: none !important;
 }
 
