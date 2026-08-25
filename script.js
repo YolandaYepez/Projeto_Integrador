@@ -14,6 +14,27 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll("nav a");
   const sections = document.querySelectorAll("main section");
 
+  /* ==========================================
+     REGIÃO PARA LEITORES DE TELA
+     ========================================== */
+
+  const mensagemAcessibilidade = document.createElement("div");
+
+  mensagemAcessibilidade.setAttribute("aria-live", "polite");
+  mensagemAcessibilidade.setAttribute("aria-atomic", "true");
+  mensagemAcessibilidade.className = "sr-only";
+
+  document.body.appendChild(mensagemAcessibilidade);
+
+
+  function anunciar(mensagem) {
+    mensagemAcessibilidade.textContent = "";
+
+    setTimeout(function () {
+      mensagemAcessibilidade.textContent = mensagem;
+    }, 50);
+  }
+
 
   /* ==========================================
      CONFIGURAÇÕES DE FONTE
@@ -28,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     parseInt(localStorage.getItem("tamanhoFonte")) || tamanhoNormal;
 
 
-  function aplicarTamanhoFonte() {
+  function aplicarTamanhoFonte(anunciarMudanca = false) {
 
     if (tamanhoFonte < tamanhoMinimo) {
       tamanhoFonte = tamanhoMinimo;
@@ -43,17 +64,39 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("tamanhoFonte", tamanhoFonte);
 
     atualizarBotoesFonte();
+
+    if (anunciarMudanca) {
+
+      if (tamanhoFonte === tamanhoNormal) {
+        anunciar("Tamanho da fonte restaurado para o tamanho normal.");
+      } else {
+        anunciar("Tamanho da fonte: " + tamanhoFonte + " por cento.");
+      }
+
+    }
   }
 
 
   function atualizarBotoesFonte() {
 
     if (btnIncrease) {
+
       btnIncrease.disabled = tamanhoFonte >= tamanhoMaximo;
+
+      btnIncrease.setAttribute(
+        "aria-disabled",
+        tamanhoFonte >= tamanhoMaximo ? "true" : "false"
+      );
     }
 
     if (btnDecrease) {
+
       btnDecrease.disabled = tamanhoFonte <= tamanhoMinimo;
+
+      btnDecrease.setAttribute(
+        "aria-disabled",
+        tamanhoFonte <= tamanhoMinimo ? "true" : "false"
+      );
     }
   }
 
@@ -70,7 +113,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         tamanhoFonte += incremento;
 
-        aplicarTamanhoFonte();
+        aplicarTamanhoFonte(true);
+
+      } else {
+
+        anunciar("A fonte já está no tamanho máximo.");
+
       }
 
     });
@@ -90,7 +138,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         tamanhoFonte -= incremento;
 
-        aplicarTamanhoFonte();
+        aplicarTamanhoFonte(true);
+
+      } else {
+
+        anunciar("A fonte já está no tamanho mínimo.");
+
       }
 
     });
@@ -108,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       tamanhoFonte = tamanhoNormal;
 
-      aplicarTamanhoFonte();
+      aplicarTamanhoFonte(true);
 
     });
 
@@ -123,19 +176,29 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.getItem("altoContraste") === "true";
 
 
-  function aplicarContraste() {
+  function aplicarContraste(anunciarMudanca = false) {
 
     if (contrasteAtivo) {
 
       body.classList.add("alto-contraste");
 
       if (btnContrast) {
+
         btnContrast.setAttribute(
           "aria-pressed",
           "true"
         );
 
+        btnContrast.setAttribute(
+          "aria-label",
+          "Desativar modo de alto contraste"
+        );
+
         btnContrast.textContent = "Desativar Contraste";
+      }
+
+      if (anunciarMudanca) {
+        anunciar("Alto contraste ativado.");
       }
 
     } else {
@@ -143,14 +206,23 @@ document.addEventListener("DOMContentLoaded", function () {
       body.classList.remove("alto-contraste");
 
       if (btnContrast) {
+
         btnContrast.setAttribute(
           "aria-pressed",
           "false"
         );
 
+        btnContrast.setAttribute(
+          "aria-label",
+          "Ativar modo de alto contraste"
+        );
+
         btnContrast.textContent = "Alto Contraste";
       }
 
+      if (anunciarMudanca) {
+        anunciar("Alto contraste desativado.");
+      }
     }
 
     localStorage.setItem(
@@ -166,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       contrasteAtivo = !contrasteAtivo;
 
-      aplicarContraste();
+      aplicarContraste(true);
 
     });
 
@@ -176,6 +248,10 @@ document.addEventListener("DOMContentLoaded", function () {
   /* ==========================================
      NAVEGAÇÃO SUAVE
      ========================================== */
+
+  const movimentoReduzido =
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
 
   navLinks.forEach(function (link) {
 
@@ -196,11 +272,18 @@ document.addEventListener("DOMContentLoaded", function () {
       event.preventDefault();
 
       elemento.scrollIntoView({
-        behavior: "smooth",
+        behavior: movimentoReduzido ? "auto" : "smooth",
         block: "start"
       });
 
       history.pushState(null, "", destino);
+
+      /* Coloca foco na seção para facilitar navegação por teclado */
+      if (!elemento.hasAttribute("tabindex")) {
+        elemento.setAttribute("tabindex", "-1");
+      }
+
+      elemento.focus({ preventScroll: true });
 
     });
 
@@ -225,11 +308,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
             link.classList.remove("ativo");
 
+            link.removeAttribute("aria-current");
+
             if (
               link.getAttribute("href") === "#" + id
             ) {
 
               link.classList.add("ativo");
+
+              link.setAttribute(
+                "aria-current",
+                "location"
+              );
 
             }
 
@@ -301,6 +391,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   botaoTopo.id = "btn-topo";
 
+  botaoTopo.type = "button";
+
   botaoTopo.setAttribute(
     "aria-label",
     "Voltar ao topo da página"
@@ -335,14 +427,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: movimentoReduzido ? "auto" : "smooth"
     });
+
+    anunciar("Você voltou ao topo da página.");
+
+    /* Devolve o foco para o início da página */
+    window.setTimeout(function () {
+
+      const tituloPrincipal =
+        document.querySelector("h1");
+
+      if (tituloPrincipal) {
+
+        if (!tituloPrincipal.hasAttribute("tabindex")) {
+          tituloPrincipal.setAttribute("tabindex", "-1");
+        }
+
+        tituloPrincipal.focus();
+
+      }
+
+    }, movimentoReduzido ? 0 : 300);
 
   });
 
 
   /* ==========================================
-     ATALHO DE TECLADO
+     ATALHOS DE TECLADO
+     
      ALT + A = ALTO CONTRASTE
      ALT + + = AUMENTAR FONTE
      ALT + - = DIMINUIR FONTE
@@ -350,6 +463,25 @@ document.addEventListener("DOMContentLoaded", function () {
      ========================================== */
 
   document.addEventListener("keydown", function (event) {
+
+    /*
+      Não ativar os atalhos enquanto a pessoa
+      estiver digitando em um campo.
+    */
+
+    const elementoAtivo = document.activeElement;
+
+    const digitando =
+      elementoAtivo &&
+      (
+        elementoAtivo.tagName === "INPUT" ||
+        elementoAtivo.tagName === "TEXTAREA" ||
+        elementoAtivo.isContentEditable
+      );
+
+    if (digitando) {
+      return;
+    }
 
     if (!event.altKey) {
       return;
@@ -360,20 +492,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
       contrasteAtivo = !contrasteAtivo;
 
-      aplicarContraste();
+      aplicarContraste(true);
 
       event.preventDefault();
 
     }
 
 
-    if (event.key === "+") {
+    if (event.key === "+" || event.key === "=") {
 
       if (tamanhoFonte < tamanhoMaximo) {
 
         tamanhoFonte += incremento;
 
-        aplicarTamanhoFonte();
+        aplicarTamanhoFonte(true);
+
+      } else {
+
+        anunciar("A fonte já está no tamanho máximo.");
 
       }
 
@@ -388,7 +524,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         tamanhoFonte -= incremento;
 
-        aplicarTamanhoFonte();
+        aplicarTamanhoFonte(true);
+
+      } else {
+
+        anunciar("A fonte já está no tamanho mínimo.");
 
       }
 
@@ -401,7 +541,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       tamanhoFonte = tamanhoNormal;
 
-      aplicarTamanhoFonte();
+      aplicarTamanhoFonte(true);
 
       event.preventDefault();
 
@@ -415,10 +555,12 @@ document.addEventListener("DOMContentLoaded", function () {
      ========================================== */
 
   if (btnContrast) {
+
     btnContrast.setAttribute(
       "aria-pressed",
       contrasteAtivo ? "true" : "false"
     );
+
   }
 
 
