@@ -988,3 +988,82 @@ a:focus-visible,
   }
 
 }
+
+/* ==========================================
+   CORREÇÃO DO ALTO CONTRASTE
+   ========================================== */
+
+body.alto-contraste {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Texto dos parágrafos */
+body.alto-contraste p,
+body.alto-contraste li,
+body.alto-contraste span,
+body.alto-contraste div {
+  color: #ffffff !important;
+}
+
+/* Títulos */
+body.alto-contraste h1,
+body.alto-contraste h2,
+body.alto-contraste h3,
+body.alto-contraste h4,
+body.alto-contraste h5,
+body.alto-contraste h6 {
+  color: #ffff00 !important;
+}
+
+/* Links */
+body.alto-contraste a {
+  color: #00ffff !important;
+}
+
+/* Barra de acessibilidade */
+body.alto-contraste .accessibility-bar {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Botões */
+body.alto-contraste button {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+/* Botão de voltar ao topo */
+body.alto-contraste #btn-topo {
+  background: #000000 !important;
+  color: #ffff00 !important;
+  border: 2px solid #ffffff !important;
+}
+
+/* Cards e seções */
+body.alto-contraste main > section,
+body.alto-contraste .card,
+body.alto-contraste article {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+/* Tabelas */
+body.alto-contraste table {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+body.alto-contraste th {
+  background: #000000 !important;
+  color: #ffff00 !important;
+  border: 2px solid #ffffff !important;
+}
+
+body.alto-contraste td {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff !important;
+}
