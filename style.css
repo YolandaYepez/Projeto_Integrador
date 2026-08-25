@@ -1070,7 +1070,7 @@ body.alto-contraste h3,
 body.alto-contraste h4,
 body.alto-contraste h5,
 body.alto-contraste h6 {
-  color: #ffff00 !important;
+  color: #0011ff !important;
   -webkit-text-fill-color: #ffff00 !important;
 }
 
@@ -1086,7 +1086,7 @@ body.alto-contraste footer p {
 
 body.alto-contraste a,
 body.alto-contraste nav a {
-  color: #00ffff !important;
+  color: #4400ff !important;
 }
 
 body.alto-contraste nav a:hover,
