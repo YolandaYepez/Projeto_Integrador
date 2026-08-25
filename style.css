@@ -939,7 +939,7 @@ body.alto-contraste #btn-topo {
 
 .skip-link:focus {
   top: 15px;
-  outline: 4px solid #ffff00;
+  outline: 4px solid #0044ff;
   outline-offset: 3px;
 }
 
@@ -956,7 +956,7 @@ select:focus-visible,
 
 /* Novos controles criados pelo script.js */
 .accessibility-bar button[aria-pressed="true"] {
-  box-shadow: 0 0 0 3px rgba(255,255,255,.65);
+  box-shadow: 0 0 0 3px rgb(0, 0, 0);
 }
 
 #btn-reader,
@@ -1133,7 +1133,7 @@ body.alto-contraste .accessibility-bar button[aria-pressed="true"] {
 
 body.alto-contraste .accessibility-bar button:disabled {
   background: #222222 !important;
-  color: #aaaaaa !important;
+  color: #000000 !important;
   border-color: #aaaaaa !important;
 }
 
