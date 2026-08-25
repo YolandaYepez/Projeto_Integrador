@@ -1,4 +1,4 @@
-:root {
+root {
   --cor-principal: #771bac;
   --cor-secundaria: #d46bcf;
   --cor-destaque: #8d3b1b;
@@ -597,8 +597,9 @@ body.alto-contraste h4 {
 }
 
 
-body.alto-contraste strong {
-  color: #9900ff;
+body.alto-contraste strong,
+body.alto-contraste b {
+  color: #ffffff !important;
 }
 
 
@@ -904,33 +905,10 @@ body.alto-contraste #btn-topo {
 
 
 /* =========================================================
-   ACESSIBILIDADE AVANÇADA — PROJETO INTEGRADOR
+   ♿ ACESSIBILIDADE AVANÇADA — VERSÃO CORRIGIDA
    ========================================================= */
 
-/* Link para pular o menu e ir direto ao conteúdo */
-.skip-link {
-  position: fixed;
-  top: -100px;
-  left: 16px;
-  z-index: 10000;
-  background: #35105d !important;
-  color: #ffffff !important;
-  padding: 12px 18px;
-  border-radius: 10px;
-  font-weight: 800;
-  text-decoration: none;
-  box-shadow: 0 8px 20px rgba(0,0,0,.25);
-  transition: top .2s ease;
-}
-
-.skip-link:focus,
-.skip-link:focus-visible {
-  top: 16px;
-  outline: 4px solid #ffeb3b !important;
-  outline-offset: 3px;
-}
-
-/* Texto disponível para leitores de tela */
+/* Leitor de tela: conteúdo visualmente oculto, mas acessível */
 .sr-only {
   position: absolute !important;
   width: 1px !important;
@@ -943,156 +921,200 @@ body.alto-contraste #btn-topo {
   border: 0 !important;
 }
 
-/* Foco sempre visível para teclado */
-a:focus-visible,
+/* Link para pular diretamente ao conteúdo */
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 15px;
+  z-index: 100000;
+  padding: 12px 18px;
+  border-radius: 8px;
+  background: #000;
+  color: #fff !important;
+  border: 3px solid #fff;
+  font-weight: 800;
+  text-decoration: none !important;
+  transition: top .2s ease;
+}
+
+.skip-link:focus {
+  top: 15px;
+  outline: 4px solid #ffff00;
+  outline-offset: 3px;
+}
+
+/* Foco consistente para teclado */
 button:focus-visible,
-main:focus-visible {
-  outline: 4px solid #ffcc00 !important;
-  outline-offset: 4px !important;
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 4px solid #ff9800;
+  outline-offset: 3px;
 }
 
-/* Barra com muitos recursos: mantém organizada */
-.accessibility-bar {
-  position: relative;
-}
-
-.accessibility-bar .accessibility-title {
-  font-weight: 900;
-}
-
+/* Novos controles criados pelo script.js */
 .accessibility-bar button[aria-pressed="true"] {
-  box-shadow: 0 0 0 3px #ffeb3b inset;
+  box-shadow: 0 0 0 3px rgba(255,255,255,.65);
 }
 
-/* =========================================================
-   MODO DE LEITURA / DISLEXIA
-   ========================================================= */
+#btn-reader,
+#btn-stop-reader,
+#btn-reading-mode,
+#btn-cursor,
+#btn-line {
+  min-height: 40px;
+}
 
-body.dislexia {
-  font-family: Verdana, Arial, sans-serif !important;
-  letter-spacing: .04em !important;
-  word-spacing: .12em !important;
+#btn-stop-reader:disabled {
+  opacity: .5;
+}
+
+/* Modo de leitura */
+body.modo-leitura {
+  letter-spacing: .045em;
+  word-spacing: .12em;
   line-height: 2 !important;
 }
 
-body.dislexia p,
-body.dislexia li,
-body.dislexia td,
-body.dislexia th {
-  line-height: 2 !important;
+body.modo-leitura p,
+body.modo-leitura li {
+  max-width: 78ch;
 }
 
-body.dislexia p,
-body.dislexia li {
-  font-size: 1.08em;
+body.modo-leitura h1,
+body.modo-leitura h2,
+body.modo-leitura h3,
+body.modo-leitura h4 {
+  line-height: 1.5;
 }
 
-body.dislexia h1,
-body.dislexia h2,
-body.dislexia h3,
-body.dislexia h4 {
-  letter-spacing: .02em !important;
-}
-
-/* =========================================================
-   CURSOR GRANDE
-   ========================================================= */
-
+/* Cursor grande: simples e compatível, sem cursor externo */
 body.cursor-grande,
 body.cursor-grande * {
-  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 2v34l9-8 7 16 7-3-7-16h12L4 2z' fill='white' stroke='black' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2, auto !important;
+  cursor: default !important;
 }
 
-/* =========================================================
-   GUIA DE LEITURA
-   ========================================================= */
+body.cursor-grande button,
+body.cursor-grande a,
+body.cursor-grande select,
+body.cursor-grande input,
+body.cursor-grande textarea {
+  cursor: pointer !important;
+}
 
+/* Guia de leitura */
 #linha-leitura {
   position: fixed;
   left: 0;
-  top: 0;
-  width: 100%;
+  width: 100vw;
   height: 4px;
+  display: none;
   background: #ffeb3b;
-  border-top: 2px solid #000000;
-  border-bottom: 2px solid #000000;
+  box-shadow: 0 0 8px rgba(0,0,0,.7);
   pointer-events: none;
   z-index: 99999;
-  display: none;
 }
 
 /* =========================================================
-   ALTO CONTRASTE — REGRAS FORTES
+   ALTO CONTRASTE — CORREÇÃO COMPLETA
    ========================================================= */
-
-body.alto-contraste,
-body.alto-contraste main,
-body.alto-contraste section,
-body.alto-contraste article,
-body.alto-contraste .explore-strip div {
-  background: #000000 !important;
-  color: #ffffff !important;
-}
 
 body.alto-contraste {
   background: #000000 !important;
+  color: #ffffff !important;
 }
 
 body.alto-contraste header,
-body.alto-contraste nav,
-body.alto-contraste .accessibility-bar,
-body.alto-contraste footer {
-  background: #000000 !important;
+body.alto-contraste main,
+body.alto-contraste footer,
+body.alto-contraste section,
+body.alto-contraste article,
+body.alto-contraste div,
+body.alto-contraste figure,
+body.alto-contraste figcaption {
   color: #ffffff !important;
-  border-color: #ffffff !important;
+}
+
+body.alto-contraste section {
+  background: #000000 !important;
+  border: 2px solid #ffffff !important;
   box-shadow: none !important;
 }
 
-body.alto-contraste .hero-wow {
-  background: #000000 !important;
+/* Todo texto comum fica branco */
+body.alto-contraste p,
+body.alto-contraste li,
+body.alto-contraste td,
+body.alto-contraste span,
+body.alto-contraste label,
+body.alto-contraste small,
+body.alto-contraste figcaption,
+body.alto-contraste .imagem-placeholder p,
+body.alto-contraste .atividade-imagem p,
+body.alto-contraste footer p {
   color: #ffffff !important;
 }
 
-body.alto-contraste .hero-content h1,
-body.alto-contraste .hero-content h1 span,
-body.alto-contraste .hero-subtitle,
-body.alto-contraste .hero-badge,
-body.alto-contraste .hero-chips span {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-  background: none !important;
-  text-shadow: none !important;
-}
-
+/* Títulos ficam amarelos para destaque */
 body.alto-contraste h1,
 body.alto-contraste h2,
 body.alto-contraste h3,
 body.alto-contraste h4,
 body.alto-contraste h5,
 body.alto-contraste h6 {
-  color: #0011ff !important;
-  -webkit-text-fill-color: #ffff00 !important;
+  color: #ffff00 !important;
 }
 
-body.alto-contraste p,
-body.alto-contraste li,
-body.alto-contraste span,
-body.alto-contraste div,
+/* Negrito não usa mais roxo */
 body.alto-contraste strong,
-body.alto-contraste td,
-body.alto-contraste footer p {
+body.alto-contraste b {
   color: #ffffff !important;
 }
 
-body.alto-contraste a,
+/* Links */
+body.alto-contraste a {
+  color: #00ffff !important;
+  text-decoration: underline !important;
+}
+
+body.alto-contraste a:hover,
+body.alto-contraste a:focus-visible {
+  color: #ffff00 !important;
+}
+
+/* Menu */
+body.alto-contraste nav {
+  background: #000000 !important;
+  border-bottom: 2px solid #ffffff !important;
+  box-shadow: none !important;
+}
+
 body.alto-contraste nav a {
-  color: #4400ff !important;
+  background: transparent !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
 }
 
 body.alto-contraste nav a:hover,
-body.alto-contraste nav a.ativo {
+body.alto-contraste nav a.ativo,
+body.alto-contraste nav a:focus-visible {
   background: #ffff00 !important;
   color: #000000 !important;
+  text-decoration: none !important;
+}
+
+/* Barra de acessibilidade */
+body.alto-contraste .accessibility-bar {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border-bottom: 2px solid #ffffff !important;
+  box-shadow: none !important;
+}
+
+body.alto-contraste .accessibility-bar span {
+  color: #ffff00 !important;
 }
 
 body.alto-contraste .accessibility-bar button {
@@ -1102,24 +1124,37 @@ body.alto-contraste .accessibility-bar button {
 }
 
 body.alto-contraste .accessibility-bar button:hover,
+body.alto-contraste .accessibility-bar button:focus-visible,
 body.alto-contraste .accessibility-bar button[aria-pressed="true"] {
   background: #ffff00 !important;
   color: #000000 !important;
+  border-color: #ffff00 !important;
 }
 
+body.alto-contraste .accessibility-bar button:disabled {
+  background: #222222 !important;
+  color: #aaaaaa !important;
+  border-color: #aaaaaa !important;
+}
+
+/* Caixas de imagens e fluxos */
 body.alto-contraste .imagem-placeholder,
 body.alto-contraste .fluxo-tecnologia,
-body.alto-contraste .explore-strip div,
-body.alto-contraste #optica-contextos h3 {
+body.alto-contraste .atividade-imagem .imagem-placeholder {
   background: #000000 !important;
   color: #ffffff !important;
-  border: 2px solid #ffffff !important;
+  border: 2px solid #ffff00 !important;
   box-shadow: none !important;
 }
 
-body.alto-contraste table,
-body.alto-contraste th,
-body.alto-contraste td {
+/* Imagens continuam visíveis */
+body.alto-contraste img {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* Tabelas */
+body.alto-contraste table {
   background: #000000 !important;
   color: #ffffff !important;
   border: 2px solid #ffffff !important;
@@ -1128,58 +1163,103 @@ body.alto-contraste td {
 body.alto-contraste th {
   background: #ffff00 !important;
   color: #000000 !important;
-}
-
-body.alto-contraste #btn-topo {
-  background: #ffff00 !important;
-  color: #000000 !important;
   border: 2px solid #ffffff !important;
 }
 
-body.alto-contraste .skip-link {
+body.alto-contraste td {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+body.alto-contraste tr:nth-child(even) td,
+body.alto-contraste tr:hover td {
+  background: #222222 !important;
+  color: #ffffff !important;
+}
+
+/* Rodapé */
+body.alto-contraste footer {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border-top: 2px solid #ffffff !important;
+}
+
+/* Botão voltar ao topo */
+body.alto-contraste #btn-topo {
   background: #ffff00 !important;
+  color: #000000 !important;
+  border: 3px solid #ffffff !important;
+  box-shadow: none !important;
+}
+
+body.alto-contraste #btn-topo:hover,
+body.alto-contraste #btn-topo:focus-visible {
+  background: #ffffff !important;
   color: #000000 !important;
 }
 
-body.alto-contraste a:focus-visible,
-body.alto-contraste button:focus-visible,
-body.alto-contraste main:focus-visible {
-  outline-color: #00ffff !important;
+/* Guia no alto contraste */
+body.alto-contraste #linha-leitura {
+  background: #ffff00 !important;
+  box-shadow: 0 0 10px #ffff00 !important;
+}
+
+/* Inputs, se existirem no futuro */
+body.alto-contraste input,
+body.alto-contraste textarea,
+body.alto-contraste select {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+/* Evita que cores inline do tema visual deixem o texto ilegível */
+body.alto-contraste [style*="color"] {
+  color: #ffffff !important;
 }
 
 /* =========================================================
-   RESPONSIVIDADE DA BARRA DE ACESSIBILIDADE
+   MODO LEITURA + ALTO CONTRASTE
    ========================================================= */
 
-@media (max-width: 700px) {
-  .accessibility-bar {
-    padding: 14px 10px !important;
-  }
+body.alto-contraste.modo-leitura {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
 
-  .accessibility-bar button {
-    min-height: 42px;
-  }
+body.alto-contraste.modo-leitura p,
+body.alto-contraste.modo-leitura li {
+  color: #ffffff !important;
 }
 
 /* =========================================================
-   REDUÇÃO DE MOVIMENTO
+   REDUZIR ANIMAÇÕES
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto !important;
+  .animar,
+  .animar.visivel {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* =========================================================
+   ACESSIBILIDADE EM TELAS PEQUENAS
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .accessibility-bar {
+    gap: 8px !important;
   }
 
-  *,
-  *::before,
-  *::after {
-    animation-duration: .01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: .01ms !important;
-    scroll-behavior: auto !important;
+  .accessibility-bar button {
+    min-height: 44px;
   }
 
-  .skip-link {
-    transition: none !important;
+  #btn-topo {
+    right: 12px;
+    bottom: 12px;
   }
 }
