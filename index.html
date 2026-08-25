@@ -569,31 +569,49 @@
 
 <body>
 
-<a class="skip-link" href="#main-content">
-  Pular para o conteúdo principal
-</a>
+<a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
 
 <header>
-  
-  <div class="accessibility-bar" role="region" aria-label="Menu de Acessibilidade">
-    <span>Acessibilidade:</span>
 
-    <button id="btn-contrast" aria-label="Alternar Alto Contraste">
+  <div class="accessibility-bar" role="region" aria-label="Menu de Acessibilidade">
+
+    <span class="accessibility-title">♿ Acessibilidade:</span>
+
+    <button id="btn-contrast" type="button" aria-pressed="false" aria-label="Ativar modo de alto contraste">
       Alto Contraste
     </button>
 
-    <button id="btn-increase" aria-label="Aumentar Fonte">
+    <button id="btn-increase" type="button" aria-label="Aumentar tamanho da fonte">
       A+
     </button>
 
-    <button id="btn-decrease" aria-label="Diminuir Fonte">
+    <button id="btn-decrease" type="button" aria-label="Diminuir tamanho da fonte">
       A-
     </button>
 
-    <button id="btn-reset" aria-label="Resetar Tamanho da Fonte">
+    <button id="btn-reset" type="button" aria-label="Restaurar tamanho normal da fonte">
       Tamanho Normal
     </button>
+
+    <button id="btn-reader" type="button" aria-pressed="false" aria-label="Ler o conteúdo da página em voz alta">
+      🔊 Ler Página
+    </button>
+
+    <button id="btn-dyslexia" type="button" aria-pressed="false" aria-label="Ativar modo de leitura com espaçamento ampliado">
+      📖 Modo Leitura
+    </button>
+
+    <button id="btn-cursor" type="button" aria-pressed="false" aria-label="Ativar cursor grande">
+      🖱 Cursor Grande
+    </button>
+
+    <button id="btn-line" type="button" aria-pressed="false" aria-label="Ativar guia de leitura">
+      📏 Guia de Leitura
+    </button>
+
   </div>
+
+  <div id="accessibility-status" class="sr-only" aria-live="polite" aria-atomic="true"></div>
 
   <nav aria-label="Navegação principal">
     <ul>
@@ -656,7 +674,7 @@
   </div>
 </section>
 
-<main id="main-content">
+<main id="main-content" tabindex="-1">
 
   <div class="explore-strip" aria-label="Áreas do projeto">
     <div><strong>01</strong><span>Óptica</span></div>

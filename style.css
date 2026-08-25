@@ -46,6 +46,7 @@ body {
     color 0.3s ease;
 }
 
+
 /* ==========================================
    ACESSIBILIDADE
    ========================================== */
@@ -901,112 +902,168 @@ body.alto-contraste #btn-topo {
 
 }
 
-/* ==========================================
-   ACESSIBILIDADE
-   ========================================== */
 
-/* Link para pular diretamente ao conteúdo */
+/* =========================================================
+   ACESSIBILIDADE AVANÇADA — PROJETO INTEGRADOR
+   ========================================================= */
+
+/* Link para pular o menu e ir direto ao conteúdo */
 .skip-link {
   position: fixed;
   top: -100px;
-  left: 15px;
-  z-index: 9999;
-
-  background: #35105d;
-  color: white;
-
+  left: 16px;
+  z-index: 10000;
+  background: #35105d !important;
+  color: #ffffff !important;
   padding: 12px 18px;
   border-radius: 10px;
-
-  font-weight: 700;
+  font-weight: 800;
   text-decoration: none;
-
-  transition: top 0.2s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+  transition: top .2s ease;
 }
 
-/* Aparece quando recebe foco pelo teclado */
-.skip-link:focus {
-  top: 15px;
-  outline: 4px solid #ffcc00;
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 16px;
+  outline: 4px solid #ffeb3b !important;
   outline-offset: 3px;
 }
 
+/* Texto disponível para leitores de tela */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
 
-/* Foco visível para teclado */
-button:focus-visible,
+/* Foco sempre visível para teclado */
 a:focus-visible,
-[tabindex="-1"]:focus-visible {
+button:focus-visible,
+main:focus-visible {
   outline: 4px solid #ffcc00 !important;
   outline-offset: 4px !important;
 }
 
-
-/* Elemento invisível visualmente,
-   mas disponível para leitores de tela */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-
-  border: 0;
+/* Barra com muitos recursos: mantém organizada */
+.accessibility-bar {
+  position: relative;
 }
 
-
-/* Botões desativados */
-.accessibility-bar button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-  transform: none !important;
+.accessibility-bar .accessibility-title {
+  font-weight: 900;
 }
 
-
-/* ==========================================
-   ALTO CONTRASTE — FOCO
-   ========================================== */
-
-.alto-contraste button:focus-visible,
-.alto-contraste a:focus-visible {
-  outline: 4px solid #ffffff !important;
-  outline-offset: 4px !important;
+.accessibility-bar button[aria-pressed="true"] {
+  box-shadow: 0 0 0 3px #ffeb3b inset;
 }
 
+/* =========================================================
+   MODO DE LEITURA / DISLEXIA
+   ========================================================= */
 
-/* ==========================================
-   REDUÇÃO DE MOVIMENTO
-   ========================================== */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .skip-link {
-    transition: none;
-  }
-
+body.dislexia {
+  font-family: Verdana, Arial, sans-serif !important;
+  letter-spacing: .04em !important;
+  word-spacing: .12em !important;
+  line-height: 2 !important;
 }
 
-/* ==========================================
-   CORREÇÃO DO ALTO CONTRASTE
-   ========================================== */
+body.dislexia p,
+body.dislexia li,
+body.dislexia td,
+body.dislexia th {
+  line-height: 2 !important;
+}
 
-body.alto-contraste {
+body.dislexia p,
+body.dislexia li {
+  font-size: 1.08em;
+}
+
+body.dislexia h1,
+body.dislexia h2,
+body.dislexia h3,
+body.dislexia h4 {
+  letter-spacing: .02em !important;
+}
+
+/* =========================================================
+   CURSOR GRANDE
+   ========================================================= */
+
+body.cursor-grande,
+body.cursor-grande * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 2v34l9-8 7 16 7-3-7-16h12L4 2z' fill='white' stroke='black' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2, auto !important;
+}
+
+/* =========================================================
+   GUIA DE LEITURA
+   ========================================================= */
+
+#linha-leitura {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 4px;
+  background: #ffeb3b;
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  pointer-events: none;
+  z-index: 99999;
+  display: none;
+}
+
+/* =========================================================
+   ALTO CONTRASTE — REGRAS FORTES
+   ========================================================= */
+
+body.alto-contraste,
+body.alto-contraste main,
+body.alto-contraste section,
+body.alto-contraste article,
+body.alto-contraste .explore-strip div {
   background: #000000 !important;
   color: #ffffff !important;
 }
 
-/* Texto dos parágrafos */
-body.alto-contraste p,
-body.alto-contraste li,
-body.alto-contraste span,
-body.alto-contraste div {
+body.alto-contraste {
+  background: #000000 !important;
+}
+
+body.alto-contraste header,
+body.alto-contraste nav,
+body.alto-contraste .accessibility-bar,
+body.alto-contraste footer {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+body.alto-contraste .hero-wow {
+  background: #000000 !important;
   color: #ffffff !important;
 }
 
-/* Títulos */
+body.alto-contraste .hero-content h1,
+body.alto-contraste .hero-content h1 span,
+body.alto-contraste .hero-subtitle,
+body.alto-contraste .hero-badge,
+body.alto-contraste .hero-chips span {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background: none !important;
+  text-shadow: none !important;
+}
+
 body.alto-contraste h1,
 body.alto-contraste h2,
 body.alto-contraste h3,
@@ -1014,56 +1071,115 @@ body.alto-contraste h4,
 body.alto-contraste h5,
 body.alto-contraste h6 {
   color: #ffff00 !important;
+  -webkit-text-fill-color: #ffff00 !important;
 }
 
-/* Links */
-body.alto-contraste a {
+body.alto-contraste p,
+body.alto-contraste li,
+body.alto-contraste span,
+body.alto-contraste div,
+body.alto-contraste strong,
+body.alto-contraste td,
+body.alto-contraste footer p {
+  color: #ffffff !important;
+}
+
+body.alto-contraste a,
+body.alto-contraste nav a {
   color: #00ffff !important;
 }
 
-/* Barra de acessibilidade */
-body.alto-contraste .accessibility-bar {
-  background: #000000 !important;
-  color: #ffffff !important;
+body.alto-contraste nav a:hover,
+body.alto-contraste nav a.ativo {
+  background: #ffff00 !important;
+  color: #000000 !important;
 }
 
-/* Botões */
-body.alto-contraste button {
+body.alto-contraste .accessibility-bar button {
   background: #000000 !important;
   color: #ffffff !important;
   border: 2px solid #ffffff !important;
 }
 
-/* Botão de voltar ao topo */
-body.alto-contraste #btn-topo {
-  background: #000000 !important;
-  color: #ffff00 !important;
-  border: 2px solid #ffffff !important;
+body.alto-contraste .accessibility-bar button:hover,
+body.alto-contraste .accessibility-bar button[aria-pressed="true"] {
+  background: #ffff00 !important;
+  color: #000000 !important;
 }
 
-/* Cards e seções */
-body.alto-contraste main > section,
-body.alto-contraste .card,
-body.alto-contraste article {
-  background: #000000 !important;
-  color: #ffffff !important;
-  border-color: #ffffff !important;
-}
-
-/* Tabelas */
-body.alto-contraste table {
+body.alto-contraste .imagem-placeholder,
+body.alto-contraste .fluxo-tecnologia,
+body.alto-contraste .explore-strip div,
+body.alto-contraste #optica-contextos h3 {
   background: #000000 !important;
   color: #ffffff !important;
-}
-
-body.alto-contraste th {
-  background: #000000 !important;
-  color: #ffff00 !important;
   border: 2px solid #ffffff !important;
+  box-shadow: none !important;
 }
 
+body.alto-contraste table,
+body.alto-contraste th,
 body.alto-contraste td {
   background: #000000 !important;
   color: #ffffff !important;
-  border: 1px solid #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+body.alto-contraste th {
+  background: #ffff00 !important;
+  color: #000000 !important;
+}
+
+body.alto-contraste #btn-topo {
+  background: #ffff00 !important;
+  color: #000000 !important;
+  border: 2px solid #ffffff !important;
+}
+
+body.alto-contraste .skip-link {
+  background: #ffff00 !important;
+  color: #000000 !important;
+}
+
+body.alto-contraste a:focus-visible,
+body.alto-contraste button:focus-visible,
+body.alto-contraste main:focus-visible {
+  outline-color: #00ffff !important;
+}
+
+/* =========================================================
+   RESPONSIVIDADE DA BARRA DE ACESSIBILIDADE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .accessibility-bar {
+    padding: 14px 10px !important;
+  }
+
+  .accessibility-bar button {
+    min-height: 42px;
+  }
+}
+
+/* =========================================================
+   REDUÇÃO DE MOVIMENTO
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .skip-link {
+    transition: none !important;
+  }
 }
